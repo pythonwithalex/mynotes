@@ -5,7 +5,7 @@ GIT NOTES
   git show \<commit hash\>:\<path to file\>
 
 #### Reset git log back to previous commit, erase all since then 
-  git reset --hard <commit has>:<path to file> 
+  git reset --hard \<commit has\>:\<path to file\> 
   
   e.g. git reset --hard d8b41cf0c78cedb8166b7071fadceb0bd7b3e089:wlfiler6/wlfiler6.c
 

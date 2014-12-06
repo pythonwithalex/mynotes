@@ -1,18 +1,18 @@
 ## **HTTP**
 
-*request*
+**request**
 
 'GET  /foo  HTTP/1.0'
 
 <verb> <path> <version>
 
-*response*
+**response**
 
 HTTP version, status code, status reason
 
 HTTP/1.1  200  OK
 
-*status codes*
+**status codes**
 
 2xx - good
 

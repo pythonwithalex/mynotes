@@ -1,4 +1,4 @@
 C Fundamentals
 ==============
 
-+ [C Programming Bootcamp, Gribble Lab](http://gribblelab.org/CBootcamp/)
++ [C Programming Bootcamp, Paul Gribble Lab Website](http://gribblelab.org/CBootcamp/)

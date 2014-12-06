@@ -15,9 +15,12 @@ GIT NOTES
 
 #### Create a new branch 
 
-  git branch experimental
+  git branch \<new branch name\>
+  
+  e.g. git branch experimental
 
 #### Checkout a branch 
-  git checkout experimental
+
+  git checkout \<new branch name\>
   
-  git branch experimental
+  e.g. git branch experimental

@@ -5,3 +5,5 @@
 + [Loop Like a Native: Lists, Iterators, Generators](http://bit.ly/Vkei05)
 
 + [Intermediate to Advanced Software Carpentry](http://intermediate-and-advanced-software-carpentry.readthedocs.org/en/latest/index.html)
+
++ [Functional Programming](http://anandology.com/python-practice-book/functional-programming.html)

@@ -2,7 +2,7 @@ GIT NOTES
 =========
 
 #### Show file from previous commit git show HEAD:/path/to/file example:
-  git show <commit hash>:<path to file>
+  git show \<commit hash\>:\<path to file\>
 
 #### Reset git log back to previous commit, erase all since then 
   git reset --hard <commit has>:<path to file> 

@@ -1,19 +1,18 @@
-HTTP
+## *HTTP*
 
-Wed Dev Notes
+*request*
 
-HTTP
-
-request: 'GET  /foo  HTTP/1.0'
+'GET  /foo  HTTP/1.0'
 
 <verb> <path> <version>
 
-response: HTTP version, status code, status reason
+*response*
+
+HTTP version, status code, status reason
 
 HTTP/1.1  200  OK
 
-
-status codes, generally speaking:
+*status codes*
 
 2xx - good
 
@@ -29,23 +28,18 @@ HTTP/1.0 - no 'keep alive optimization'
 
 HTTP/1.1 - keep alive optimization
 
-
-
-WHAT DOES A WEB APP DO?
+#### WHAT DOES A WEB APP DO?
 
 It lives on a browser, speaks http, and generates content depending on browser requests
 
 
 
-HTML FORM
+#### HTML FORM
 
 hitting enter in a form isn't any different than using a submit button (by default)
 
 
 
-URL ENCODING
+#### URL ENCODING
 
 urls can't have spaces, so they need to be transformed when generated via input with , e.g., spaces
-
-
-

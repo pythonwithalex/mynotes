@@ -2,7 +2,9 @@
 
 **request**
 
-'GET  /foo  HTTP/1.0'
+Telnet www.google.com 80
+
+GET  /foo  HTTP/1.0
 
 <verb> <path> <version>
 

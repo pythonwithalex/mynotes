@@ -2,4 +2,4 @@
 + [What is a Web Server?, Part 2](http://www.jeffknupp.com/blog/2014/03/19/what-is-a-web-server-part-2-headers-and-cookies/)
 + [What is a Web Framework? ](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)
 + [How To Structure Larg Flask Applications (DigitalOcean)](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications)
-+ (Real Python Flask tutorials)[https://github.com/realpython]
++ [Real Python Flask tutorials](https://github.com/realpython)

@@ -1,0 +1,61 @@
+## Discrete Math & Combinatorics
+
+counting underlies developments in arithmetic, geometry algebra
+
+onto function - range is exhausted by input
+one to one - each input corresponds to a unique output, or:
+"whenever x is different from y, f(x) is different from f(y)"
+
+
+The number of functions from a set X to another set Y is given by |Y||X| since each element in the set X has |Y| choices.
+Every subset of A×B is a binary relation and A×B has mn elements hence 2mn subsets.
+
+where order doesn't matter, you have to take all possible permutations and get rid of duplicates
+
+example: ways you can get a hand of 5 cards
+
+52 unique cards
+
+5 spots: _ _ _ _ _
+
+number of possible hands (permutations, aka order matters) = 52 * 51 * 50 * 49 * 48
+
+that can be written as
+
+52!
+----
+(52-5)!
+
+which is
+
+52!
+-----
+47!
+
+and this basically gives you the top 5 terms of 52! factorial.
+
+This still hasn't erased the duplicates, though.
+
+For the cards we do have, we need to find the number of ways they can be re-arranged and put this in the divisor of the fraction above
+
+number of ways a hand can be re-arranged: 5 * 4 * 3 * 2 * 1
+
+so in the end we have:
+
+52!
+----
+5!(52-5)!                            
+
+or
+
+52!
+-----
+5!(47)!
+
+CONCLUSION:
+
+C(n,k), n choose k, where order doesn't matter AND you can't repeat n:
+
+n!
+-----
+k!(n-k)!

@@ -6,6 +6,7 @@ A repository for notes and links to useful articles that I'm keeping on the web 
 #### Topics Include:
 
 + Python
++ C
 + JavaScript
 + Web Development
 + Web Design

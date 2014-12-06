@@ -23,7 +23,7 @@ number of possible hands (permutations, aka order matters) = 52 * 51 * 50 * 49 *
 that can be written as
 
 52!
-----
+-------
 (52-5)!
 
 which is

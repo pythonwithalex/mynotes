@@ -1,6 +1,7 @@
 C Fundamentals
 ==============
 
++ [ANSI C Reference Card](http://people.fas.harvard.edu/~lib113/reference/c/c-refcard-a4.pdf)
 + [C Programming Bootcamp, Paul Gribble Lab Website](http://gribblelab.org/CBootcamp/)
 + [The Gnu C Programming Tutorial](http://crasseux.com/books/ctutorial/)
 

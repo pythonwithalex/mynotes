@@ -3,7 +3,7 @@ my notes
 
 ## Introduction
 
-You have a neurotic, intellectual hoarder mentality and an impatience for collections that can't be accessed anywhere, so you're pulling from all of the disparate lists on your various computers and cloud drives and publishing the best of your internet searches over the last few years on GitHub.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience.  Make sure to refresh your page so that you don't still have the previously cached version.
+You are an intellectual hoarder and this is your cry for help. Your have an impatience for collections that can't be accessed anywhere, so you're pulling from all of the disparate lists on your various computers and cloud drives and publishing the best of your internet searches over the last few years on GitHub.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience.  Make sure to refresh your page so that you don't still have the previously cached version.
 
 #### Lists vs Notes
 

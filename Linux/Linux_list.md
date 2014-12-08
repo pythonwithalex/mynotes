@@ -12,6 +12,8 @@
 
 #### Sysadmin
 
++ [Urban Penguin LPI Study Guide](http://theurbanpenguin.com/wp/?page_id=865)
+
 + [Variety of Tutorials, linux.org](http://www.linux.org/forums/intermediate-tutorials.54/)
 
 + [makelinux.com/resources](http://makelinux.com/resources)

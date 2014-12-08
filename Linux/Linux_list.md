@@ -4,7 +4,7 @@
 #### principles
 
 + [Norm Matloff's Unix/Linux Page](http://heather.cs.ucdavis.edu/~matloff/unix.html)
-+ [Bruce Molay's Unix References](http://people.fas.harvard.edu/~lib113/)
++ [Bruce Molay's Unix References](http://people.fas.harvard.edu/~lib113/reference/)
 
 #### scripting
 

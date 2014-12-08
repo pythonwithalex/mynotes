@@ -10,7 +10,7 @@
 + [Bruce Molay's Unix References](http://people.fas.harvard.edu/~lib113/reference/)
 
 #### scripting
-
++ [sed one-liners explained](http://www.catonmat.net/blog/sed-book/)
 + [a really good bourne shell tutorial](http://www.grymoire.com/Unix/Sh.html)
 + [Daniel Miessler's Study Page](http://danielmiessler.com/study/)
 + [The Urban Penguin](http://www.theurbanpenguin.com)

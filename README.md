@@ -1,9 +1,15 @@
 my notes
 =====
 
-Because you have a neurotic, intellectual hoarder mentality and an impatience for collections that can't be accessed anywhere, you published your collection of links and notes online via github.  They get pulled to mynotes.readthedocs.org every time they're updated.
+## Introduction
 
-The links below lead you to a list page of links broken up into sub-topics.  There are additional adjacent files that are unformatted (so far) notes on various things.  Those are not so suitable for public consumption, but the list of links is.
+You have a neurotic, intellectual hoarder mentality and an impatience for collections that can't be accessed anywhere, so you published the best of your internet searches over the last few years on GitHub.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience.
+
+#### Lists vs Notes
+
+The links below lead you to a topical page that is broken up into sub-topics.  These pages are supposed to the best links I could find on the subject.
+
+There are additional adjacent files that are unformatted (so far) notes on various things.  Those are not so suitable for public consumption at the moment, as they are often specifically written for projects you were working on at the time.
 
 #### Topics Include:
 

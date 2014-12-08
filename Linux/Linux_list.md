@@ -14,6 +14,6 @@
 
 + [makelinux.com/resources](http://makelinux.com/resources)
 
-+ [Good review of important Linux Commands](Daniel Miessler - http://danielmiessler.com/study/)
++ [Good review of important Linux Commands](http://danielmiessler.com/study/)
 
 + [an obscure repository for obscure issues](http://www.linuxproblem.org/)

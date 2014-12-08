@@ -6,7 +6,7 @@
 
 + [Daniel Miessler's Study Page](http://danielmiessler.com/study/)
 
-+ [The Urban Penguin](http://www.theurbanpenguin.com/scripting.html)
++ [The Urban Penguin](http://www.theurbanpenguin.com)
 
 + [The Unix School](http://www.theunixschool.com/)
 

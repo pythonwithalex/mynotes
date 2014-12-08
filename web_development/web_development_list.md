@@ -1,9 +1,11 @@
 ## Web Development
 
 #### HTML && CSS 
+**bold** only the really good ones, there are so many bad ones...
 
-+[sitepoint css](http://reference.sitepoint.com/css)
-
++ [Shaye How](http://learn.shayhowe.com/)
++ [sitepoint css](http://reference.sitepoint.com/css)
++ [Chris Coyier's CSS Tricks](http://css-tricks.com/)
 
 
 #### Web Technolgy Explanations

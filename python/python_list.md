@@ -23,7 +23,9 @@
 + [probabilistic programming and bayesian methods for hackers](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb)
 
 + [think bayes](http://www.greenteapress.com/thinkbayes/thinkbayes.pdf)
+
 ## Physics
+
 + [Matplotlib Animations](http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/)
 
 ## Under the Hood

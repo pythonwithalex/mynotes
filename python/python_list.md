@@ -24,7 +24,7 @@
 + [A Guide to Python's Magic Methods, by Rafe Kettler](http://www.rafekettler.com/magicmethods.html)
 + [Why Python is Slow, by Jake Vanderplas](https://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/)
 
-## Web Development
+## Web Development with Python
 
 + [What is a Web Server?, Part 1](http://www.jeffknupp.com/blog/2014/03/12/what-is-a-web-server/)
 + [What is a Web Server?, Part 2](http://www.jeffknupp.com/blog/2014/03/19/what-is-a-web-server-part-2-headers-and-cookies/)

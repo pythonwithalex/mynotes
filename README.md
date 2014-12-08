@@ -6,8 +6,9 @@ A repository for notes and links to useful articles that I'm keeping on the web 
 
 #### Topics Include:
 
-+ Python
-+ C
++ [Python](http://mynotes.readthedocs.org/en/latest/python/under_the_hood/)
++ [C](http://mynotes.readthedocs.org/en/latest/C/fundamentals/)
++ [Git](http://mynotes.readthedocs.org/en/latest/git/git_notes/)
 + JavaScript
 + Web Development
 + Web Design

@@ -1,6 +1,12 @@
 ## Web Development
 
-#### Technolgies explained
+#### HTML && CSS 
+
++[sitepoint css](http://reference.sitepoint.com/css)
+
+
+
+#### Web Technolgy Explanations
 
 + [What is a Web Server? (Part 1)](http://www.jeffknupp.com/blog/2014/03/12/what-is-a-web-server/)
 + [What is a Web Server? (Part 2)](http://www.jeffknupp.com/blog/2014/03/19/what-is-a-web-server-part-2-headers-and-cookies/)
@@ -10,5 +16,6 @@
 
 + [Linux Apache Tutorials](http://theurbanpenguin.com/tech/tech.html)
 
-
 #### Protocols
+
++ [HTTP1.1 RRC](https://www.ietf.org/rfc/rfc2616.txt)

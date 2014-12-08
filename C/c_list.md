@@ -6,11 +6,11 @@
 
 ## Other Links
 
-ascii vs binary, good! http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/asciiBin.html
-http://farmdev.com/talks/unicode/
-http://boredzo.org/pointers/
-http://www.lysator.liu.se/c/c-faq/c-2.html
++ [ascii vs binary](http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/asciiBin.html)
++ [unicode](http://farmdev.com/talks/unicode/)
++ [pointers] (http://boredzo.org/pointers/)
++ [Arrays and Pointers](http://www.lysator.liu.se/c/c-faq/c-2.html)
 
 ## Debugging
 
-http://www.thegeekstuff.com/2010/03/debug-c-program-using-gdb/
++ [debugging](http://www.thegeekstuff.com/2010/03/debug-c-program-using-gdb/)

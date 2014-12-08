@@ -18,6 +18,9 @@
 
 + [Functional Programming](http://anandology.com/python-practice-book/functional-programming.html)
 
+## Physics
++ [Matplotlib Animations](http://jakevdp.github.io/blog/2012/08/18/matplotlib-animation-tutorial/)
+
 ## Under the Hood
 + [Advanced Python - Google Talk](https://www.youtube.com/watch?v=HlNTheck1Hk#t=434)
 + [A look at Tim Peters's Timsort algorithm](http://www.infopulse.com/eng/Blogs/Software-Development/Algorithms/Timsort-Sorting-Algorithm/)

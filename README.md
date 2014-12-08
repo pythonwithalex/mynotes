@@ -1,8 +1,9 @@
 my notes
 =====
 
-A repository for notes and links to useful articles that I'm keeping on the web so I and others can benefit from it.
+Because you have a neurotic, intellectual hoarder mentality and a desire to make it as easily accessible as possibe, you published your collection of links and notes online.  
 
+The links below lead you to a list page of links broken up into sub-topics.  There are additional adjacent files that are unformatted (so far) notes on various things.  Those are not so suitable for public consumption, but the list of links is.
 
 #### Topics Include:
 

@@ -21,8 +21,4 @@ move through tabs:
 
 toggle between windows
     
-    CMD-Arrow Key
-
-reverse toggle between windows
-    
-    CMD-SHIFT -Arrow 
+    CMD-Arrow Key or CMD-SHIFT -Arrow 

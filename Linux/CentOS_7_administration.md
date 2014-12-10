@@ -3,7 +3,9 @@ CentOS 7 Admin Notes
 + check default run - levels
 
     systemctl get-default
+    
     systemctl list-units --type=target
+    
     set to runlevel 3: systemctl set-default multi-user.target
 
 + create a sysadmin group

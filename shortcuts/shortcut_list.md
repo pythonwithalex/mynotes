@@ -1,18 +1,19 @@
-Shortcuts
+Shortcuts for Various Mac Applications
 =========
 
 ## Sublime Text
-select multiple lines
 
+select multiple lines
     alt shift
-ctrl-tab - move between tabs
+move between tabs
+    ctrl-tab
 
 ## Chrome
 move through tabs:
-
     ctrl - tab
 
 ## Mac Terminal
-
-    CMD-left/right arrow, toggle between windows
-    CMD-SHIFT - ARROW - toggle between tabs
+toggle between windows
+    CMD-Arrow Key
+reverse toggle between windows
+    CMD-SHIFT -Arrow 

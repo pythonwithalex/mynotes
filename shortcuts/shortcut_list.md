@@ -2,12 +2,17 @@ Shortcuts
 =========
 
 ## Sublime Text
-alt shift - select multiple lines
+select multiple lines
+
+    alt shift
 ctrl-tab - move between tabs
 
 ## Chrome
-ctrl - tab: move through tabs
+move through tabs:
+
+    ctrl - tab
 
 ## Mac Terminal
-CMD-left/right arrow, toggle between windows
-CMD-SHIFT - ARROW - toggle between tabs
+
+    CMD-left/right arrow, toggle between windows
+    CMD-SHIFT - ARROW - toggle between tabs

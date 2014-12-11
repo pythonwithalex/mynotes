@@ -35,7 +35,7 @@ The Example File:
 
 **basic form**
 
-```
+```bash
 sed 's/match/replace/' words.txt
 ```
     

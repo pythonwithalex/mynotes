@@ -1,7 +1,9 @@
 Sed Notes
 =========
 
-sed is a Unix 'stream editor'. Sed's basic substitution mode has a match section(left) and a replace(right) section that lets you modifies a stream.  Sed supports any valid combination of theBasic Regular Expression rules that you give it.  Sed can work on files or standard input. This is a basic tutorial that covers Basic Regular Expressions and fundamental sed operations.
+**Sed** is a Unix 'stream editor'. Sed's basic substitution mode supports a string or pattern match section (on the left)  and a replace section (on the right), separated by a consistent delimter (you'll often see '/' used as the delimiter, but you have other options).  You feed it a stream of text data and it replaces what it finds on the left side with what you've specified on the right (see the basic form below).  
+
+Sed supports any valid combination of theBasic Regular Expression rules that you give it.  Sed can work on files or standard input. This is a basic tutorial that covers Basic Regular Expressions and fundamental sed operations.
 
 #### Basic form of match and replace with sed
 

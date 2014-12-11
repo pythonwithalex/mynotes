@@ -1,14 +1,16 @@
 Sed Notes
 =========
-#### sed is short for 'stream editor'. It modifies a stream based on the regular expression rules that you give it.  Sed can work on files or standard input.
 
-#### the basic components of sed:
+sed is short for 'stream editor'. It modifies a stream based on the regular expression rules that you give it.  Sed can work on files or standard input.
 
-sed 's/text to match/text to replace it with' file
+#### Basic form of match and replace with sed
+
+```sed 's/text to match/text to replace it with' file```
 
 or 
 
-cat file | sed 's/text to match/text to replace it with'
+```cat file | sed 's/text to match/text to replace it with'```
+
 
 | Basic Regular Expressions (BRE) Chart  | | |
 |---------------|-------------------|--------|
@@ -16,10 +18,10 @@ cat file | sed 's/text to match/text to replace it with'
 | the dot | **.** | match a single character no matter what it is |
 | character class | **[abcdefg]** | match one of the characters specified in between the brackets, [].|
 |character class range | **[a-z]** |  match any single letter from the lower case 26 alphabetic letters.|
-| complement of character class| **[^a]**, **[^a-z]**, **[^0-9a-zA-Z]**, etc | match any single characters that are not in the specified class.
-
+| aggregate character class ranges | **[a-zA-Z0-9] | match any single character from the specified ranges |
+| complement of character class| **[^a]**, **[^a-z]**, **[^0-9a-zA-Z]** | match any single characters that are not in the specified class.|
 | Modifying Symbols: | | |
-| the  * |  | |
+| the glob |  *  | |
 
 The Example File:
 

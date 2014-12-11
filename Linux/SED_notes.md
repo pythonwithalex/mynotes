@@ -5,11 +5,15 @@ sed is short for 'stream editor'. It modifies a stream based on the regular expr
 
 #### Basic form of match and replace with sed
 
-```sed 's\text to match/text to replace it with/' file```
+```bash
+sed 's\text to match/text to replace it with/' file```
+```
 
 or 
 
-```cat file | sed 's/text to match/text to replace it with/'```
+```bash
+cat file | sed 's/text to match/text to replace it with/'
+```
 
 
 | Basic Regular Expressions (BRE) Chart  | | |
@@ -25,11 +29,12 @@ or
 
 The Example File:
 
-    alex@terminal$ cat words.txt
-    california
-    massachusetts
-    michigan
-
+```bash
+alex@terminal$ cat words.txt
+california
+massachusetts
+michigan
+```
 
 #### Simple Match & Replace
 
@@ -41,7 +46,7 @@ sed 's/match/replace/' words.txt
     
 **example:**  
         
-```
+```bash
 sed 's/california/massachusetts/' words.txt
 ```
 
@@ -53,19 +58,21 @@ sed 's/california/massachusetts/' words.txt
 
 **example:**
 
-```'s/california/& is great/' words.txt```
+```bash
+'s/california/& is great/' words.txt
+```
 
 **result:** replaces lines containing 'california' with the literal text 'california is great'
     
 #### Substring Replacement
     
 **form**    
-    ```
+    ```bash
     sed 's/\(ignore group #1\)match/\1replacement/' words.txt
     ```
     
 **example**: 
-    ```
+    ```bash
     sed 's/califor\(.*a\)/\1gara falls/' words.txt
     ```
     
@@ -80,11 +87,12 @@ We have to escape that number, as well, to tell sed that it isn't to be a litera
 **result**: don't replace anything in the escaped parentheses, aka the 'nia' ending in california. 
 Replace the non-protected text with 'gara falls' and place that after the previously protected text.
 
-    alex@terminal$ cat words.txt
-    niagara falls
-    massachusetts
-    michigan
-    
+```bash
+alex@terminal$ cat words.txt
+niagara falls
+massachusetts
+michigan
+```    
 
 #### resources
 

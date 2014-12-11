@@ -1,10 +1,8 @@
 Sed Notes
 =========
-####
-sed is short for 'stream editor'. It modifies a stream based on the regular expression rules that you give it.  Sed can work on files or standard input.
+#### sed is short for 'stream editor'. It modifies a stream based on the regular expression rules that you give it.  Sed can work on files or standard input.
 
-####
-the basic components of sed:
+#### the basic components of sed:
 
 sed 's/text to match/text to replace it with' file
 
@@ -12,11 +10,10 @@ or
 
 cat file | sed 's/text to match/text to replace it with'
 
-###
-Basic Regular Expressions (BRE) Chart
+#### Basic Regular Expressions (BRE) Chart
 
 Matching Symbols: 
-
+|: :|: :|: :|
 | the dot | . match a single character no matter what it is |
 | character class | [abcdefg] | match one of the characters specified in between the brackets, [].|
 |character class range | [a-z] |  match any single letter from the lower case 26 alphabetic letters.|

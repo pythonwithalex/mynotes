@@ -1,12 +1,12 @@
 Sed Notes
 =========
 
-sed is short for 'stream editor'. It modifies a stream based on the regular expression rules that you give it.  Sed can work on files or standard input.
+sed is a Unix 'stream editor'. Sed's basic substitution mode has a match section(left) and a replace(right) section that lets you modifies a stream.  Sed supports any valid combination of theBasic Regular Expression rules that you give it.  Sed can work on files or standard input. This is a basic tutorial that covers Basic Regular Expressions and fundamental sed operations.
 
 #### Basic form of match and replace with sed
 
 ```bash
-sed 's\text to match/text to replace it with/' file```
+sed 's/text to match/text to replace it with/' file```
 ```
 
 or 

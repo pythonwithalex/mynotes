@@ -21,7 +21,7 @@ or
 | aggregate character class ranges | **[a-zA-Z0-9] | match any single character from the specified ranges |
 | complement of character class| **[^a]**, **[^a-z]**, **[^0-9a-zA-Z]** | match any single characters that are not in the specified class.|
 | **Modifying Symbols:** |
-| the asterisk/'glob' |  [a-z]\*, .\*  | match zero or more of the preceding character|
+| the asterisk/'glob' |  [a-z]\* or .\*  | match zero or more of the preceding character|
 
 The Example File:
 

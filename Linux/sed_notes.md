@@ -5,11 +5,11 @@ sed is short for 'stream editor'. It modifies a stream based on the regular expr
 
 #### Basic form of match and replace with sed
 
-```sed 's/text to match/text to replace it with' file```
+```sed 's\text to match/text to replace it with/' file```
 
 or 
 
-```cat file | sed 's/text to match/text to replace it with'```
+```cat file | sed 's/text to match/text to replace it with/'```
 
 
 | Basic Regular Expressions (BRE) Chart  | | |

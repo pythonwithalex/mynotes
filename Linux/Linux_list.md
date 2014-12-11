@@ -12,7 +12,7 @@
 #### scripting
 
 + [The Grymoire: Sh Tutorial](http://www.grymoire.com/Unix/Sh.html)
-+ [The Grymoire: Sed Tutorial](a really good bourne shell tutorial](http://www.grymoire.com/Unix/sed.html)
++ [The Grymoire: Sed Tutorial](http://www.grymoire.com/Unix/sed.html)
 + [sed one-liners explained](http://www.catonmat.net/blog/sed-book/)
 + [Daniel Miessler's Study Page](http://danielmiessler.com/study/)
 + [The Urban Penguin](http://www.theurbanpenguin.com)

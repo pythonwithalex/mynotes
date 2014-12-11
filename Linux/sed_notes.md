@@ -18,9 +18,9 @@ cat file | sed 's/text to match/text to replace it with'
 |character class range | **[a-z]** |  match any single letter from the lower case 26 alphabetic letters.|
 | complement of character class| **[^a]**, **[^a-z]**, **[^0-9a-zA-Z]**, etc | match any single characters that are not in the specified class.
 
-Modifying Symbols:
+| Modifying Symbols: | | |
+| the  * |  | |
 
-| the  * |  
 The Example File:
 
     alex@terminal$ cat words.txt
@@ -28,22 +28,24 @@ The Example File:
     massachusetts
     michigan
 
-Simple Match & Replace
 
-    **form**
+#### Simple Match & Replace
+
+**basic form**
+
     ```
     sed 's/match/replace/' words.txt
     ```
     
-    **example:**  
+**example:**  
         
     ```
     sed 's/california/massachusetts/' words.txt
     ```
 
-    result: replaces all literal matches of california with massachusetts
+**result:** Replaces all literal matches of california with massachusetts
 
-Add to a Matched String
+#### Add to a Matched String
 
     sed 's/match/&match/' words.txt
 
@@ -51,21 +53,33 @@ Add to a Matched String
 
     result: replaces lines containing 'california' with the literal text 'california is great'
     
-Substring Replacement
-
+#### Substring Replacement
+    
+**form**    
+    ```
     sed 's/\(ignore group #1\)match/\1replacement/' words.txt
+    ```
     
-    **example**: sed 's/califor\(.*a\)/\1gara falls/' words.txt
+**example**: 
+    ```
+    sed 's/califor\(.*a\)/\1gara falls/' words.txt
+    ```
     
-    **explanation**: sed protects text in the match section which is placed in parentheses () alone.
-    You can refer to it in the replace section, which is useful.
-    Without escaping the '(' and ')' characters, we would have s/(califor).*a/1replacement/'
-    I find thinking of it without the escaping at first helps one understand what's actually going on.  Sed is LEAVING the parenthetical text alone.
-    However, we can use each parenthetical chunk from the match section in the replace section by refering to its position, starting with 1.  
-    We have to escape that number, as well, to tell sed that it isn't to be a literal replacement.
+**explanation**: 
+sed protects text in the match section which is placed in parentheses () alone.
+You can refer to it in the replace section, which is useful.
+Without escaping the '(' and ')' characters, we would have s/(califor).*a/1replacement/'
+I find thinking of it without the escaping at first helps one understand what's actually going on.  Sed is leaving the parenthetical text alone.
+However, we can use each parenthetical chunk from the match section in the replace section by refering to its position, starting with 1.  
+We have to escape that number, as well, to tell sed that it isn't to be a literal replacement.
     
-    **result**: don't replace anything in the escaped parentheses, aka the 'nia' ending in california. 
-    Replace the non-protected text with 'gara falls' and place that after the previously protected text.
+**result**: don't replace anything in the escaped parentheses, aka the 'nia' ending in california. 
+Replace the non-protected text with 'gara falls' and place that after the previously protected text.
+
+    alex@terminal$ cat words.txt
+    niagara falls
+    massachusetts
+    michigan
     
 
 #### resources

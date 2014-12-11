@@ -1,18 +1,30 @@
 Sed Notes
 =========
-
+####
 sed is short for 'stream editor'. It modifies a stream based on the regular expression rules that you give it.  Sed can work on files or standard input.
 
-BRE (Basic Regular Expression) Symbol Chart
+####
+the basic components of sed:
 
-Matching Symbols:
+sed 's/text to match/text to replace it with' file
 
-the dot . match a single character no matter what it is
-character class [abcdefg] match one of the characters specified in between the brackets, [].
-character class range [a-z]  match any single letter from the lower case 26 alphabetic letters.
-complement of the character class [^a-z] match any single letter that is in the class of characters which is not in a,b,c,d,e ... z.
+or 
 
+cat file | sed 's/text to match/text to replace it with'
 
+###
+Basic Regular Expressions (BRE) Chart
+
+Matching Symbols: 
+
+| the dot | . match a single character no matter what it is |
+| character class | [abcdefg] | match one of the characters specified in between the brackets, [].|
+|character class range | [a-z] |  match any single letter from the lower case 26 alphabetic letters.|
+| complement of character class| [^a], [^a-z], [^0-9a-zA-Z], etc | match any single characters that are not in the specified class.
+
+Modifying Symbols:
+
+| the  * |  
 The Example File:
 
     alex@terminal$ cat words.txt
@@ -52,3 +64,7 @@ Substring Replacement
     **result**: don't replace anything in the escaped parentheses, aka the 'nia' ending in california. 
     Replace the non-protected text with 'gara falls' and place that after the previously protected text.
     
+
+#### resources
+
+[which characters do I need to escape when using sed?](http://unix.stackexchange.com/questions/32907/what-characters-do-i-need-to-escape-when-using-sed-in-a-sh-script)

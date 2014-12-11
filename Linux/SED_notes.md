@@ -5,16 +5,18 @@ Sed Notes
 
 Sed supports any valid combination of the Basic Regular Expression rules that you give it.  Sed can work on files or standard input. This is a basic tutorial that covers Basic Regular Expressions and fundamental sed operations.
 
+**note:** POSIX compliant versions of Sed do not support in-place modification of a file.  This means that sed doesn't modify the original file you send through it.  You can always pipe the output to a file.  See the bracketed sections in the example below.
+
 #### Basic form of match and replace with sed
 
 ```bash
-sed 's/text to match/text to replace it with/' file
+sed 's/text to match/text to replace it with/' file [ > newfile ]
 ```
 
 or 
 
 ```bash
-cat file | sed 's/text to match/text to replace it with/'
+cat file | sed 's/text to match/text to replace it with/' [ > newfile ]
 ```
 
 
@@ -52,7 +54,12 @@ sed 's/match/replace/' words.txt
 sed 's/california/massachusetts/' words.txt
 ```
 
-**result:** Replaces all literal matches of california with massachusetts
+**result:** 
+```bash
+massachusetts
+massachusetts
+michigan
+```
 
 #### Add to a Matched String
 
@@ -76,6 +83,9 @@ sed 's/california/massachusetts/' words.txt
 **example**: 
     ```bash
     sed 's/califor\(.*a\)/\1gara falls/' words.txt
+    niagara falls
+    massachusetts
+    michigan
     ```
     
 **explanation**: 

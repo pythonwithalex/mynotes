@@ -8,7 +8,7 @@ Sed supports any valid combination of the Basic Regular Expression rules that yo
 #### Basic form of match and replace with sed
 
 ```bash
-sed 's/text to match/text to replace it with/' file```
+sed 's/text to match/text to replace it with/' file
 ```
 
 or 

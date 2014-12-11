@@ -33,25 +33,27 @@ The Example File:
 
 **basic form**
 
-    ```
-    sed 's/match/replace/' words.txt
-    ```
+```
+sed 's/match/replace/' words.txt
+```
     
 **example:**  
         
-    ```
-    sed 's/california/massachusetts/' words.txt
-    ```
+```
+sed 's/california/massachusetts/' words.txt
+```
 
 **result:** Replaces all literal matches of california with massachusetts
 
 #### Add to a Matched String
 
-    sed 's/match/&match/' words.txt
+```sed 's/match/&match/' words.txt```
 
-    example: 's/california/& is great/' words.txt
+**example:**
 
-    result: replaces lines containing 'california' with the literal text 'california is great'
+```'s/california/& is great/' words.txt```
+
+**result:** replaces lines containing 'california' with the literal text 'california is great'
     
 #### Substring Replacement
     

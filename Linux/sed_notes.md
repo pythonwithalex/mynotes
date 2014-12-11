@@ -30,9 +30,16 @@ The Example File:
 
 Simple Match & Replace
 
+    **form**
+    ```
     sed 's/match/replace/' words.txt
-
-    example:  's/california/massachusetts/' words.txt
+    ```
+    
+    **example:**  
+        
+    ```
+    sed 's/california/massachusetts/' words.txt
+    ```
 
     result: replaces all literal matches of california with massachusetts
 

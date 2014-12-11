@@ -25,6 +25,10 @@ toggle between windows
 
 ## Vim
 
-reverses case in command mode with **~**
+** ~ ** reverse case of letter in command mode mode
 
-convert to lower case by **selecting text with v and pressing 'u'**
+** gg Shift-V-G u ** convert entire file to lower case
+
+** gg Shift-V-G U ** convert entire file to upper case
+
+

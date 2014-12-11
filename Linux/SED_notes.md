@@ -5,7 +5,7 @@ Sed Notes
 
 Sed supports any valid combination of the Basic Regular Expression rules that you give it.  Sed can work on files or standard input. This is a basic tutorial that covers Basic Regular Expressions and fundamental sed operations.
 
-**note:** POSIX compliant versions of Sed do not support in-place modification of a file.  This means that sed doesn't modify the original file you send through it.  You can always pipe the output to a file.  See the bracketed sections in the example below.
+**note:** The GNU version of sed has an -i flag that allows you to modify a file in place, but this isn't so portable.  POSIX compliant versions of Sed do not support in-place modification of a file.  This means that sed doesn't modify the original file you send through it.  You can always pipe the output to a file.  See the bracketed sections in the example below.
 
 #### Basic form of match and replace with sed
 

@@ -10,7 +10,8 @@ or
 
 cat file | sed 's/text to match/text to replace it with'
 
-#### Basic Regular Expressions (BRE) Chart
+| Basic Regular | Expressions (BRE) | Chart  |
+|---------------|-------------------|--------|
 
 Matching Symbols: 
 |: :|: :|: :|

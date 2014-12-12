@@ -19,6 +19,10 @@ or
 cat file | sed 's/text to match/text to replace it with/' [ > newfile ]
 ```
 
+A literal text string is not the only thing you can match with sed.  It supports the Basic Regular Expression pattern language.  This language expresses many of the subsets of all possible combinations of a given character set. 
+
+The point of sed is to use the rules below to cast information additively or subtractively into a form that you specify.  If you want _last name, middle firstname_ to become _firstname, middle, last name_, you could do :
+
 
 | Basic Regular Expressions (BRE) Chart  | | |
 |---------------|-------------------|--------|

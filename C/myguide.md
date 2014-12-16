@@ -9,9 +9,11 @@ argv is an array that holds these arguments.
 when checking arguments for flags, do
 
 ```c
+int i;
+
 for (i=1; i< argc; i++)
-{ if (strcmp(argv[i],"-o") == 0)
-{
+{ 
+  if (strcmp(argv[i],"-o") == 0)
     printf("argument: %s\n",argv[i]);
 }
 ```

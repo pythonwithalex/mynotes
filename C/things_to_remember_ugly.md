@@ -1,4 +1,5 @@
 C :  things to remember
+=======================
 
 SSCANF FAMILY FORMATTING
 to scan 'name=value;' string into name,value variables:

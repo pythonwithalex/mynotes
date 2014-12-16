@@ -10,6 +10,7 @@ C Fundamentals
 + [ascii vs binary](http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/asciiBin.html)
 + [unicode](http://farmdev.com/talks/unicode/)
 + [pointers] (http://boredzo.org/pointers/)
++ [Why C Has Pointers] (http://duramecho.com/ComputerInformation/WhyCPointers.html)
 + [Arrays and Pointers](http://www.lysator.liu.se/c/c-faq/c-2.html)
 
 ## Debugging

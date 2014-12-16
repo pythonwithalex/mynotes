@@ -3,8 +3,9 @@ My Guide to C
 
 #### argc, argv
 
-Argc is the number of arguments passed to the C program on execution.  If none are passed, argc is 1 because it is always passed its own name.
-argv is an array that holds these arguments.
+**argc** is the number of arguments passed to the C program on execution.  If none are passed, argc is 1 because it is always passed its own name.
+
+**argv** is an array that holds these arguments.  They are char pointers ( aka, char *).  You can think of them as an array of arrays(null terminated arrays, aka strings).
 
 when checking arguments for flags, do
 

@@ -5,7 +5,7 @@ My sh (Bourne Shell) Guide
 
 ```sh
 # get PID of current shell
-echo $$
+me@system:~$ echo $$
 # 8606
 
 

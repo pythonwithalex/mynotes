@@ -5,7 +5,10 @@ My Guide to C
 
 ```c
 int c;
-getc(FILE * STREAM);
+while ( (c = getc(FILE * STREAM) ) != EOF)
+{
+  putc(c);
+}
 ```
 
 #### open a file

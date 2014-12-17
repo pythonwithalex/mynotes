@@ -48,7 +48,16 @@ char letters[20];
 printf("%c\n",&letters);
 
 ```
-## arrays and Strings
+
+#### concatenate strings
+```c
+char * s1 = "string1";
+char * s2 = "string2";
+
+char buff[strlen(s1)+strlen(s2)+1];
+strcpy(buf,s1);
+strcpy(buf+strlen(s1),s2); // basically pointer arithmetic here
+```
 
 #### Malloc and Strings
 

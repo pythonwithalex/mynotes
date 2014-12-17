@@ -8,6 +8,19 @@ test 1 -eq 0
 test $? -eq 0 || echo 'abc'
 ```
 
+## case statement
+
+#!/bin/sh
+
+max=1
+```sh
+#!/bin/sh
+
+case $max in
+    '1')  echo "its one";;
+     *)   echo "its not one";;
+esac
+```
 ## while loop
 
 ```sh

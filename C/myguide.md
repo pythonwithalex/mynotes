@@ -181,6 +181,7 @@ printf("%c\n",*(str+len-1)); // verifies it's an e.
 printf("%c\n",*(str+len-2)); // verifies it's an m.
 
 ```
+The full example:
 
 ```c
 #include    <stdio.h>

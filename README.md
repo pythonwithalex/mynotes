@@ -8,7 +8,7 @@ You are an intellectual hoarder and this is not at all your cry for help. collec
 #### Lists
 
 The links below lead to a topical page that is broken up into sub-topics.  These pages are the best links you could find on the subject.
-
++ [C for final](https://github.com/foundling/mynotes/blob/master/C/c_for_final.md)
 + [Python](http://mynotes.readthedocs.org/en/latest/python/python_list/)
 + [C](http://mynotes.readthedocs.org/en/latest/C/c_list)
 + [Git](http://mynotes.readthedocs.org/en/latest/git/git_notes/)

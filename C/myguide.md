@@ -119,4 +119,39 @@ printf("%p\n",&a);
 
 ```
 
+#### Multiple Files, Extern
 
+My Main C File:
+
+```c
+
+#include    <stdio.h>
+#include    "funcs.h"
+
+extern int count;
+
+int
+main()
+{
+    addOne();
+    printf("%d\n",count);
+    return 0;
+}
+```
+The file with the addOne function
+
+```c
+#include    <stdio.h>
+
+int count = 0;
+
+void addOne()
+{
+    count+=1;
+}
+```
+
+The file that declares the addOne() function
+```c
+void addOne();
+```

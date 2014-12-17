@@ -3,6 +3,19 @@ My Guide to C
 
 ## Control Structures
 
+#### case statement
+    ```c
+    int x = 4;
+    switch (x)
+    {
+        case 1: printf("just one\n");
+                            break;
+        case 4: printf("four!\n");
+                            break;
+        default: printf("no match\n");
+    }
+```
+
 #### the if/else if/else construct
 
 ```c

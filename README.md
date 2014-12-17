@@ -3,7 +3,7 @@ my notes
 
 ## Introduction
 
-You are an intellectual hoarder and this is not at all your cry for help. collections should be global, here are the lists.  plus maybe implicit tutorials i've written to myself.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience. 
+You are an intellectual hoarder and this is not at all your cry for help. collections should be global, here are the lists.  plus maybe implicit tutorials you've written to yourself.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience. 
 
 #### Lists
 

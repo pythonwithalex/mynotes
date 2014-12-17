@@ -1,9 +1,9 @@
 My Guide to C
 =============
 
-## Control Flow
+## Control Structures
 
-#### if else
+#### the if/else if/else construct
 
 ```c
 if (expression that evaluates to true or false)

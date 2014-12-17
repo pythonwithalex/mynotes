@@ -11,22 +11,22 @@ fp = fopen("file.txt","w");
 fclose(fp);
 ```
 
-#### open a file for writing, but append to file if it exists
+#### open a file for writing in append mode
 ```c
 FILE * fp;
 fp = fopen("file.txt","a");
 fclose(fp);
 ```
 
-#### Write to a file
+#### Write to a file (overwrites the file)
 ```c
 FILE * fp;
-fp = fopen("testfile.txt","w+");
+fp = fopen("testfile.txt","w");
 fprintf(fp,"%d %d %d %d",1,2,3,4);
 fclose(fp);
 ```
-or
 
+#### Write to a file (appends to the end of the file)
 ```c
 FILE * fp;
 fp = fopen("testfile","a");

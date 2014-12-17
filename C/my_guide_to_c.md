@@ -1,15 +1,10 @@
-My Guide to C
-=============
-
-This is my guide to the fundamentals of C.  A work in progress.
-
-# Function List w/ signatures
+## Function List w/ signatures
 
 ```c
 sscanf(str,"format string"); // const char *restrict s, const char *restrict format, ... );
 fgets(str,max,stream);      //char *fgets(char *restrict s, int n, FILE *restrict stream);
 ```
-# strings and arrays
+## strings and arrays
 
 #### to get the address of the first element in an array
 
@@ -19,7 +14,7 @@ printf("%c\n",&letters);
 
 ```
 
-# Control Structures
+## Control Structures
 
 #### case statement
 ```c
@@ -62,7 +57,7 @@ else
     
 ```
 
-# Safe Methods of Taking User Input
+## Safe Methods of Taking User Input
 
 
 ####  fgets, fscanf: a C pre-processor text-replacement method
@@ -134,7 +129,7 @@ while ( (c=getc(stdin)) != EOF)
 fclose(fp);
 ```
 
-# Passing Command-Line Arguments to Your C Program
+## Passing Command-Line Arguments to Your C Program
 
 #### argc, argv
 
@@ -160,7 +155,7 @@ for (i=1; i<argc; i++)
 }
 ```
 
-# Pointers
+## Pointers
 
 ```c
 int a = 120; // a holds the numeric value 120
@@ -217,7 +212,7 @@ printf("%p\n",&a);
 
 ```
 
-# Compiling a Multiple-file Program
+## Compiling a Multiple-file Program
 
 In the following example:
 
@@ -348,7 +343,7 @@ main()
 }
 ```
 
-# Malloc and Strings
+## Malloc and Strings
 
 ```c
 int main()

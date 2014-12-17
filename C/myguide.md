@@ -232,8 +232,8 @@ int main()
 int main()
 {
     char * str = "Happy Birthday!";
-    char * p = malloc(sizeof(char)*strlen(str)+1);
-    strcpy(p,str);
+    char * p = malloc(sizeof(char)*strlen(str)+1); // number of chars in str + 1 for null
+    strcpy(p,str);  // copy str into p's address
     printf("%s\n",p);
 
     return 0;

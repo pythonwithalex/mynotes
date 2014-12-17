@@ -108,9 +108,9 @@ fclose(fp);
 
 #### argc, argv
 
-```c argc``` is short for 'argument count', the number of arguments passed to the C program on execution.  If none are passed, argc is still 1 because the program is always passed its name.
+**argc** is short for 'argument count', the number of arguments passed to the C program on execution.  If none are passed, argc is still 1 because the program is always passed its name.
 
-```c argv``` is an array that holds these arguments.  They are char pointers ( char * ).  Think of argc as an array of strings that the Shell passes to your C program on the command line.
+**argv** is short for 'argument vector'.  It's an array that holds the arguments passed to the c program at execution.  They are char pointers ( char * ).  Think of argc as an array of strings that the Shell passes to your C program on the command line.
 
 ```c
   argc 1 -> argv[0]

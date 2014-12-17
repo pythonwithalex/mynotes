@@ -3,7 +3,7 @@ My Guide to C
 
 ## strings and arrays
 
-###### to get the address of the first element in an array
+#### to get the address of the first element in an array
 
 ```c
 char letters[20];
@@ -315,3 +315,17 @@ int main()
 }
 ```
 
+#### Pointer Arithmetic
+
+```c
+int nums[4] = {1,2,3,4};    // create an array of ints
+int * nums_ptr;             // create a int pointer
+nums_ptr = nums;            // point nums_ptr to array                                
+// array w/out brackets is address of 1st elmt
+printf("%d\n",*nums_ptr);   // print value at that address with *
+printf("%d\n",*nums_ptr+1); // print value-at offset by one int's size
+printf("%d\n",*nums_ptr+2);
+printf("%d\n",*nums_ptr+3);
+return 0;
+
+```

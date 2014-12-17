@@ -10,10 +10,11 @@ test $? -eq 0 || echo 'abc'
 
 ## case statement
 
+```sh
 #!/bin/sh
 
 max=1
-```sh
+
 #!/bin/sh
 
 case $max in

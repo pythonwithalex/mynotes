@@ -1,7 +1,6 @@
 My Guide to C
 =============
 
-# USEFUL FUNCTIONS
 
 ## Working With Files
 

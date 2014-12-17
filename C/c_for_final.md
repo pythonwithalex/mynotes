@@ -10,6 +10,25 @@ strncmp(str1,str2,num of chars to compare);
 
 ## strings and arrays
 
+#### initializing an array
+
+```c
+
+int array[10] = { 0 };
+// all elements initialized to 0
+int array[10] = {1,2};
+// first two are as they appear, rest initialized to 0
+```
+
+#### array length
+
+```c
+int array[5];
+size_t len = sizeof(array)/sizeof(char);
+printf("%lu\n",len);
+
+```
+
 #### address of the first element in an array
 
 ```c

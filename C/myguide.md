@@ -5,6 +5,19 @@ My Guide to C
 
 getc(FILE * STREAM)
 
+#### open a file
+```c
+FILE * fp;
+fp = fopen("file.txt","w");
+fclose(fp);
+```
+
+#### Write to a file
+```c
+FILE * fileptr;
+fileptr = fopen("testfile.txt","w+");
+fprintf(fileptr,"%d %d %d %d",1,2,3,4);
+```
 
 ## PROGRAM ARGUMENTS
 #### argc, argv

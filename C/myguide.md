@@ -3,7 +3,10 @@ My Guide to C
 
 ## USEFUL FUNCTIONS
 
-getc(FILE * STREAM)
+```c
+int c;
+getc(FILE * STREAM);
+```
 
 #### open a file
 ```c

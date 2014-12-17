@@ -12,8 +12,8 @@ switch (x)
                 break;
     case 4:     printf("four!\n");
                 break;
-    default: printf("no match\n");
-}
+    default:    printf("no match\n");
+}   
 ```
 
 #### the if/else if/else construct

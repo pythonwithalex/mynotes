@@ -78,7 +78,7 @@ after the preprocessor replaces MAXLEN and MAXLEN_S, this becomes
 sscanf(src, "%" "20" "s", dest);
 ```
 
-# Working With Files
+##  Working With Files
 
 #### open a file for writing
 ```c

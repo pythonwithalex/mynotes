@@ -57,9 +57,23 @@ else
     
 ```
 
-# Getting Input
+# Safe Methods of Taking User Input
 
-#### 
+####  a C pre-processor text-replacement method
+
+```c
+#define MAXLEN 20
+#define MAXLEN_S "20"
+
+char buffer[MAXLEN+1];
+sscanf(src, "%" MAXLEN_S "s", dest);
+```
+
+after the preprocessor replaces MAXLEN and MAXLEN_S, this becomes
+
+```c
+sscanf(src, "%" "20" "s", dest);
+```
 
 # Working With Files
 

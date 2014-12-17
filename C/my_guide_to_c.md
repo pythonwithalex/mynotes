@@ -6,7 +6,8 @@ This is my guide to the fundamentals of C.  A work in progress.
 # Function List w/ signatures
 
 ```c
-sscanf(const char *restrict s, const char *restrict format, ... );
+sscanf(str,"format string"); // const char *restrict s, const char *restrict format, ... );
+sscanf(str,max,stream); //char *fgets(char *restrict s, int n, FILE *restrict stream);
 ```
 # strings and arrays
 
@@ -63,12 +64,15 @@ else
 
 # Safe Methods of Taking User Input
 
-####  a C pre-processor text-replacement method
+
+####  fgets, fscanf: a C pre-processor text-replacement method
+
 
 ```c
 #define MAXLEN 20
 #define MAXLEN_S "20"
 
+fgets(stdin,
 char buffer[MAXLEN+1];
 sscanf(src, "%" MAXLEN_S "s", dest);
 ```

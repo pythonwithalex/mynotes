@@ -7,7 +7,7 @@ My Guide to C
 
 to get straight on pointers, it's important to get straight on variables.   Variables are the names we give to places in memory so we can refer to the values that the data there represents.  Variables point to a physical location in memory, but they have that human-friendly handle we know by name. the name!  They are of primary purpose because of the data they hold for us.
 
-C has been around for a while, though, and reflects a much more restrictive mindset on computing.  The way you get data into and out of functions makes pointers necessary, as they provide direct access to the specified location in memory and the value in it.
+C has been around for a while, though, and reflects a much more resource-restricted computing history.  The way you get data from one function to another is by copying it, which is memory and space costly affair. makes pointers necessary.  They provide direct access to the specified location in memory and the value in it.  In some sense they are global.
 
 You can return a struct from a C function but you can't return an array.  
 
@@ -15,7 +15,8 @@ You don't have to remember 0x7fff7a9002a0. You probably can remember 'p'.
 
 Except when you are using a programming language that originated in XXXX when the amount of memory was supposedly scarce.
 
-Pointers are variables whose data is a number that identifies a physical place in your computer.  this number represents the way purpose, and it's the memory address of something connected to the pointer's name, it's handle. store these registry locations.  They provide a kind of difficult but ultimately worth-it way of saving your system the work of having to copying large amounts of data into functions.  In general, pointers are kind of a consequence of scoping rules.  they have a kind of heavy baggage with some folks, but 
+Is what it holds.  
+An int holds a number.  A pointer holds a number, too.  A pointer holds Pointers are variables whose data is a number that identifies a physical place in your computer. They complement C's scoping rules, allowing you to  .  they have a kind of heavy baggage with some folks, but 
 
 ```c
 int a = 120;

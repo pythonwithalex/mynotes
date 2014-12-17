@@ -5,6 +5,7 @@ My sh (Bourne Shell) Guide
 
 ```sh
 #!/bin/sh
+# usage: countdown <num>
 
 max=$1
 

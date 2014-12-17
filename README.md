@@ -3,15 +3,11 @@ my notes
 
 ## Introduction
 
-You are an intellectual hoarder and this is your cry for help. Your have an impatience for collections that can't be accessed anywhere, so you're pulling from all of the disparate lists on your various computers and cloud drives and publishing the best of your internet searches over the last few years on GitHub.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience.  Make sure to refresh your page so that you don't still have the previously cached version.
+You are an intellectual hoarder and this is not at all your cry for help. collections should be global, here are the lists.  plus maybe implicit tutorials i've written to myself.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience. 
 
-#### Lists vs Notes
+#### Lists
 
 The links below lead to a topical page that is broken up into sub-topics.  These pages are the best links you could find on the subject.
-
-There are additional adjacent files that are unformatted notes on various things.  Those are not so suitable for public consumption at the moment, as they are often specifically written for projects you were working on at the time.
-
-#### Topics Include:
 
 + [Python](http://mynotes.readthedocs.org/en/latest/python/python_list/)
 + [C](http://mynotes.readthedocs.org/en/latest/C/c_list)

@@ -48,9 +48,10 @@ int c;
 fp = fopen("textfile.txt","w");
 while ( (c=getc(stdin)) != EOF)
     fprintf(fp,"%c",c);
+fclose(fp);
 ```
 
-## PROGRAM ARGUMENTS
+## Passing Command-Line Arguments to Your C Program
 
 #### argc, argv
 

@@ -166,3 +166,36 @@ The file that declares the addOne() function
 ```c
 void addOne();
 ```
+
+## Programming Examples
+
+#### reverse a string
+
+```c
+char * str = "reverse me";
+long unsigned len = strlen(str);
+printf("%p\n",str+len-1); // address of last char
+// len -1 because we already start at the first letter
+printf("%c\n",*(str+len-1)); // verify it's an e.
+
+```
+
+```c
+#include    <stdio.h>
+#include    <string.h>
+
+int main()
+{
+    char * str = "reverse me";
+    long unsigned len = strlen(str);
+
+    // len -1 because we already start at the first letter
+
+    char * end;
+    char * start;
+
+    for (end=(str+len-1),start=str; end >= start; end--)
+       printf("%c",*end);
+    return 0;
+}
+```

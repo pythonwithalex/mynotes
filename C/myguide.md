@@ -171,12 +171,14 @@ void addOne();
 
 #### reverse a string
 
+Preliminary proof of concepts
+
 ```c
 char * str = "reverse me";
-long unsigned len = strlen(str);
-printf("%p\n",str+len-1); // address of last char
-// len -1 because we already start at the first letter
-printf("%c\n",*(str+len-1)); // verify it's an e.
+long unsigned len = strlen(str); // length of string, not including terminating '\n'
+printf("%p\n",str+len-1); // address of last char; len-1 because it's the offset from the first char
+printf("%c\n",*(str+len-1)); // verifies it's an e.
+printf("%c\n",*(str+len-2)); // verifies it's an m.
 
 ```
 

@@ -20,11 +20,16 @@ fprintf(fileptr,"%d %d %d %d",1,2,3,4);
 ```
 
 ## PROGRAM ARGUMENTS
+
 #### argc, argv
 
-**argc** is the number of arguments passed to the C program on execution.  If none are passed, argc is 1 because it is always passed its own name.
+**argc** is short for 'argument count', the number of arguments passed to the C program on execution.  If none are passed, argc is still 1 because the program is always passed its name.
 
 **argv** is an array that holds these arguments.  They are char pointers ( aka, char *).  You can think of them as an array of arrays(null terminated arrays, aka strings).
+
+argc 1 -> argv[0]
+argc 2 -> argv[1]
+...
 
 when checking arguments for flags, do
 

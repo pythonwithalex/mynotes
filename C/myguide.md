@@ -7,7 +7,9 @@ My Guide to C
 
 to get straight on pointers, it's important to get straight on variables.   Variables are the names we give to places in memory so we can refer to the values that the data there represents.  Variables point to a physical location in memory, but they have that human-friendly handle we know by name. the name!  They are of primary purpose because of the data they hold for us.
 
-C has been around for a while, though, and reflects a much more resource-restricted computing history.  The way you get data from one function to another is by copying it, which is memory and space costly affair. makes pointers necessary.  They provide direct access to the specified location in memory and the value in it.  In some sense they are global.
+C has been around for a while, though, and reflects a much more resource-restricted computing history.  The way you get data from one function to another is by copying it, which is a memory-and-space costly affair. Pointers provide direct access to the specified location in memory and the value in it.  In some sense they are global.
+
+A pointer is a variable holds a thing that points to hardware.
 
 You can return a struct from a C function but you can't return an array.  
 

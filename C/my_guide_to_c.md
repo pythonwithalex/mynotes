@@ -142,6 +142,21 @@ printf("%p\n",&a);
 
 ```
 
+#### Pointer Arithmetic
+
+```c
+int nums[4] = {1,2,3,4};    // create an array of ints
+int * nums_ptr;             // create a int pointer
+nums_ptr = nums;            // point nums_ptr to array                                
+// array w/out brackets is address of 1st elmt
+printf("%d\n",*nums_ptr);   // print value at that address with *
+printf("%d\n",*nums_ptr+1); // print value-at offset by one int's size
+printf("%d\n",*nums_ptr+2);
+printf("%d\n",*nums_ptr+3);
+return 0;
+
+```
+
 #### variables
 to get straight on pointers, it's important to get straight on variables.   Variables are the names for places in memory.  We want to refer to those values whenever we want, so we write some code that works with various places in memory and the programming lanaguage software to name and keep track of those values. A variable points to a physical location in memory, but they have that human-friendly handle we know by name. the name!  They are of primary purpose because of the data they hold for us.
 
@@ -315,17 +330,4 @@ int main()
 }
 ```
 
-#### Pointer Arithmetic
 
-```c
-int nums[4] = {1,2,3,4};    // create an array of ints
-int * nums_ptr;             // create a int pointer
-nums_ptr = nums;            // point nums_ptr to array                                
-// array w/out brackets is address of 1st elmt
-printf("%d\n",*nums_ptr);   // print value at that address with *
-printf("%d\n",*nums_ptr+1); // print value-at offset by one int's size
-printf("%d\n",*nums_ptr+2);
-printf("%d\n",*nums_ptr+3);
-return 0;
-
-```

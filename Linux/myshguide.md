@@ -6,4 +6,8 @@ My sh (Bourne Shell) Guide
 $ echo $$
 # 8606
 ```
-#### get 
+#### get return value of last command
+```sh
+$ echo $?
+# 0
+```

@@ -16,11 +16,19 @@ test $? -eq 0 || echo 'abc'
 max=1
 
 #!/bin/sh
+# usage case.sh
 
 case $max in
     '1')  echo "its one";;
      *)   echo "its not one";;
 esac
+```
+
+now, run this:
+
+```sh
+$ sh case.sh
+its one
 ```
 ## while loop
 

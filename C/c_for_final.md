@@ -3,7 +3,11 @@
 ```c
 sscanf(str,"format string"); // const char *restrict s, const char *restrict format, ... );
 fgets(str,maxchars,stdin/stream);      //char *fgets(char *restrict s, int n, FILE *restrict stream);
+strcpy(dest_string,src_string);
+strcmp(str1,str2); // returns value that's <, == or  > 0 depending on whether str1 is <, ==, > str2
+strncmp(str1,str2,num of chars to compare);
 ```
+
 ## strings and arrays
 
 #### address of the first element in an array

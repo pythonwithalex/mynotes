@@ -4,8 +4,8 @@ My sh (Bourne Shell) Guide
 
 ```sh
 #!/bin/sh
-
-test 1 -eq 0 || echo 'abc'
+test 1 -eq 0
+test $? -eq 0 || echo 'abc'
 ```
 
 ## while loop

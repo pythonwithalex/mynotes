@@ -55,7 +55,7 @@ argc 2 -> argv[1]
 
 ...
 
-when checking arguments for flags, do
+check for an option
 
 ```c
 int i;

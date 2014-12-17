@@ -6,6 +6,10 @@ fgets(str,maxchars,stdin/stream);      //char *fgets(char *restrict s, int n, FI
 strcpy(dest_string,src_string);
 strcmp(str1,str2); // returns value that's <, == or  > 0 depending on whether str1 is <, ==, > str2
 strncmp(str1,str2,num of chars to compare);
+getc(FILE *stream);
+getchar(); // macro for getc
+malloc(size_t size);
+
 ```
 
 ## strings and arrays
@@ -191,6 +195,17 @@ printf("%p\n",&a);
 
 #### Pointer Arithmetic
 
+example 1
+```c
+char *s = "redrum";
+char * ptr = &s[0];
+printf("%c\n",*(ptr++)); 
+//prints 'r' and increments ptr to be at s[1], or 'e'
+printf("%c\n",*(++ptr));
+//increments ptr to s[2] and prints 'd'
+```
+
+example 2
 ```c
 int nums[4] = {1,2,3,4};    // create an array of ints
 int * nums_ptr;             // create a int pointer
@@ -198,7 +213,6 @@ nums_ptr = nums;            // point nums_ptr to array
 // array w/out brackets is address of 1st elmt
 printf("%d\n",*nums_ptr);   // print value at that address with *
 printf("%d\n",*nums_ptr+4); // print value-at offset by four int's size
-
 
 ```
 

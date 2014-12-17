@@ -1,6 +1,12 @@
 My Guide to C
 =============
 
+## USEFUL FUNCTIONS
+
+getc(FILE * STREAM)
+
+
+## PROGRAM ARGUMENTS
 #### argc, argv
 
 **argc** is the number of arguments passed to the C program on execution.  If none are passed, argc is 1 because it is always passed its own name.

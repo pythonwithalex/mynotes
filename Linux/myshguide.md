@@ -1,5 +1,12 @@
 My sh (Bourne Shell) Guide
 ==========================
+## Logical Operators
+
+```sh
+#!/bin/sh
+
+test 1 -eq 0 || echo 'abc'
+```
 
 ## while loop
 

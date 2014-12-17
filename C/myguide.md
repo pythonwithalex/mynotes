@@ -128,7 +128,9 @@ In the following example:
 gcc -Wall main.c funcs.c
 ```
 + the main.c file calls a function from another file, funcs.c. 
-+ The main.c file doesn't need to include the funcs.c file because that job is done by the compiler when you invoke it correctly as specified above. main.c only needs the basic function protopype of the function in funcs.c, which I've put in the header file, funcs.h 
++ The main.c file doesn't reference funcs.c in its source code because that job is done by the compiler when you call cc like I did above. 
++ main.c only needs the basic function protopype of the function in funcs.c, which I've put in the header file, funcs.h
++ we didn't need the header file, we could have put the definition of funcs.h at the top of main.c, but it makes for a cleaner organization when you write non-trivial programs.
 
 My Main C File:
 

@@ -7,7 +7,7 @@ This is my guide to the fundamentals of C.  A work in progress.
 
 ```c
 sscanf(str,"format string"); // const char *restrict s, const char *restrict format, ... );
-sscanf(str,max,stream); //char *fgets(char *restrict s, int n, FILE *restrict stream);
+fgets(str,max,stream);      //char *fgets(char *restrict s, int n, FILE *restrict stream);
 ```
 # strings and arrays
 

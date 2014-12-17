@@ -225,3 +225,17 @@ int main()
     return 0;
 }
 ```
+
+## Malloc and Strings
+
+```c
+int main()
+{
+    char * str = "Happy Birthday!";
+    char * p = malloc(sizeof(char)*strlen(str)+1);
+    strcpy(p,str);
+    printf("%s\n",p);
+
+    return 0;
+}
+```

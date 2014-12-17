@@ -57,7 +57,9 @@ else
     
 ```
 
+# Getting Input
 
+#### 
 
 # Working With Files
 
@@ -277,6 +279,8 @@ int main()
 }
 ```
 #### Linked List of Students
+
+** note ** this is missing lookup, replace, delete functions
 
 ```c
 #include    <stdio.h>

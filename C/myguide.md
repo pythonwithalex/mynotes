@@ -1,8 +1,6 @@
 My Guide to C
 =============
 
-
-
 ## USEFUL FUNCTIONS
 
 #### open a file for writing
@@ -21,10 +19,10 @@ fclose(fp);
 
 #### Write to a file
 ```c
-FILE * fileptr;
-fileptr = fopen("testfile.txt","w+");
-fprintf(fileptr,"%d %d %d %d",1,2,3,4);
-
+FILE * fp;
+fp = fopen("testfile.txt","w+");
+fprintf(fp,"%d %d %d %d",1,2,3,4);
+fclose(fp);
 ```
 or
 
@@ -37,7 +35,9 @@ int main()
     FILE * fp;
     fp = fopen("testfile","a");
     fprintf(fp,"hey there");
+    fclose(fp);
     return 0;
+    
 }
 
 ```

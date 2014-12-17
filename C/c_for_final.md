@@ -52,7 +52,7 @@ switch (x)
 //fgets() + fscanf()
 char line[256];
 int i;
-if (fgets(line, sizeof(line), stdin)) {
+if (fgets(line, sizeof(line), stdin)) { // fgets is NULL if no input
     if (1 == sscanf(line, "%d", &i)) {
         /* i can be safely used */
     }

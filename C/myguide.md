@@ -24,10 +24,11 @@ FILE * fileptr;
 fileptr = fopen("testfile.txt","w+");
 fprintf(fileptr,"%d %d %d %d",1,2,3,4);
 
-#include <stdio.h>
-#include <stdlib.h>
 ```
 or
+
+#include <stdio.h>
+#include <stdlib.h>
 
 ```c
 int main()

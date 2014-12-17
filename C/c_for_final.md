@@ -2,7 +2,7 @@
 
 ```c
 sscanf(str,"format string"); // const char *restrict s, const char *restrict format, ... );
-fgets(str,max,stream);      //char *fgets(char *restrict s, int n, FILE *restrict stream);
+fgets(str,maxchars,stdin/stream);      //char *fgets(char *restrict s, int n, FILE *restrict stream);
 ```
 ## strings and arrays
 
@@ -49,7 +49,14 @@ switch (x)
 ## Safe Methods of Taking User Input
 
 ```c
-fgets() + fscanf()
+//fgets() + fscanf()
+char line[256];
+int i;
+if (fgets(line, sizeof(line), stdin)) {
+    if (1 == sscanf(line, "%d", &i)) {
+        /* i can be safely used */
+    }
+}
 ```
 
 ####  fgets, fscanf: a C pre-processor text-replacement method

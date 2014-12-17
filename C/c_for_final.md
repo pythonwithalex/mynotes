@@ -299,5 +299,75 @@ main()
 }
 ```
 
+#### Linked List of Characters
+
+```c
+
+#include    <stdio.h>
+#include    <stdlib.h>
+
+struct charlink
+{
+    char c;
+    struct charlink * next;
+};
+
+
+int main()
+{
+    // create and initialize the head struct, which is null by convention 
+    struct charlink head;
+    head.next = NULL;
+
+    // declare char to hold c from standard in
+    int c;
+
+    // create a pointer that initially points to head
+    struct charlink * prev = &head;
+
+    // while data, generate a linked list 
+    while ( (c=getchar()) != EOF)
+    {
+        // create pointer for new link we're about to make in the heap
+        struct charlink * newcharlink;
+
+        // malloc space for new link and check it is successful
+        newcharlink = malloc(sizeof(struct charlink));
+        if (newcharlink == NULL)
+        {
+            printf("couldn't make a new link.\n");
+            exit(1);
+        }
+
+        // populate new link with the current stdin data
+        newcharlink->c = c;
+
+        //point previous link to this new link
+        prev->next = newcharlink;
+
+        // point next ptr of new link to null, it's at the end of the list
+        newcharlink->next = NULL;
+
+        // initially forgot this step. prev now becomes charlink
+        // so that next run of loop treats this charlink as last one
+        prev = newcharlink;
+    }
+
+
+    // create a pointer to traverse the list with
+    struct charlink * trav_p;
+
+    // set the pointer to the address of the head of the list
+    // while trav_p points to something non-Null
+    // print that struct's 'c' member
+    // set trav_p to point to the address of it's next element
+    printf("\n");
+    for (trav_p = &head; trav_p->next != NULL; trav_p = trav_p->next)
+        printf("%c",trav_p->c);
+    printf("\n");
+    return 0;
+}
+
+```
 
 

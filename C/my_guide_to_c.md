@@ -3,7 +3,7 @@ My Guide to C
 
 ## strings and arrays
 
-##### get the address of the first element in an array
+to get the address of the first element in an array
 
 ```c
 char letters[20];

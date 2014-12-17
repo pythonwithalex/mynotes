@@ -1,5 +1,18 @@
 My sh (Bourne Shell) Guide
 ==========================
+
+## Printf 
+
+```sh
+#!/bin/sh
+
+for f in "$*"
+do
+    printf "%s" $f
+done
+```
+
+
 ## Logical Operators
 
 ```sh

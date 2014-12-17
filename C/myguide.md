@@ -1,7 +1,9 @@
 My Guide to C
 =============
 
-## USEFUL FUNCTIONS
+# USEFUL FUNCTIONS
+
+## Working With Files
 
 #### open a file for writing
 ```c

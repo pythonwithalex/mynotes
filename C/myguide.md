@@ -119,7 +119,13 @@ printf("%p\n",&a);
 
 ```
 
-#### Multiple Files, Extern
+## Multiple Files
+
+In the following example:
+
++ we compile it like this: gcc -Wall main.c funcs.c
++ the main.c file calls a function from another file, funcs.c. 
++ The main.c file doesn't need to include the funcs.c file because that job is done by the compiler when you invoke it correctly as specified above. main.c only needs the basic function protopype of the function in funcs.c, which I've put in the header file, funcs.h 
 
 My Main C File:
 

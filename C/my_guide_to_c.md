@@ -6,7 +6,7 @@ This is my guide to the fundamentals of C.  A work in progress.
 # Function List w/ signatures
 
 ```c
-sscanf() // sscanf(const char *restrict s, const char *restrict format, ... )
+sscanf(const char *restrict s, const char *restrict format, ... );
 ```
 # strings and arrays
 

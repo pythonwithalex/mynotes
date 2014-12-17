@@ -27,10 +27,10 @@ fprintf(fileptr,"%d %d %d %d",1,2,3,4);
 ```
 or
 
+```
 #include <stdio.h>
 #include <stdlib.h>
 
-```c
 int main()
 {
     FILE * fp;

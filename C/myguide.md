@@ -26,19 +26,12 @@ fclose(fp);
 ```
 or
 
-```
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-    FILE * fp;
-    fp = fopen("testfile","a");
-    fprintf(fp,"hey there");
-    fclose(fp);
-    return 0;
-    
-}
+```c
+FILE * fp;
+fp = fopen("testfile","a");
+fprintf(fp,"hey there");
+fclose(fp);
+return 0;
 
 ```
 ## Write stdin to a stdout

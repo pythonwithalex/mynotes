@@ -9,13 +9,18 @@ to get straight on pointers, it's important to get straight on variables.   Vari
 
 Obviously that didn't solve all the problems, though; software is a human problem.  you have to remember  your variable names, but not the layer of information beneath them -- the register location.  
 
-Pointers store these registry locations.  They provide a kind of difficult but ultimately worth it way of saving your system the work of having to copying large amounts of data.
+Pointers store these registry locations.  They provide a kind of difficult but ultimately worth-it way of saving your system the work of having to copying large amounts of data.
+
 ```c
 int a = 120;
 int * p = &a;
-printf("%s\n",p);
+printf("%p\n",p);
+printf("%p\n",&a);
 // 0x7fff7a9002a0
+// 0x7fff7a9002a0
+
 ```
+
 
 
 

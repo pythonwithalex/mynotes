@@ -1,12 +1,9 @@
 My sh (Bourne Shell) Guide
 ==========================
 
-####
-
+#### get PID of current shell
 ```sh
-# get PID of current shell
 $ echo $$
 # 8606
-
-
 ```
+#### get 

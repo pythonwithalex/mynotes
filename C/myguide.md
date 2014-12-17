@@ -196,8 +196,8 @@ int main()
 
     char * end;
     char * start;
-
-    for ( end = (str+len-1), start = str; end >= start; end--) // while end addr is greater than the start addr
+    // while end addr is greater than the start addr, print char at that addr and decrement end
+    for ( end = (str+len-1), start = str; end >= start; end--) 
        putchar(c);
     return 0;
 }

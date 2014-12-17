@@ -4,4 +4,4 @@
 
 + [CS from the bottum up](http://www.bottomupcs.com/csbu.pdf)
 
-+[Geeks for Geeks](http://www.geeksforgeeks.org/)
++ [Geeks for Geeks](http://www.geeksforgeeks.org/)

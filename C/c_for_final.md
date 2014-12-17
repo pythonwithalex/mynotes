@@ -29,6 +29,19 @@ printf("%lu\n",len);
 
 ```
 
+#### initializing a string
+
+```c
+char * str = "This is a constant string that isn't meant to be modified";
+
+```
+
+#### getting length of a string
+
+```c
+char arr2[] = "This is a constant string, you can't modify";
+printf("%lu\n",strlen(arr2));
+```
 #### address of the first element in an array
 
 ```c

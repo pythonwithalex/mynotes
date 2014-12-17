@@ -16,7 +16,7 @@ running this:
 ```sh
 $ sh forloop.sh a b c
 abc$
-
+```
 ## Logical Operators
 
 ```sh

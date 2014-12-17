@@ -11,12 +11,13 @@ do
     printf "%s" $f
 done
 ```
-running this:
+running this, you get:
 
 ```sh
 $ sh forloop.sh a b c
 abc$
 ```
+
 ## Logical Operators
 
 ```sh

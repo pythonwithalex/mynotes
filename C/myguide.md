@@ -49,10 +49,10 @@ int main()
 
 **argv** is an array that holds these arguments.  They are char pointers ( char * ).  Think of argc as an array of strings that the Shell passes to your C program on the command line.
 
-argc 1 -> argv[0]
-
-argc 2 -> argv[1]
-
+```c
+  argc 1 -> argv[0]
+  argc 2 -> argv[1]
+```
 ...
 
 check for an option

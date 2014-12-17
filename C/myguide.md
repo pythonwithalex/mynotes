@@ -1,6 +1,29 @@
 My Guide to C
 =============
 
+## Control Flow
+
+#### if else
+
+```c
+if (expression that evaluates to true or false)
+{
+    statement1;
+    statement2;
+}
+// runs if the first one isn't true and the condition in the if is met
+else if(expression that evalues to true or false)
+{
+    statement1;
+    statement2;
+}
+// runs if neither of the above run
+else
+    statement1;
+    statement2;
+    
+```
+
 
 ## Working With Files
 

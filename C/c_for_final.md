@@ -11,6 +11,50 @@ getchar(); // macro for getc
 malloc(size_t size);
 
 ```
+## Pointers
+
+```c
+int a = 120; // a holds the numeric value 120
+int * p = &a; // p holds the address of a, not its value
+printf("%p\n",p);
+printf("%p\n",&a);
+// 0x7fff7a9002a0
+// 0x7fff7a9002a0
+
+```
+
+#### Pointer Arithmetic
+
+example 1
+```c
+char *s = "redrum";
+char * ptr = &s[0];
+printf("%c\n",*(ptr++)); 
+//prints 'r' and increments ptr to be at s[1], or 'e'
+printf("%c\n",*(++ptr));
+//increments ptr to s[2] and prints 'd'
+```
+
+example 2
+```c
+int nums[4] = {1,2,3,4};    // create an array of ints
+int * nums_ptr;             // create a int pointer
+nums_ptr = nums;            // point nums_ptr to array                                
+// array w/out brackets is address of 1st elmt
+printf("%d\n",*nums_ptr);   // print value at that address with *
+printf("%d\n",*nums_ptr+4); // print value-at offset by four int's size
+
+```
+
+```c
+int a = 120;
+int * p = &a;
+printf("%p\n",p);
+printf("%p\n",&a);
+// 0x7fff7a9002a0
+// 0x7fff7a9002a0
+
+```
 
 ## strings and arrays
 
@@ -76,23 +120,6 @@ int main()
     return 0;
 }
 ```
-
-
-## Control Structures
-
-#### case statement
-```c
-int x = 4;
-switch (x)
-{
-    case 1:     printf("just one\n");
-                break;
-    case 4:     printf("four!\n");
-                break;
-    default:    printf("no match\n");
-}   
-```
-
 
 ## Safe Methods of Taking User Input
 
@@ -181,98 +208,7 @@ for (i=1; i<argc; i++)
 }
 ```
 
-## Pointers
 
-```c
-int a = 120; // a holds the numeric value 120
-int * p = &a; // p holds the address of a, not its value
-printf("%p\n",p);
-printf("%p\n",&a);
-// 0x7fff7a9002a0
-// 0x7fff7a9002a0
-
-```
-
-#### Pointer Arithmetic
-
-example 1
-```c
-char *s = "redrum";
-char * ptr = &s[0];
-printf("%c\n",*(ptr++)); 
-//prints 'r' and increments ptr to be at s[1], or 'e'
-printf("%c\n",*(++ptr));
-//increments ptr to s[2] and prints 'd'
-```
-
-example 2
-```c
-int nums[4] = {1,2,3,4};    // create an array of ints
-int * nums_ptr;             // create a int pointer
-nums_ptr = nums;            // point nums_ptr to array                                
-// array w/out brackets is address of 1st elmt
-printf("%d\n",*nums_ptr);   // print value at that address with *
-printf("%d\n",*nums_ptr+4); // print value-at offset by four int's size
-
-```
-
-```c
-int a = 120;
-int * p = &a;
-printf("%p\n",p);
-printf("%p\n",&a);
-// 0x7fff7a9002a0
-// 0x7fff7a9002a0
-
-```
-
-## Compiling a Multiple-file Program
-
-In the following example:
-
-+ we compile it like this: 
-```c
-gcc -Wall main.c funcs.c
-```
-+ the main.c file calls a function from another file, funcs.c. 
-+ The main.c file doesn't reference funcs.c in its source code because that job is done by the compiler when you call cc like I did above. 
-+ main.c only needs the basic function protopype of the function in funcs.c, which I've put in the header file, funcs.h
-+ we didn't need the header file, we could have put the definition of funcs.h at the top of main.c, but it makes for a cleaner organization when you write non-trivial programs.
-
-My Main C File:
-
-```c
-
-#include    <stdio.h>
-#include    "funcs.h"
-
-extern int count;
-
-int
-main()
-{
-    addOne();
-    printf("%d\n",count);
-    return 0;
-}
-```
-The file with the addOne function
-
-```c
-#include    <stdio.h>
-
-int count = 0;
-
-void addOne()
-{
-    count+=1;
-}
-```
-
-The file that declares the addOne() function
-```c
-void addOne();
-```
 
 ## Programming Examples
 
@@ -428,4 +364,68 @@ int main()
 
 ```
 
+
+
+## Control Structures
+
+#### case statement
+```c
+int x = 4;
+switch (x)
+{
+    case 1:     printf("just one\n");
+                break;
+    case 4:     printf("four!\n");
+                break;
+    default:    printf("no match\n");
+}   
+```
+
+## Compiling a Multiple-file Program
+
+In the following example:
+
++ we compile it like this: 
+```c
+gcc -Wall main.c funcs.c
+```
++ the main.c file calls a function from another file, funcs.c. 
++ The main.c file doesn't reference funcs.c in its source code because that job is done by the compiler when you call cc like I did above. 
++ main.c only needs the basic function protopype of the function in funcs.c, which I've put in the header file, funcs.h
++ we didn't need the header file, we could have put the definition of funcs.h at the top of main.c, but it makes for a cleaner organization when you write non-trivial programs.
+
+My Main C File:
+
+```c
+
+#include    <stdio.h>
+#include    "funcs.h"
+
+extern int count;
+
+int
+main()
+{
+    addOne();
+    printf("%d\n",count);
+    return 0;
+}
+```
+The file with the addOne function
+
+```c
+#include    <stdio.h>
+
+int count = 0;
+
+void addOne()
+{
+    count+=1;
+}
+```
+
+The file that declares the addOne() function
+```c
+void addOne();
+```
 

@@ -197,8 +197,8 @@ int main()
     char * end;
     char * start;
 
-    for (end=(str+len-1),start=str; end >= start; end--)
-       printf("%c",*end);
+    for ( end = (str+len-1), start = str; end >= start; end--) // while end addr is greater than the start addr
+       putchar(c);
     return 0;
 }
 ```

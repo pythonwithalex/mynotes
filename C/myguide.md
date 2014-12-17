@@ -53,20 +53,13 @@ main()
 
 ## Write stdin to a file
 ```c
-#include    <stdio.h>
-#include    <stdlib.h>
-#include    <string.h>
 
-int
-main()
-{
-    FILE * fp;
-    int c;
-    fp = fopen("textfile.txt","w");
-    while ( (c=getc(stdin)) != EOF)
-        fprintf(fp,"%c",c);
-    return 0;
-}
+FILE * fp;
+int c;
+fp = fopen("textfile.txt","w");
+while ( (c=getc(stdin)) != EOF)
+    fprintf(fp,"%c",c);
+return 0;
 ```c
 
 ## PROGRAM ARGUMENTS

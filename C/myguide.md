@@ -3,6 +3,16 @@ My Guide to C
 
 ## Pointers
 
+```c
+int a = 120;
+int * p = &a;
+printf("%p\n",p);
+printf("%p\n",&a);
+// 0x7fff7a9002a0
+// 0x7fff7a9002a0
+
+```
+
 #### variables
 to get straight on pointers, it's important to get straight on variables.   Variables are the names for places in memory.  We want to refer to those values whenever we want, so we write some code that works with various places in memory and the programming lanaguage software to name and keep track of those values. A variable points to a physical location in memory, but they have that human-friendly handle we know by name. the name!  They are of primary purpose because of the data they hold for us.
 

@@ -32,8 +32,6 @@ FILE * fp;
 fp = fopen("testfile","a");
 fprintf(fp,"hey there");
 fclose(fp);
-return 0;
-
 ```
 ## Write stdin to a stdout
 
@@ -41,19 +39,16 @@ return 0;
 int c;
 while ( (c=getc(stdin)) != EOF)
     putchar(c);
-return 0;
 ```
 
 ## Write stdin to a file
 ```c
-
 FILE * fp;
 int c;
 fp = fopen("textfile.txt","w");
 while ( (c=getc(stdin)) != EOF)
     fprintf(fp,"%c",c);
-return 0;
-```c
+```
 
 ## PROGRAM ARGUMENTS
 

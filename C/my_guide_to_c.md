@@ -1,7 +1,10 @@
 My Guide to C
 =============
 
-## strings and arrays
+This is my guide to the fundamentals of C.  A work in progress.
+
+
+# strings and arrays
 
 #### to get the address of the first element in an array
 
@@ -11,7 +14,7 @@ printf("%c\n",&letters);
 
 ```
 
-## Control Structures
+# Control Structures
 
 #### case statement
 ```c
@@ -55,7 +58,8 @@ else
 ```
 
 
-## Working With Files
+
+# Working With Files
 
 #### open a file for writing
 ```c
@@ -86,7 +90,8 @@ fp = fopen("testfile","a");
 fprintf(fp,"hey there");
 fclose(fp);
 ```
-## Write stdin to a stdout
+
+#### Write stdin to a stdout
 
 ```c
 int c;
@@ -94,7 +99,8 @@ while ( (c=getc(stdin)) != EOF)
     putchar(c);
 ```
 
-## Write stdin to a file
+#### Write stdin to a file
+
 ```c
 FILE * fp;
 int c;
@@ -104,7 +110,7 @@ while ( (c=getc(stdin)) != EOF)
 fclose(fp);
 ```
 
-## Passing Command-Line Arguments to Your C Program
+# Passing Command-Line Arguments to Your C Program
 
 #### argc, argv
 
@@ -130,7 +136,7 @@ for (i=1; i<argc; i++)
 }
 ```
 
-## Pointers
+# Pointers
 
 ```c
 int a = 120; // a holds the numeric value 120
@@ -187,7 +193,7 @@ printf("%p\n",&a);
 
 ```
 
-## Multiple Files
+# Compiling a Multiple-file Program
 
 In the following example:
 
@@ -316,7 +322,7 @@ main()
 }
 ```
 
-## Malloc and Strings
+# Malloc and Strings
 
 ```c
 int main()

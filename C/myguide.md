@@ -16,6 +16,13 @@ switch (x)
 }   
 ```
 
+running this gives:
+
+```sh
+$ ./case.c
+four!
+```
+
 #### the if/else if/else construct
 
 ```c

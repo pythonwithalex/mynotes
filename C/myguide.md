@@ -5,18 +5,17 @@ My Guide to C
 
 ## USEFUL FUNCTIONS
 
-```c
-int c;
-while ( (c = getc(FILE * STREAM) ) != EOF)
-{
-  putc(c);
-}
-```
-
-#### open a file
+#### open a file for writing
 ```c
 FILE * fp;
 fp = fopen("file.txt","w");
+fclose(fp);
+```
+
+#### open a file for writing, but append to file if it exists
+```c
+FILE * fp;
+fp = fopen("file.txt","a");
 fclose(fp);
 ```
 
@@ -42,6 +41,40 @@ int main()
 }
 
 ```
+## Write stdin to a stdout
+
+```c
+#include    <stdio.h>
+#include    <stdlib.h>
+#include    <string.h>
+
+int
+main()
+{
+    int c;
+    while ( (c=getc(stdin)) != EOF)
+        putchar(c);
+    return 0;
+}
+```
+
+## Write stdin to a file
+```c
+#include    <stdio.h>
+#include    <stdlib.h>
+#include    <string.h>
+
+int
+main()
+{
+    FILE * fp;
+    int c;
+    fp = fopen("textfile.txt","w");
+    while ( (c=getc(stdin)) != EOF)
+        fprintf(fp,"%c",c);
+    return 0;
+}
+```c
 
 ## PROGRAM ARGUMENTS
 

@@ -4,7 +4,9 @@ My Guide to C
 ## Pointers
 
 #### variables
-to get straight on pointers, it's important to get straight on variables.   Variables are the names we give to places in memory so we can refer to the values that the data there represents.  Variables point to a physical location in memory, but they have that human-friendly handle we know by name. the name!  They are of primary purpose because of the data they hold for us.
+to get straight on pointers, it's important to get straight on variables.   Variables are the names for places in memory.  We want to refer to those values whenever we want, so we write some code that works with various places in memory and the programming lanaguage software to name and keep track of those values. A variable points to a physical location in memory, but they have that human-friendly handle we know by name. the name!  They are of primary purpose because of the data they hold for us.
+
+In C each variable has an address
 
 #### history
 C has been around for a while, though, and reflects a much more resource-restricted computing history.  The way you get data from one function to another is by copying it, which is a memory-and-space costly affair. Pointers provide direct access to the specified location in memory and the value in it.  In some sense they are global.

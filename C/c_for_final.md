@@ -24,7 +24,7 @@ int array[10] = {1,2};
 
 ```c
 int array[5];
-size_t len = sizeof(array)/sizeof(char);
+size_t len = sizeof(array)/sizeof(char); // total number of bytes, divided by the size of a single unit
 printf("%lu\n",len);
 
 ```
@@ -33,14 +33,13 @@ printf("%lu\n",len);
 
 ```c
 char * str = "This is a constant string that isn't meant to be modified";
-
 ```
 
 #### getting length of a string
 
 ```c
-char arr2[] = "This is a constant string, you can't modify";
-printf("%lu\n",strlen(arr2));
+char arr[] = "This is a constant string, you can't modify";
+printf("%lu\n",strlen(arr)); // strlen reads chars until '\n', returns that number of chars
 ```
 #### address of the first element in an array
 

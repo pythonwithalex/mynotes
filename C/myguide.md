@@ -37,18 +37,10 @@ return 0;
 ## Write stdin to a stdout
 
 ```c
-#include    <stdio.h>
-#include    <stdlib.h>
-#include    <string.h>
-
-int
-main()
-{
-    int c;
-    while ( (c=getc(stdin)) != EOF)
-        putchar(c);
-    return 0;
-}
+int c;
+while ( (c=getc(stdin)) != EOF)
+    putchar(c);
+return 0;
 ```
 
 ## Write stdin to a file

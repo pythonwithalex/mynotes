@@ -317,7 +317,7 @@ main()
     }
 
     // traverse the list
-    // for each student, the last student's address should point to it
+    // for each student, the last student struct's next member should point to it
     struct student * trav_p;
     for (trav_p = &class[0];  trav_p != NULL; trav_p = trav_p->next)
         printf("%d\n",trav_p->id);

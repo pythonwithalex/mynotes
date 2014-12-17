@@ -4,8 +4,8 @@ My Guide to C
 ## Pointers
 
 ```c
-int a = 120;
-int * p = &a;
+int a = 120; // a holds the numeric value 120
+int * p = &a; // p holds the address of a, not its value
 printf("%p\n",p);
 printf("%p\n",&a);
 // 0x7fff7a9002a0

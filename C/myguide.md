@@ -1,6 +1,16 @@
 My Guide to C
 =============
 
+## strings and arrays
+
+#### get the address of the first element in an array
+
+```c
+char letters[20];
+printf("%c\n",&letters);
+
+```
+
 ## Control Structures
 
 #### case statement

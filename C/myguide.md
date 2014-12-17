@@ -255,6 +255,48 @@ int main()
     return 0;
 }
 ```
+#### Linked List of Students
+
+```c
+#include    <stdio.h>
+#define     SIZE    40
+
+struct student
+{
+    int id;
+    struct student * next;
+};
+
+int
+main()
+{
+    // create an array of student structs called class
+    struct student class[SIZE];
+    struct student * cur = NULL;
+    struct student * prev = NULL;
+    int i;
+    // populate those structs with data
+    // id should increment with the for loop
+    // for each student, the last student's address should point to it
+
+    for (i=0; i<SIZE;i++)
+    {
+       cur = &class[i];
+       class[i].id = i;
+       if (prev != NULL)
+            prev->next = cur;
+       cur->next = NULL;
+       prev = &class[i];
+    }
+
+    // traverse the list
+    struct student * trav_p;
+    for (trav_p = &class[0];  trav_p != NULL; trav_p = trav_p->next)
+        printf("%d\n",trav_p->id);
+
+    return 0;
+}
+```
 
 ## Malloc and Strings
 
@@ -269,3 +311,4 @@ int main()
     return 0;
 }
 ```
+

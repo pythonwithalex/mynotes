@@ -20,5 +20,5 @@ The links below lead to a topical page that is broken up into sub-topics.  These
 + [Raspberry Pi]()
 
 #### My Guides
-
-+ [Guide to C](http://mynotes.readthedocs.org/en/latest/C/my_guide_to_c.md)
++ [C](https://github.com/foundling/mynotes/blob/master/C/my_guide_to_c.md)
++ [Sed](https://github.com/foundling/mynotes/blob/master/Linux/SED_notes.md)

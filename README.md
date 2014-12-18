@@ -3,7 +3,7 @@ my notes
 
 ## Introduction
 
-You are an intellectual hoarder and this is not at all your cry for help. collections should be global, here are the lists.  plus maybe implicit tutorials you've written to yourself.  It gets pulled to mynotes.readthedocs.org every time they're updated to make for a better reading experience. 
+You are an intellectual hoarder and this isn't your cry for help. collections should be global, here are the lists.  
 
 #### Lists
 
@@ -19,3 +19,8 @@ The links below lead to a topical page that is broken up into sub-topics.  These
 + [Software Shortcuts]()
 + [Raspberry Pi]()
 
+#### My Guides
++ [Linux](http://mynotes.readthedocs.org/en/latest/Linux/Linux_list/)
++ [Database ](http://mynotes.readthedocs.org/en/latest/SQL/Database_list/)
++ [Software Shortcuts]()
++ [Raspberry Pi]()

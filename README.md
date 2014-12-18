@@ -20,7 +20,5 @@ The links below lead to a topical page that is broken up into sub-topics.  These
 + [Raspberry Pi]()
 
 #### My Guides
-+ [Linux](http://mynotes.readthedocs.org/en/latest/Linux/Linux_list/)
-+ [Database ](http://mynotes.readthedocs.org/en/latest/SQL/Database_list/)
-+ [Software Shortcuts]()
-+ [Raspberry Pi]()
+
++ [Guide to C](http://mynotes.readthedocs.org/en/latest/C/my_guide_to_c.md)

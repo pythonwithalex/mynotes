@@ -1,16 +1,16 @@
-WORDPRESS POST-CONFIG
+#### WORDPRESS POST-CONFIG
 make sure ps aux | grep php shows that owner of those processes is www-data
 sudo chown -R www-data:www-data /var/www (avoid ftp login when installing plugins)
 install wpsupercache to speed up wordpress by using static pages
 
-PASSWORD-LESS ENTRY
+#### PASSWORD-LESS ENTRY
 password-less ssh entry
 assuming you have no .ssh dir, mkdir ~/.ssh; chmod 700 ~/.ssh on your mac
 ssh-keygen -t rsa
 hit enter until done.
 cat ~/.ssh/id_rsa.pub | ssh user@pi 'cat >> ~/.ssh/authorized_keys'
 
-RESTORABLE-BACKUP
+#### RESTORABLE-BACKUP
 note: this isn't a solution if you hose your raspi. It's more of a 'I just want to start fresh' solution.  Raspi needs to boot from an SD device, so your best bet if you want a reliable bootable backup is to get a backup sd device and image that one in addition to your primary one.
 
 However, if you want to go back to a point in time without getting an SD device, this approach at least works.
@@ -28,7 +28,7 @@ if your system resides completely on /dev/mmcblk0:
 dd if=/dev/mmcblk0 | nc 192.168.1.116 7000
 there are potential issues with copying filesystem being mounted rw while you do a dd, but in my experience, it didn't cause any problems.
 
-RESTORING
+#### RESTORING
 I wrote this backup image to a usb drive
 on my mac:
 reformatted a usb drive (/Volumes/DATA) to FAT with Disk Utility

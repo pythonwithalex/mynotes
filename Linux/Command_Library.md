@@ -5,7 +5,7 @@ Command Library
     echo "60 / 4.3" | bc -l
 Commands
 
-
+        du -sk -- .??* * | sort -n 
         cat  /proc/dma
         cat  /proc/ioports
         cat  /proc/interrupts

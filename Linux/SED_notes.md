@@ -38,44 +38,26 @@ The point of sed is to use the rules below to cast information additively or sub
 The Example File:
 
 ```bash
-alex@terminal$ cat words.txt
-california
-massachusetts
-michigan
+
 ```
 
 #### Simple Match & Replace
 
-**basic form**
+**basic usage**
 
 ```bash
-sed 's/match/replace/' words.txt
-```
-    
-**example:**  
-        
-```bash
-sed 's/california/massachusetts/' words.txt
-```
+alex@t$ cat words.txt
+california
+massachusetts
+michigan
 
-**result:** 
-```bash
+alex@t$ sed 's/california/massachusetts/' words.txt
 massachusetts
 massachusetts
 michigan
 ```
 
-#### Add to a Matched String
-
-```sed 's/match/&match/' words.txt```
-
-**example:**
-
-```bash
-'s/california/& is great/' words.txt
-```
-
-**result:** replaces lines containing 'california' with the literal text 'california is great'
+**Result:** replaces lines containing 'california' with the literal text 'california is great'
     
 #### Substring Replacement
     

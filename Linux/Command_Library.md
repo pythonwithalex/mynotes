@@ -57,5 +57,4 @@ Commands
         expand -  turns tabs to spaces, use -t=<int> to set how many spaces a tab equals
         
         xargs [ turns stdin into command line arguments]
-        e
-
+   

@@ -1,6 +1,26 @@
 GIT NOTES
 =========
 
+#### sets your user values
+    git config --global <key> <value>
+
+#### get help
+    hit help <verb>, e.g. 'git help config'
+
+#### add file to staging area
+    git add <file>
+    
+#### find out what's changed but not's changed, and what you've staged and are about to commit
+git diff
+    note: only shows you files that are UNSTAGED since last
+    commit.  Use 'git diff --cached or git diff --staged' for that.
+
+#### git mv file.txt file
+    equivalent to the following:
+    $ mv README.txt README
+    $ git rm README.txt
+    $ git add README
+    
 #### Show file from previous commit git show HEAD:/path/to/file example:
     git show <commit hash>:<path to file>
 

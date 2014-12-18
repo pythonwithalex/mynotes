@@ -2,7 +2,7 @@
 
 #### Typography
 
-+ [pracice@typekit](http://practice.typekit.com/)
++ [practice @ typekit](http://practice.typekit.com/)
 
 #### HTML && CSS 
 [ only the **really good ones**, there are so many bad ones...]

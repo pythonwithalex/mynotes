@@ -1,3 +1,7 @@
+## Good
+
++ [OpenTechSchool, Flask](http://opentechschool.github.io/python-flask/core/form-submission.html)
+
 ## Code to read
 
 + [How to Make a Spell-Corrector, by Peter Norvig](http://norvig.com/spell-correct.html)

@@ -11,7 +11,7 @@ GIT NOTES
     git add <file>
     
 #### find out what's changed but not's changed, and what you've staged and are about to commit
-git diff
+    git diff
     note: only shows you files that are UNSTAGED since last
     commit.  Use 'git diff --cached or git diff --staged' for that.
 

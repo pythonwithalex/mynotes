@@ -136,7 +136,12 @@ fclose(fp);
 
 **argc** is short for 'argument count', the number of arguments passed to the C program on execution.  If none are passed, argc is still 1 because the program is always passed its name.
 
-**argv** is short for 'argument vector'.  It's an array that holds the arguments passed to the c program at execution.  They are char pointers ( char * ).  Think of argc as an array of strings that the Shell passes to your C program on the command line.
+**argv** is short for 'argument vector'.  It's a pointer to the array where the program stores the strinig arguments that it received from the shell at execution.  
+
+argv => [a.out,
+
+```c
+int main(int argc, char *argv[]);
 
 ```c
   argc 1 -> argv[0]

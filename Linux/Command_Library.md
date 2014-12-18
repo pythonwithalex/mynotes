@@ -2,10 +2,17 @@ Command Library
 ===============
 
 #### floating point expressions
+```sh
     echo "60 / 4.3" | bc -l
+```
+
+#### file usage on your user account
+```sh
+    du -sk -- .??* * | sort -n 
+```
 Commands
 
-        du -sk -- .??* * | sort -n 
+
         cat  /proc/dma
         cat  /proc/ioports
         cat  /proc/interrupts

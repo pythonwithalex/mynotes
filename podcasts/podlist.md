@@ -3,7 +3,7 @@ the best podcasts
 
 #### Music
 
-+ [Magic Transistor, this site is the best](http://magictransistor.com/radio)
++ [Magic Transistor: this site is the best](http://magictransistor.com/radio)
 
 #### computing
 

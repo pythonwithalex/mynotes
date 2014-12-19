@@ -25,4 +25,4 @@
 
 #### Protocols
 
-+ [HTTP1.1 RRC](https://www.ietf.org/rfc/rfc2616.txt)
++ [HTTP1.1 RFC](https://www.ietf.org/rfc/rfc2616.txt)

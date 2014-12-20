@@ -11,8 +11,8 @@
 
 #### Web Server
 
-+ [bash cgi programs](http://www.team2053.org/docs/bashcgi/postdata.html)
-
++ [GET / POST bash ](http://www.team2053.org/docs/bashcgi/postdata.html)
++ [Why the Distinction between Get and Post matters](https://www.cs.tut.fi/~jkorpela/forms/methods.html#why)
 #### scripting
 
 + [The Grymoire: Sh Tutorial](http://www.grymoire.com/Unix/Sh.html)

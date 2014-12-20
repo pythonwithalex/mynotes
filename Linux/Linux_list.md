@@ -11,7 +11,7 @@
 
 #### Web Server
 
-+ [bash cgi](http://www.team2053.org/docs/bashcgi/postdata.html)
++ [bash cgi programs](http://www.team2053.org/docs/bashcgi/postdata.html)
 
 #### scripting
 

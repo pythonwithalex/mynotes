@@ -9,6 +9,10 @@
 + [Norm Matloff's Unix/Linux Page](http://heather.cs.ucdavis.edu/~matloff/unix.html)
 + [Bruce Molay's Unix References](http://people.fas.harvard.edu/~lib113/reference/)
 
+#### Web Server
+
++ [bash cgi](http://www.team2053.org/docs/bashcgi/postdata.html)
+
 #### scripting
 
 + [The Grymoire: Sh Tutorial](http://www.grymoire.com/Unix/Sh.html)

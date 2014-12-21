@@ -13,6 +13,8 @@
 
 + [GET / POST bash ](http://www.team2053.org/docs/bashcgi/postdata.html)
 + [Why the Distinction between Get and Post matters](https://www.cs.tut.fi/~jkorpela/forms/methods.html#why)
++ [Bash Shell CGI](http://www.yolinux.com/TUTORIALS/BashShellCgi.html)
+
 #### scripting
 
 + [The Grymoire: Sh Tutorial](http://www.grymoire.com/Unix/Sh.html)

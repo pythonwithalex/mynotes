@@ -1,3 +1,7 @@
+## Pip
+
++ [Pip Docs](http://pip.readthedocs.org/en/1.0.1/requirement-format.html)
+
 ## Code to read
 
 + [How to Make a Spell-Corrector, by Peter Norvig](http://norvig.com/spell-correct.html)

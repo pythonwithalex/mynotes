@@ -11,9 +11,47 @@ CirculationConceptDiagram2.jpg		CirculationRender.jpg
 CirculationDiagram.jpg			CirculationforCirculation.jpg
 CirculationModel.jpg			DevotionalCirculationConcept.jpg
 CirculationModel2.jpg
-alexr@machine:$ count=0
-alexr@machine:$ count=0; for i in *; do mv -i "$i" "$( echo "$i" | sed "s/.*.\(jpg\)/$count.\1/" )"; count=$(expr $count + 1); done;
-alexr@machine:$ count=0
+```
+
+my script to rename these files:
+```bash
+#!/bin/bash
+
+#FILE_EXT=$1
+#SUFFIX_=$2
+
+#echo $2
+#exit
+
+if test -z "$1"
+then
+  echo "usage: rename [file extension] [path]"
+  exit 1
+fi
+
+
+read -p "This Utility takes all images in the current directory and renames them sequentially from 0 to N.  Rename is a suitable tool for working with copies of files. Ok? (y/N)" RESPONSE
+
+if test -z "$(ls *.$1)"
+then
+  echo "no .$1 files here"
+  exit 1
+fi
+
+case $RESPONSE in
+
+  [^yY]*) echo "Bye"; exit 0 ;;
+
+esac
+
+COUNT=0;
+for i in ./*.$1
+do
+  echo "$i" "$( echo "$i" | sed 's/.*.\('$1'\)/'$COUNT'_'$2'.\1/' )"
+  COUNT=$(expr $COUNT + 1);
+done;
+
+exit 0
 ```
 
 #### floating point expressions

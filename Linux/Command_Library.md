@@ -11,15 +11,9 @@ CirculationConceptDiagram2.jpg		CirculationRender.jpg
 CirculationDiagram.jpg			CirculationforCirculation.jpg
 CirculationModel.jpg			DevotionalCirculationConcept.jpg
 CirculationModel2.jpg
-```
-
-test it first
-
-```bash
 alexr@machine:$ count=0
 alexr@machine:$ count=0; for i in *; do mv -i "$i" "$( echo "$i" | sed "s/.*.\(jpg\)/$count.\1/" )"; count=$(expr $count + 1); done;
 alexr@machine:$ count=0
-
 ```
 
 #### floating point expressions

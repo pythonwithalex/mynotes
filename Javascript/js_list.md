@@ -1,5 +1,6 @@
 JavaScript, what a language
 ==========
++ [Event Delegation](http://davidwalsh.name/event-delegate)
 + [Native JavaScript Equivalents of jQuery Methods](Native JavaScript Equivalents of jQuery Methods)
 + [unobtrusive javascript](http://onlinetools.org/articles/unobtrusivejavascript/)
 + [Progressive Enhancement](http://alistapart.com/article/progressiveenhancementwithjavascript)

@@ -1,5 +1,6 @@
 JavaScript, what a language
 ==========
++ [Native JavaScript Equivalents of jQuery Methods](Native JavaScript Equivalents of jQuery Methods)
 + [unobtrusive javascript](http://onlinetools.org/articles/unobtrusivejavascript/)
 + [Progressive Enhancement](http://alistapart.com/article/progressiveenhancementwithjavascript)
 + [What is Node.js?](https://www.youtube.com/watch?v=pU9Q6oiQNd0)

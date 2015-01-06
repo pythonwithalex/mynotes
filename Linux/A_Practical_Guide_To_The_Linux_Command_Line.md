@@ -1,7 +1,7 @@
 ## A Practical Guide to The Linux Command Line
 
 #### Table of Contents
-+ [Text Editors](#Text Editors)
++ [Text Editors](#text-editors)
 + [The Linux Command Line](http://link.com)
 + [The Unix Philosophy and Toolchain](http://link.com)
 + [The Linux Filesystem Structure](http://link.com)

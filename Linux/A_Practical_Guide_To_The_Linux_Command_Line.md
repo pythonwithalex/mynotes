@@ -11,19 +11,6 @@ I like Vi because it led me naturally down the path of putting as many commands 
 as possible, which obviates excess repetitive movement.
 
 That said, some people feel equally at home with Emacs or something else.  Just realize that choosing a text editor is an investment.  You can do so much more once you learn the ways of a powerful editor, though it may not seem intuitive at first, that the learning curve is often justified.
-A Practical Guide to Linux via the Command Line
-
-TEXT EDITORS
-
-If you want to use the Linux command line, you are going to be working in text.  I find its often easiest to write to files from the terminal, even if I'm in a graphical environment with virtualized terminals.
-
-Today, some popular terminal-based text editors in this realm are emacs, vi/vim, nano, pico, gedit.
-I some times hear Vi enthusiasts boast that if you know how to use Vi, you are covered on any
-Linux machine. Thats the case so far for me, and the others do vary more in terms of availability.
-I like Vi because it led me naturally down the path of putting as many commands in the same typing area
-as possible, which obviates excess repetitive movement.
-
-That said, some people feel equally at home with Emacs or something else.  Just realize that choosing a text editor is an investment.  You can do so much more with a powerful editor, though it may not seem intuitive at first, that the learning curve is often justified.
 
 THE LINUX COMMAND LINE
 
@@ -32,19 +19,19 @@ The commands you type are just strings that are handed to the Operating System w
 
 Here's an example of a command that renames a file a.txt to b.txt. ('we're assuming that a.txt exists already').  Note that there is no output after the command ran.  A general convention in Linux software is to generally output user-directed messages to indicate problems or warnings but not successes.
 
-CODE
+```bash
 userA@systemD:~$ mv a.txt b.txt
 userA@systemD:~$
-ENDCODE
+```
 
 if I try that again:
 
-CODE
+```bash
 userA@systemD:~$ mv a.txt b.txt
 mv: rename a.txt to b.txt: No such file or directory
 ENDCODE
-
-we see this convention in action.
+```
+we see this convention in action.  The second time I try to move **a.txt** to **b.txt**, the **mv** program speaks up because **a.txt** no longer exists.
 
 
 UNIX PHILOSOPHY AND TOOL CHAIN

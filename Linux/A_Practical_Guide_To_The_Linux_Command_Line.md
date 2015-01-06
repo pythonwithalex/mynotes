@@ -28,7 +28,7 @@ That said, some people feel equally at home with Emacs or something else.  Just 
 #### THE LINUX COMMAND LINE
 
 The command line environment is a mostly textual representation of the parts of the operating system that are exposed to you.  You are provided with a terminal console environment that will attempt to execute any text commands you type.
-The commands you type are just strings that are handed to the Operating System wich specify precisely what it should carry out.  The OS then performs the tasks to the best of its ability given the context of the user and the commands passed.
+The commands you type are just strings that are handed to the Operating System which specify precisely what it should carry out.  The OS then performs the tasks to the best of its ability given the context of the user and the commands passed.
 
 Here's an example of a command that renames a file a.txt to b.txt. ('we're assuming that a.txt exists already').  Note that there is no output after the command ran.  A general convention in Linux software is to generally output user-directed messages to indicate problems or warnings but not successes.
 
@@ -56,10 +56,10 @@ for example.  Instead of looking for a tool that does exactly what you want, you
 smaller programs to do something to the text and pass it on to the next one.
 
 Here, I want to find the size and name of each file in my current directory and sort it by size with
-the largest at the descending.
+the largest at the bottom.
 
 ```bash
-userA@machineD:~$ ls -l | tr -s ' ' | tr ' ' '\t' | cut -f5,9 -d$'\t' | sort -nrk1
+userA@machineD:~$ ls -l | tr -s ' ' | tr ' ' '\t' | cut -f5,9 -d$'\t' | sort -nr -k1
 0       script.js
 1038    command_line_index.html
 122     sync.sh

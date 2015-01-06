@@ -17,7 +17,7 @@ That said, some people feel equally at home with Emacs or something else.  Just 
 The command line environment is a mostly textual representation of the parts of the operating system that are exposed to you.  You are provided with a terminal console environment that will attempt to execute any text commands you type.
 The commands you type are just strings that are handed to the Operating System wich specify precisely what it should carry out.  The OS then performs the tasks to the best of its ability given the context of the user and the commands passed.
 
-Here's an example of a command that renames a file a.txt to b.txt. ('we're assuming that a.txt exists already').  Note that there is no output after the command ran.  A general convention in Linux software is to generally output user-directed messages to indicate problems or warnings but not successes.
+Here's an example of a command that renames a file **a.txt** to **b.txt** (We're assuming that a.txt exists already).  Note that there is no output after the command ran.  A general convention in Linux software is to generally output user-directed messages to indicate problems or warnings but not successes.
 
 ```bash
 userA@systemD:~$ mv a.txt b.txt

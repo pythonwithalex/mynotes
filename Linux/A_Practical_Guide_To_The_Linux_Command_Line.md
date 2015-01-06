@@ -1,5 +1,18 @@
 ## A Practical Guide to The Linux Command Line
 
+#### Table of Contents
++ (Text Editors)[http://link.com]
++ (The Linux Command Line)[http://link.com]
++ (The Unix Philosophy and Toolchain)[http://link.com]
++ (The Linux Filesystem Structure)[http://link.com]
++ (Redirection and Pipes)[http://link.com]
++ (Environment Variables)[http://link.com]
++ (Manipulating Text)[http://link.com]
++ (Users, Groups, Permissions, SELinux)[http://link.com]
++ (Best Practices)[http://link.com]
++ (Links & Resources)[http://link.com]
+
+
 #### TEXT EDITORS
 
 If you want to use the Linux command line, you are going to be working in text.  I find its often easiest to write to files from within the terminal, even if I'm in a graphical environment with graphical editors available.  You don't need a mouse to get to it.

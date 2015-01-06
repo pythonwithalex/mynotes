@@ -75,9 +75,30 @@ userA@machineD:~$ ls -l | tr -s ' ' | tr ' ' '\t' | cut -f5,9 -d$'\t' | sort -nr
 The Linux Filesystem is a <tree> structure.  The 'root' of this tree is called
 the <top level> and is not contained in any other directory. Everything else is
 contained in it directly or indirectly by being contained in another folder
-contained within the root.
+contained within the root, which is referred to as **/**.  
 
-The root directory is referred to with just a slash,**/**.  It contains all of the system directories.
+A **filepath** locates a file.  If it begins with '/', it denotes the file's full path relative to the root.  
+If it begins without '/', then it denotes a file relative to the current directory. In the following example, I use **ls** to find the files located in a directory that is named 'bin', but depending on the presence of the leading slash, I get different results.
+
+```bash
+userA@machineD:~$ ls bin
+userA@machineD:~$ ls /bin
+bash          bzless     date           false       hostname  loadkeys     mountpoint      open      rmdir       su               unicode_start  zless
+bunzip2       bzmore     dd             fbset       ip        login        mt              openvt    rnano       sync             vdir           zmore
+bzcat         cat        df             fgconsole   kbd_mode  ls           mt-gnu          pidof     run-parts   tailf            which          znew
+bzcmp         chgrp      dir            fgrep       kill      lsblk        mv              ping      sed         tar              ypdomainname
+bzdiff        chmod      dmesg          findmnt     kmod      lsmod        nano            ping6     setfont     tempfile         zcat
+bzegrep       chown      dnsdomainname  fuser       less      mkdir        nc              plymouth  setupcon    touch            zcmp
+bzexe         chvt       domainname     fusermount  lessecho  mknod        nc.openbsd      ps        sh          true             zdiff
+bzfgrep       con2fbmap  dumpkeys       grep        lessfile  mktemp       nc.traditional  pwd       sh.distrib  ulockmgr_server  zegrep
+bzgrep        cp         echo           gunzip      lesskey   modeline2fb  netcat          rbash     sleep       umount           zfgrep
+bzip2         cpio       ed             gzexe       lesspipe  more         netstat         readlink  ss          uname            zforce
+bzip2recover  dash       egrep          gzip        ln        mount        nisdomainname   rm        stty        uncompress       zgrep
+
+```
+
+All directories below the root
+are separated by **/**.  Together, they make up a **filepath**.  If the filepath ends in a filename
 The default login location for a normal user is located inside of **/home**.
 The 'userA' directory is inside of 'home', which is inside of '/'.
 

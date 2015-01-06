@@ -39,7 +39,7 @@ we see this convention in action. I've already moved a.txt to b.txt, so a.txt do
 The Unix philosophy emphasizes the idea that you can accomplish sophisticated tasks by combining
  a sequence of small or single-purpose tools instead of building a single large monolithic,
 do-everything tool. On the command line, this comes into play when you want to manipulate some text,
-for example.  Instead of looking for a tool that finds the size and name of each file in my current directory and sort it by size with the largest at the descending, I can use the **ls**, **tr**, **cut** and **sort** utilities to do it for me
+for example.  Instead of looking for a tool that finds the size and name of each file in my current directory and sort it by size with the largest at the descending, I can use the **ls**, **tr**, **cut** and **sort** utilities to do it for me.
 
 ```bash
 userA@machineD:~$ ls -l | tr -s ' ' | tr ' ' '\t' | cut -f5,9 -d$'\t' | sort -nrk1

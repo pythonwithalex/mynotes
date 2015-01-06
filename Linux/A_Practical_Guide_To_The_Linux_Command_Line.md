@@ -3,14 +3,14 @@
 #### Table of Contents
 + [Text Editors](#text-editors)
 + [The Linux Command Line](#the-linux-command-line)
-+ [The Unix Philosophy and Toolchain](unix-philosophy-and-tool-chain)
-+ [The Linux Filesystem Structure](http://link.com)
-+ [Redirection and Pipes](http://link.com)
-+ [Environment Variables](http://link.com)
-+ [Manipulating Text](http://link.com)
-+ [Users, Groups, Permissions, SELinux](http://link.com)
-+ [Best Practices](http://link.com)
-+ [Links & Resources](http://link.com)
++ [The Unix Philosophy and Toolchain](#unix-philosophy-and-tool-chain)
++ [The Linux Filesystem Structure](#linux-filesystem-structure)
++ [Redirection and Pipes](#redirection-and-pipes)
++ [Environment Variables](#environment-variables)
++ [Manipulating Text](#manipulating-text)
++ [Users, Groups, Permissions, SELinux](#users-groups-permissions-selinux)
++ [Best Practices](#best-practices)
++ [Links & Resources](#links-and-resources)
 
 
 #### TEXT EDITORS

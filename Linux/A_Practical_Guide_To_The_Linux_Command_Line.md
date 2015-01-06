@@ -77,8 +77,8 @@ the <top level> and is not contained in any other directory. Everything else is
 contained in it directly or indirectly by being contained in another folder
 contained within the root.
 
-The root directory is referred to with just a slash, `'/'.  It contains all of the system directories.
-The default login location for a normal user is located inside of ```home```.
+The root directory is referred to with just a slash,**/**.  It contains all of the system directories.
+The default login location for a normal user is located inside of **/home**.
 The 'userA' directory is inside of 'home', which is inside of '/'.
 
 

@@ -78,7 +78,9 @@ contained in it directly or indirectly by being contained in another folder
 contained within the root, which is referred to as **/**.  
 
 A **filepath** locates a file.  If it begins with '/', it denotes the file's full path relative to the root.  
-If it begins without '/', then it denotes a file relative to the current directory. In the following example, I use **ls** to find the files located in a directory that is named 'bin', but depending on the presence of the leading slash, I get different results.
+If it begins without '/', then it denotes a file relative to the current directory. 
+
+In the following example, I use **ls** to find the files located in a directory that is named 'bin', but depending on the presence of the leading slash, I get different results.
 
 ```bash
 userA@machineD:~$ ls bin
@@ -97,8 +99,7 @@ bzip2recover  dash       egrep          gzip        ln        mount        nisdo
 
 ```
 
-All directories below the root
-are separated by **/**.  Together, they make up a **filepath**.  If the filepath ends in a filename
+All directories below the root are separated by **/**.  Together, they make up a **filepath**.  If the filepath ends in a filename
 The default login location for a normal user is located inside of **/home**.
 The 'userA' directory is inside of 'home', which is inside of '/'.
 

@@ -2,7 +2,7 @@
 
 #### TEXT EDITORS
 
-If you want to use the Linux command line, you are going to be working in text.  I find its often easiest to write to files from within the terminal, even if I'm in a graphical environment with graphical editors available.
+If you want to use the Linux command line, you are going to be working in text.  I find its often easiest to write to files from within the terminal, even if I'm in a graphical environment with graphical editors available.  You don't need a mouse to get to it.
 
 Today, some popular terminal-based text editors in this realm are emacs, vi/vim, nano, pico, gedit.
 I some times hear Vi enthusiasts boast that if you know how to use Vi, you are covered on any

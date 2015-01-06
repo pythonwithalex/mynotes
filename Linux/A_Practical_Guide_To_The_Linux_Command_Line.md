@@ -1,16 +1,16 @@
 ## A Practical Guide to The Linux Command Line
 
 #### Table of Contents
-+ (Text Editors)[http://link.com]
-+ (The Linux Command Line)[http://link.com]
-+ (The Unix Philosophy and Toolchain)[http://link.com]
-+ (The Linux Filesystem Structure)[http://link.com]
-+ (Redirection and Pipes)[http://link.com]
-+ (Environment Variables)[http://link.com]
-+ (Manipulating Text)[http://link.com]
-+ (Users, Groups, Permissions, SELinux)[http://link.com]
-+ (Best Practices)[http://link.com]
-+ (Links & Resources)[http://link.com]
++ [Text Editors](http://link.com)
++ [The Linux Command Line](http://link.com)
++ [The Unix Philosophy and Toolchain](http://link.com)
++ [The Linux Filesystem Structure](http://link.com)
++ [Redirection and Pipes](http://link.com)
++ [Environment Variables](http://link.com)
++ [Manipulating Text](http://link.com)
++ [Users, Groups, Permissions, SELinux](http://link.com)
++ [Best Practices](http://link.com)
++ [Links & Resources](http://link.com)
 
 
 #### TEXT EDITORS

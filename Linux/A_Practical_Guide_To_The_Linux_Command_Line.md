@@ -42,7 +42,6 @@ if I try that again:
 ```bash
 userA@systemD:~$ mv a.txt b.txt
 mv: rename a.txt to b.txt: No such file or directory
-ENDCODE
 ```
 we see this convention in action.  The second time I try to move **a.txt** to **b.txt**, the **mv** program speaks up because **a.txt** no longer exists.
 

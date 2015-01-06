@@ -2,8 +2,8 @@
 
 #### Table of Contents
 + [Text Editors](#text-editors)
-+ [The Linux Command Line](http://link.com)
-+ [The Unix Philosophy and Toolchain](http://link.com)
++ [The Linux Command Line](#the-linux-command-line)
++ [The Unix Philosophy and Toolchain](the-unix-philosophy-and-toolchain)
 + [The Linux Filesystem Structure](http://link.com)
 + [Redirection and Pipes](http://link.com)
 + [Environment Variables](http://link.com)

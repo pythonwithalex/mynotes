@@ -31,7 +31,7 @@ userA@systemD:~$ mv a.txt b.txt
 mv: rename a.txt to b.txt: No such file or directory
 ```
 
-we see this convention in action.
+we see this convention in action. I've already moved a.txt to b.txt, so a.txt doesn't exist.  Hence the error message.
 
 
 #### UNIX PHILOSOPHY AND TOOL CHAIN

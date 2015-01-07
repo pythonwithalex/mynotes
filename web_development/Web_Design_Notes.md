@@ -21,6 +21,8 @@ html {box-sizing: border-box; }
 *,*:before, *:after { box-sizing: inherit; }
 ```
 
-#### Clearing Floats
+#### Floats
 
-set the container width and give it an overflow: auto property
+Floats let text and other elements flow around block elements instead of coming after them.  To clear the floated elements completely, use 'clear: both'.
+
+To give a container that has floated elements in it a border, set the container width and give it overflow: auto. property

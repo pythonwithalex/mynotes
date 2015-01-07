@@ -6,7 +6,8 @@
   <head>
     <title>HTML5 Web Page Skeleton</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" /> <!-- Note, no "type" here-- not necessary with HTML5-->
+    <!-- Note, no "type" here-- not necessary with HTML5-->
+    <link rel="stylesheet" href="styles.css" /> 
     <script src="scripts.js"></script>
   </head>
   <body>
@@ -23,7 +24,10 @@
       </ul>
     </nav>
     
-    <section> <!-- this is for grouping thematically related content.  the article is a special subset of it -->
+    <section> 
+    <!-- this is for grouping thematically related content.  the article is a special subset of it -->
+    <!-- use if you have an article header. don't use for styling purposes. -->
+      <h1>Article Title</h1>
       <article>
         <p>Articles are intended to be syndicatable content.  Also, if the article is in the URI, it's best to give it the  </p>
       </article>

@@ -11,20 +11,27 @@
   </head>
   <body>
   
-    <header><h1>Demo Header</h1></header>
+    <header>
+      <h1>Demo Header</h1>
+    </header>
     
     <nav>
       <ul>
-        <li></li>
-        <li></li>
+        <li>work</li>
+        <li>clients</li>
+        <li>contact</li>
       </ul>
     </nav>
     
-    <article>
-      <p>Some text inside a section</p>
-    </article>
+    <section>
+      <article>
+        <p>Some text inside an article</p>
+      </article>
+    </section>
     
-    <aside><p>An aside</p></aside>
+    <aside>
+      <p>An aside</p>
+    </aside>
 
     <footer>
       <h3>Demo Footer</h3>

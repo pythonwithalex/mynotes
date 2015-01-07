@@ -14,9 +14,13 @@ div
   width: 100px;
 }
 ```
-#### Use Box-Sizing so that padding is included in the element's idth
+#### Use Box-Sizing so that padding is included in the element's id
 
 ```css
 html {box-sizing: border-box; }
 *,*:before, *:after { box-sizing: inherit; }
 ```
+
+#### Clearing Floats
+
+set the container width and give it an overflow: auto property

@@ -1,3 +1,43 @@
+#### Basic HTML5 Skeleton
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML5 Web Page Skeleton</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" /> <!-- Note, no "type" here-- not necessary with HTML5-->
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+  
+    <header><h1>Demo Header</h1></header>
+    
+    <nav>
+      <ul>
+        <li></li>
+        <li></li>
+      </ul>
+    </nav>
+    
+    <article>
+      <p>Some text inside a section</p>
+    </article>
+    
+    <aside><p>An aside</p></aside>
+
+    <footer>
+      <h3>Demo Footer</h3>
+    </footer>
+  </body>
+</html>
+```
+
+
+
+
+```
+
 #### Center a div vertically and horizontally in page
 
 ```css
@@ -23,6 +63,8 @@ html {box-sizing: border-box; }
 
 #### Floats
 
-Floats let text and other elements flow around block elements instead of coming after them.  To clear the floated elements completely, use 'clear: both'.
+Floats let elements flow to the side of block elements instead of following after them.  To clear the floated elements completely, or to make sure a container wraps around its contained floated elements, use the **clearfix** technique below. The reason they aren't automatically cleared is that a float takes the element out of the document flow.
+
+
 
 To give a container that has floated elements in it a border, set the container width and give it overflow: auto. property

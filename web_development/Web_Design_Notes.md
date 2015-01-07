@@ -29,7 +29,8 @@
     <!-- use if you have an article header. don't use for styling purposes. -->
       <h1>Article Title</h1>
       <article>
-        <p>Articles are intended to be syndicatable content.  Also, if the article is in the URI, it's best to give it the  </p>
+        <p>Articles are intended to be syndicatable content.  If the name of the article or blogpost 
+        is in the URI, it's best to give it an article tag </p>
       </article>
     </section>
     

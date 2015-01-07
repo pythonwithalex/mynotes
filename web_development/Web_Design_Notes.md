@@ -23,9 +23,9 @@
       </ul>
     </nav>
     
-    <section>
+    <section> <!-- this is for grouping thematically related content.  the article is a special subset of it -->
       <article>
-        <p>Some text inside an article</p>
+        <p>Articles are intended to be syndicatable content.  Also, if the article is in the URI, it's best to give it the  </p>
       </article>
     </section>
     
@@ -41,7 +41,15 @@
 ```
 
 
+#### Vendor Prefixes
 
+```css
+
+
+
+
+
+```
 
 ```
 

@@ -14,3 +14,9 @@ div
   width: 100px;
 }
 ```
+#### Use Box-Sizing so that padding is included in the element's idth
+
+```css
+html {box-sizing: border-box; }
+*,*:before, *:after { box-sizing: inherit; }
+```

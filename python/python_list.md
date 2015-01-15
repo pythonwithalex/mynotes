@@ -45,6 +45,8 @@
 + [What is a Web Framework? ](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)
 
 ## Flask
++ [static blog with flask](https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/)
++ [another static block tutorial with flask](http://www.jamesharding.ca/posts/simple-static-markdown-blog-in-flask/)
 + [Frozen-Flask](https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/)
 + [How To Structure Larg Flask Applications (DigitalOcean)](https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications)
 + [How I Structure My Flask Applications, by Matt Wright](http://mattupstate.com/python/2013/06/26/how-i-structure-my-flask-applications.html)

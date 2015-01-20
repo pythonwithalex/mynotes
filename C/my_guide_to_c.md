@@ -381,12 +381,26 @@ while ( (c=getc(fp)) == EOF)
 
 forgetting to make if/else blocks exclusive so that each character gets touched only once.
 
+the following will execute logic on a specific character, then possibly again on the same character because both if clauses can run.
+
 ```c
 if (state == INSIDE) 
 {
   
 }
 if (state == OUTSIDE) 
+{
+
+}
+
+```
+This will prevent multiple processing blocks on the same character.
+```c
+if (state == INSIDE) 
+{
+  
+}
+else (state == OUTSIDE) 
 {
 
 }

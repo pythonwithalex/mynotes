@@ -363,4 +363,15 @@ int main()
 }
 ```
 
+## Gotchas
+
+```c
+
+ while ( (c=getc(fp) == EOF))
+```
+instead of
+```c
+while ( (c=getc(fp)) == EOF)
+```
+
 

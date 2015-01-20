@@ -377,4 +377,18 @@ instead of
 while ( (c=getc(fp)) == EOF)
 ```
 
-#### null pointer
+####  Parsing text character by character with a Finite State Machine model
+
+forgetting to make if/else blocks exclusive so that each character gets touched only once.
+
+```c
+if (state == INSIDE) 
+{
+  
+}
+if (state == OUTSIDE) 
+{
+
+}
+
+```

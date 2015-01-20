@@ -365,7 +365,9 @@ int main()
 
 ## Gotchas
 
-#### getc(fp) isn't printing anything
+#### while ( (c=getc(fp)) != EOF) { putchar(c)} isn't printing anything
+
+check to make sure you haven't wrapped parentheses incorrectly, e.g.:
 
 ```c
  while ( (c=getc(fp) == EOF))

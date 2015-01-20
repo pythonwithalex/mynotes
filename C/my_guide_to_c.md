@@ -365,8 +365,9 @@ int main()
 
 ## Gotchas
 
-```c
+#### getc(fp) isn't printing anything
 
+```c
  while ( (c=getc(fp) == EOF))
 ```
 instead of
@@ -374,4 +375,4 @@ instead of
 while ( (c=getc(fp)) == EOF)
 ```
 
-
+#### null pointer

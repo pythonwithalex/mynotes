@@ -409,16 +409,19 @@ else (state == OUTSIDE)
 
 #### forgetting something in the for loop declaration, e.g.: forgetting the i<block_len
 
-'''c
+```c
 for (i=0;block_len;i++)
 {
     // code
 }
 
-'''
+```
 
 That's segfault material because the block_len section converts to 1 and the loop runs under no terminating conditions.
 
 ```c
-
+for (i=0;block_len;i++)
+{
+    // code
+}
 ```

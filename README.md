@@ -3,7 +3,7 @@ my notes
 
 ## Introduction
 
-You are an intellectual hoarder and this isn't your cry for help. collections should be global, here are the lists.  
+Collections should be globally readable, here are the lists.  
 
 #### Lists
 

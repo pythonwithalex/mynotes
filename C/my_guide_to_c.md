@@ -420,7 +420,7 @@ for (i=0;block_len;i++)
 That's segfault material because the block_len section converts to 1 and the loop runs under no terminating conditions.
 
 ```c
-for (i=0;block_len;i++)
+for (i=0;i < block_len;i++)
 {
     // code
 }

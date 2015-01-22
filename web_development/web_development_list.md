@@ -6,6 +6,10 @@
 
 + [practice @ typekit](http://practice.typekit.com/)
 
+#### Layout
+
++ [learn layout](http://learnlayout.com/position.html)
+
 #### HTML && CSS 
 [ only the **really good ones**, there are so many bad ones...]
 

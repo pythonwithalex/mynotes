@@ -1,6 +1,7 @@
 JavaScript, what a language
 ==========
 + [A Better Way to Learn Angular](https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/)
++ [Thomas Davis's Backbone.js Tutorials](https://backbonetutorials.com/)
 + [nodebeginner](http://www.nodebeginner.org/)
 + [jstherightway](http://jstherightway.org/)
 + [Immediately Invoked Function Expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)

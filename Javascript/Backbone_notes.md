@@ -11,11 +11,5 @@ var newPhoto = new Photo();
 
 you are extending Backbone's Model prototype and getting a constructor returned to you that you can use to create objects.
 
-If you used 
-
-```javascript
-var newPhoto = Backbone.Model();
-```
-then you'd be getting a single object back, not a constructor.
-
-Backbone.Model.extend takes 
+The first object is a set of instanceProperties that you give to your object by calling the constructor function, new Photo();
+The second is a set of classProperties that are apart of all members of that class.

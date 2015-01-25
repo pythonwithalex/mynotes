@@ -13,3 +13,15 @@ you are extending Backbone's Model prototype and getting a constructor returned 
 
 The first object is a set of instanceProperties that you give to your object by calling the constructor function, new Photo();
 The second is a set of classProperties that are attached to the constructor itself, and thus are available to all objects created with the constructor.
+
+#### Built-In Methods
+
+**defaults**: for when your user doesn't provide complete information
+**initialize**
+**validate**
+
+#### Setting Values on a Model
+```javascript
+var photo = new Photo();
+photo.set(); // the proper way to do it
+```

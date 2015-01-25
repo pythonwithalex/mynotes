@@ -18,9 +18,9 @@ The second is a set of classProperties that are attached to the constructor itse
 
 **defaults**: for when your user doesn't provide complete information
 
-**initialize**
+**initialize**: a good place to bind changes in your model to custom functions
 
-**validate**
+**validate**: return a value only in case of validation error. otherwise, no return.
 
 #### Setting Values on a Model
 ```javascript

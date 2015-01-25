@@ -1,9 +1,10 @@
-my notes
+My Notes
 =====
 
 ## Introduction
 
-Collections should be globally readable, here are the lists.  
+The following are lists of the best programming links I've managed to amass over the last few years, as well as a few of my own guides to Linux, C and other things. Enjoy.
+
 
 #### Lists
 

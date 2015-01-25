@@ -23,5 +23,5 @@ The second is a set of classProperties that are attached to the constructor itse
 #### Setting Values on a Model
 ```javascript
 var photo = new Photo();
-photo.set(); // the proper way to do it
+photo.set({title:'town_hall',author: 'Michael Michaels'}); // the proper way to do it
 ```

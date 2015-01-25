@@ -1,9 +1,20 @@
 Backbone Notes
 ====
 
-#### Backbone.Model.Extend
+#### Backbone.Model.extend
+When you use 
+
 ```javascript
-var Photo = Backbone.Model.Extend({})
-// extends Backbone's Model and returns a constructor function
-var photo = new Photo(); // using the Extend constructor to create an object
+var Photo = Backbone.Model.extend();
+var newPhoto = new Photo();
 ```
+
+you are extending Backbone's Model prototype and getting a constructor returned to you that you can use to create objects.
+
+If you used 
+
+```javascript
+var newPhoto = Backbone.Model();
+```
+then you'd be getting a single object back, not a constructor.
+

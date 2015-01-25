@@ -1,5 +1,6 @@
 JavaScript, what a language
 ==========
++ [nodebeginner](http://www.nodebeginner.org/)
 + [jstherightway](http://jstherightway.org/)
 + [Immediately Invoked Function Expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
 + [30 people to follow](http://code.tutsplus.com/articles/30-developers-you-must-subscribe-to-as-a-javascript-junkie--net-18151)

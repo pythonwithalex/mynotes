@@ -6,10 +6,6 @@ My Notes
 The following are lists of the best programming links I've managed to amass over the last few years, as well as a few of my own guides to Linux, C and other things. Enjoy.
 
 
-#### Lists
-
-The links below lead to a topical page that is broken up into sub-topics.  These pages are the best links you could find on the subject.
-
 + [C for final](https://github.com/foundling/mynotes/blob/master/C/c_for_final.md)
  
 + [Python](http://mynotes.readthedocs.org/en/latest/python/python_list/)
@@ -31,6 +27,7 @@ The links below lead to a topical page that is broken up into sub-topics.  These
 + [Raspberry Pi]()
 
 #### My Guides
+
 + [C](https://github.com/foundling/mynotes/blob/master/C/my_guide_to_c.md)
 
 + [Sed](https://github.com/foundling/mynotes/blob/master/Linux/SED_notes.md)

@@ -5,7 +5,7 @@ Backbone Notes
 When you use 
 
 ```javascript
-var Photo = Backbone.Model.extend();
+var Photo = Backbone.Model.extend({instanceProperties},{classProperties, attached to constructor});
 var newPhoto = new Photo();
 ```
 
@@ -18,3 +18,4 @@ var newPhoto = Backbone.Model();
 ```
 then you'd be getting a single object back, not a constructor.
 
+Backbone.Model.extend takes 

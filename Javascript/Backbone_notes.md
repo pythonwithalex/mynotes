@@ -17,7 +17,9 @@ The second is a set of classProperties that are attached to the constructor itse
 #### Built-In Methods
 
 **defaults**: for when your user doesn't provide complete information
+
 **initialize**
+
 **validate**
 
 #### Setting Values on a Model

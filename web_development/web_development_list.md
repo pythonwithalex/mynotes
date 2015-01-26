@@ -12,7 +12,7 @@
 
 #### HTML && CSS 
 [ only the **really good ones**, there are so many bad ones...]
-
++ [HTML5 reset](http://www.cssreset.com/scripts/html5-doctor-css-reset-stylesheet/)
 + [professional CSS](http://opentechschool.github.io/python-flask/extras/css.html)
 + [Shaye How](http://learn.shayhowe.com/)
 + [sitepoint css](http://reference.sitepoint.com/css)

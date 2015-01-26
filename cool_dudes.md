@@ -1,11 +1,11 @@
 A List of Cool Dudes
 ====================
 
-+ grace hopper
++ [grace hopper](http://en.wikipedia.org/wiki/Grace_Hopper)
 
-+ Billy Childish
++ [Billy Childish](http://en.wikipedia.org/wiki/Billy_Childish)
 
-+ ronald jenkees
++ [Ronald Jenkees](https://www.youtube.com/watch?v=LoFurLevE28)
 
 + Brian McGee
 

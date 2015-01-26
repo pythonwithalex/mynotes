@@ -1,7 +1,7 @@
 A List of Cool Dudes
 ====================
 
-+ [grace hopper](http://en.wikipedia.org/wiki/Grace_Hopper)
++ [Grace Hopper](http://en.wikipedia.org/wiki/Grace_Hopper)
 
 + [Billy Childish](http://en.wikipedia.org/wiki/Billy_Childish)
 

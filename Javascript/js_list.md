@@ -1,5 +1,6 @@
 JavaScript, what a language
 ==========
++ [JavaScript - less known parts](http://michalbe.blogspot.com/2013/03/javascript-less-known-parts-bitwise.html)
 + [Backbone Local Storage Annotated Code](http://backbonejs.org/docs/backbone-localstorage.html)
 + [A Better Way to Learn Angular](https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/)
 + [Thomas Davis's Backbone.js Tutorials](https://backbonetutorials.com/)

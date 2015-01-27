@@ -1,6 +1,18 @@
 Command Library
 ===============
 
+### resizing image files in place on OS X (BSD)
+
+sipz -Z \<max height or width\> \<files\>
+```bash
+$ ls imgs
+1.jpg
+2.jpg
+3.jpg
+$ sips -z 640 *.jpg
+
+```
+
 #### renaming files in a directory to something much more structured
 
 ```bash

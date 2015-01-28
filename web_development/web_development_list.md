@@ -2,7 +2,7 @@
 
 #### Speed
 
-+ [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html)
++ [Yahoo's Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html)
 
 #### Meta List !
 + [the big list](http://blog.reybango.com/the-big-list-of-javascript-css-and-html-development-tools-libraries-projects-and-books/#sites)

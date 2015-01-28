@@ -4,6 +4,16 @@
 
 + [Yahoo's Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html)
 
+#### REST
+
+REST
+
++ [learn REST](http://rest.elkstein.org/)
++ [how i explained rest to my wife](http://www.looah.com/source/view/2284)
++ [Roy Fielding's thesis chapter on REST (Architectural Styles and the Design of Network-based Software Architecture Styles)](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
++ [Roy Fielding's whole thesis](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
++ [SO question about REST](http://stackoverflow.com/questions/4663927/what-is-rest-slightly-confused)
+
 #### Meta List !
 + [the big list](http://blog.reybango.com/the-big-list-of-javascript-css-and-html-development-tools-libraries-projects-and-books/#sites)
 

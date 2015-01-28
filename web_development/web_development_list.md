@@ -6,8 +6,6 @@
 
 #### REST
 
-REST
-
 + [learn REST](http://rest.elkstein.org/)
 + [how i explained rest to my wife](http://www.looah.com/source/view/2284)
 + [Roy Fielding's thesis chapter on REST (Architectural Styles and the Design of Network-based Software Architecture Styles)](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

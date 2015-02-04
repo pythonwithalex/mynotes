@@ -9,17 +9,32 @@
 + openldap
 + mail server (dovecot)
 + nfs
++ printing
 
 ## Commands
+** Systemctl **:
++ systemctl stop
++ systemctl start
++ systemctl restart
++ systemctl reload
++ systemctl try-restart
++ systemctl kill
++ systemctl is-active
++ systemctl status
+
+**Change Run Level**
++ change /etc/inittab runlevel value to 3(multi-user, text) or 5(gui)
++ systemctl set-default multi-user.target or graphical.target
 
 **tar**: 
 
 **zcat**: view a compressed log
 
+**printing**:
 
 ## Installation 
 
-**kickstart**: Using kickstart, a system administrator can create a single file containing the answers to all the questions that would normally be asked during a typical installation.
+**kickstart**: Use the /root/anaconda-cfg.ks file to automate your installs by putting in a ks='   ' value at the command line in the boot loader menu
 
 ## Users and Groups
 
@@ -27,18 +42,23 @@
 each user gets an identically named group account
 
 
-#### OpenLDAP
-LDAP: Light Weight Access Protocol
+## OpenLDAP
++ LDAP: Light Weight Access Protocol
++ Directory of typed and ordered data that describes a system of commonly accessed information used for authentication
++ specialized database that is optimized for reads, not writes (i.e., not like a print queue, which is frequently updated)
++ Usually don't support transactions
++ Access Methods aren't as complex as SQL, usually very simple.
++ Runs over TCP/IP
 
-OpenLDAP Runs over TCP/IP
-[ref: https://sites.google.com/site/openldaptutorial/Home/openldap---beginners/benefits]
+[ref1: https://sites.google.com/site/openldaptutorial/Home/openldap---beginners/benefits, ref2: https://www.youtube.com/watch?v=5VxdqkjFwBs]
 
-OpenLdap is implemented as a database. 
+OpenLdap is implemented as a database called a **Directory**
 mostly reads, not so many modifications/writes.
 add info once, use for authentication many places.
 convenient restrictions for anonymous and regular users.
 
 Purpose: "used to authenticate from a single and common base of information regardless of location or application"
+Share information among many applications
 
 **Terminology**
 + Entry/Object: a node in the Directory Information Tree

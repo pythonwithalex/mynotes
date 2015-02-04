@@ -41,9 +41,14 @@ convenient restrictions for anonymous and regular users.
 Purpose: "used to authenticate from a single and common base of information regardless of location or application"
 
 **Terminology**
-+ Directory Information Tree
-+ Root DSE
++ Entry/Object: a node in the Directory Information Tree
++ Directory Information Tree: The Entire Database
++ Root DSE: head node
 + entry
 + distinguised name, DN
 + attribute
++ objectclasses
 + schema
+
+Schema Files provide the structure/ container for the database
+they store attributes and object classes

@@ -12,15 +12,27 @@
 + printing
 
 ## Commands
+
+** telnet **
++ telnet www.google.com 80
++ GET / HTTP/1.1
++ host: www.google.com
+
+
+**set SELinux to disabled**
+
+vim /etc/selinux/config
+
 ** Systemctl **:
 + systemctl stop
-+ systemctl start
++ systemctl start [httpd]
 + systemctl restart
 + systemctl reload
 + systemctl try-restart
 + systemctl kill
 + systemctl is-active
 + systemctl status
+
 
 **Change Run Level**
 + change /etc/inittab runlevel value to 3(multi-user, text) or 5(gui)
@@ -77,3 +89,14 @@ The schema files store the attributes and object classes
 schema file examples: misc.schema, inetorgperson.schema, nis.schema
 
 objectclasses determine which node, attributes determine what its properties (key-value pairs) are
+
+## LAMP
+
++ disable selinux
++ yum install httpd php php-gd mysql-server php-mysql phpMyAdmin
++ systemctl start apache
++ systemctl start mysqld
++ mysql -u root
++ mysql> set password = password('your password');
++ mysql> exit
++ mysql -p -u root (then enter previous password);

@@ -1,4 +1,4 @@
-#### List of Topics
+## List of Topics
 
 + commands
 + creating partitions and filesystems
@@ -10,18 +10,18 @@
 + mail server (dovecot)
 + nfs
 
-#### Commands
+## Commands
 
 **tar**: 
 
 **zcat**: view a compressed log
 
 
-#### Installation 
+## Installation 
 
 **kickstart**: Using kickstart, a system administrator can create a single file containing the answers to all the questions that would normally be asked during a typical installation.
 
-#### Users and Groups
+## Users and Groups
 
 /etc/passwd
 each user gets an identically named group account
@@ -51,4 +51,7 @@ Purpose: "used to authenticate from a single and common base of information rega
 + schema
 
 Schema Files provide the structure/ container for the database
-they store attributes and object classes
+The schema files store the attributes and object classes
+schema file examples: misc.schema, inetorgperson.schema, nis.schema
+
+objectclasses determine which node, attributes determine what its properties (key-value pairs) are

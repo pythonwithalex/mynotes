@@ -6,7 +6,7 @@
 + users and groups
 + apache
 + lamp
-+ ldap (or heimdal)
++ openldap (or heimdal)
 + mail server (dovecot)
 + nfs
 

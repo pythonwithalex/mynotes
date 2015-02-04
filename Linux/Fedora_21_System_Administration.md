@@ -100,3 +100,4 @@ objectclasses determine which node, attributes determine what its properties (ke
 + mysql> set password = password('your password');
 + mysql> exit
 + mysql -p -u root (then enter previous password);
++ vim /etc/phpMyAdmin/config.inc.php and replace MySQL user and password lines with 'root' and the password you just created.

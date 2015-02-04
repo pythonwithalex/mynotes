@@ -44,7 +44,9 @@ each user gets an identically named group account
 
 ## OpenLDAP
 + LDAP: Light Weight Access Protocol
-+ Directory of typed and ordered data that describes a system of commonly accessed information used for authentication
++ Directory of typed and ordered data 
++ Information used by a lot of applications, Information accessible from many locations (centralized on a server)
++ that describes a system of commonly accessed information used for authentication
 + specialized database that is optimized for reads, not writes (i.e., not like a print queue, which is frequently updated)
 + Usually don't support transactions
 + Access Methods aren't as complex as SQL, usually very simple.

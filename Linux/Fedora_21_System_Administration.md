@@ -13,6 +13,8 @@
 
 ## Commands
 
+** df -T**: show mounted filesystems with FileSystem Type information
+
 ** telnet **
 + telnet www.google.com 80
 + GET / HTTP/1.1
@@ -93,7 +95,7 @@ objectclasses determine which node, attributes determine what its properties (ke
 ## LAMP
 
 + disable selinux
-+ yum install httpd php php-gd mysql-server php-mysql phpMyAdmin
++ yum install httpd php php-gd mysql-server php-mysql phpMyAdmin // this will install mariadb 
 + systemctl start apache
 + systemctl start mysqld
 + mysql -u root
@@ -103,3 +105,5 @@ objectclasses determine which node, attributes determine what its properties (ke
 + vim /etc/phpMyAdmin/config.inc.php and replace MySQL user and password lines with 'root' and the password you just created.
 + systemctl restart httpd
 + curl 127.0.0.1/lolz.php
++ checkconfig --levels 235 httpd on
++ checkconfig --levels 235 mysqld on

@@ -49,6 +49,7 @@ vim /etc/selinux/config
 **printing**:
 
 ## Network Config
++ don't use /etc/init.d/network for scripts. it isn't event driven, so not real-time. use NetworkManager
 + ifconfig still supported
 + NetworkManager is the new utility
 + nmtui is a tui for basic config
@@ -64,6 +65,9 @@ each user gets an identically named group account
 
 
 ## OpenLDAP
+
+**refs**: http://www.openldap.org/doc/admin24/index.html
+
 + LDAP: Light Weight Access Protocol
 + Directory of typed and ordered data 
 + Information used by a lot of applications, Information accessible from many locations (centralized on a server)

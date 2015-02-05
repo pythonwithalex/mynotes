@@ -111,6 +111,10 @@ objectclasses determine which node, attributes determine what its properties (ke
 + mysql -p -u root (then enter previous password);
 + vim /etc/phpMyAdmin/config.inc.php and replace MySQL user and password lines with 'root' and the password you just created.
 + systemctl restart httpd
-+ curl 127.0.0.1/lolz.php
++ create a file called 'phptest.php' in /var/www/html with the following info
+```php
+<?php phpinfo(); ?>
+```
++ curl 127.0.0.1/phptest.php
 + checkconfig --levels 235 httpd on
 + checkconfig --levels 235 mysqld on

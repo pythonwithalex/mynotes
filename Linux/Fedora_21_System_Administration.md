@@ -12,6 +12,7 @@
 + printing
 
 ## Commands
+**lsof -i**: open ports
 
 **df -T**: show mounted filesystems with FileSystem Type information
 

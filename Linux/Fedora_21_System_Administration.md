@@ -48,6 +48,11 @@ vim /etc/selinux/config
 
 **printing**:
 
+## Network Config
++ ifconfig still supported
++ NetworkManager is the new utility
++ nmtui is a tui for basic config
+
 ## Installation 
 
 **kickstart**: Use the /root/anaconda-cfg.ks file to automate your installs by putting in a ks='   ' value at the command line in the boot loader menu

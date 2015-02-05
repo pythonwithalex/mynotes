@@ -1,6 +1,7 @@
 ## List of Topics
 
-+ commands
++ command index
++ Network Configuration
 + creating partitions and filesystems
 + diagnosing
 + users and groups

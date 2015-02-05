@@ -13,9 +13,9 @@
 
 ## Commands
 
-** df -T**: show mounted filesystems with FileSystem Type information
+**df -T**: show mounted filesystems with FileSystem Type information
 
-** telnet **
+**telnet**
 + telnet www.google.com 80
 + GET / HTTP/1.1
 + host: www.google.com

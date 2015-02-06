@@ -26,10 +26,18 @@ toggle between windows
 
 ## Vim
 
-**~** reverse case of letter in command mode mode
+reverse case of letter in command mode mode
 
-**gg Shift-V-G u** convert entire file to lower case
+    ~ 
 
-**gg Shift-V-G U** convert entire file to upper case
+convert entire file to lower case
 
+    gg Shift-V-G u
+    
+convert entire file to upper case
+
+    gg Shift-V-G U
+
+delete up to a character match
+    d + SHIFT + /search 
 

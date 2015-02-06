@@ -1,5 +1,30 @@
 Functions are like objects in that they can have properties.
 
+
+#### A note on lexical scope using an example
+
+In the function below, because foo is declared with a visible in the global namespace, the a inside of foo will refer to that a.  You can change the context in which it's called in such a way that you create an a that is visible to it, but if you don't pass it into the function ( as I'm not doing with bar()), then the original function refers to the context in which it is defined.
+
+```javascript
+
+var a = 5;
+function foo()
+{
+  return a;
+}
+
+function bar()
+{
+  var a = 1;
+  return foo();
+}
+
+console.log(foo());
+console.log(bar());
+
+```
+
+
 #### Call Method - Determining Context
 
 ```javascript

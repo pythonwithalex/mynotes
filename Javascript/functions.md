@@ -1,7 +1,17 @@
 Functions are like objects in that they can have properties.
+Every time you declare a function, you create a lexical scope.
+Functions are objects and thus are unique
 
+lexical
+
+
+#### Execution contexts
+The context of a function is the child of the context in which it was defined.
+In-memory scope structures that hold variable names and their values.
+One lexical scope can mean many in-memory execution contexts
 
 #### A note on lexical scope using an example
+
 
 In the function below, because foo is declared with 'a' visible in the global namespace, the 'a' returned by foo will refer to the global 'a'.  The variables in the parent scope of a given function are available to that function.  The context in which foo is called does not affect its scope, hence the term 'static' scoping.
 
@@ -33,9 +43,8 @@ It's one part of a function's runtime invocation/call context.
 **Four Rules**:
 + default context: function using this is out in the open, this refers to global var
 + implicit binding:
-+ expliclit binding: using .call() and .apply()
-+ chained functions:
-
++ expliclit binding: using .call() and .apply(), you can explicitly set the object to use for this
++ hard binding: point is to prevent loss of the proper this binding.
 
 #### Call Method - Determining Context
 

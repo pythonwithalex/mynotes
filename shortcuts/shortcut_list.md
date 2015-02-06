@@ -39,5 +39,6 @@ convert entire file to upper case
     gg Shift-V-G U
 
 delete up to a character match
-    d + SHIFT + /search 
+
+    d + / + regex match 
 

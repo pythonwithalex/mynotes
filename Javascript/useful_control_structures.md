@@ -1,4 +1,4 @@
-#### access the 
+#### iterate through the attributes of an object
 
 ```javascript
 var favorites = ['movies','tv','junk food','skiing'];

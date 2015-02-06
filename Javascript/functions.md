@@ -42,7 +42,7 @@ It's one part of a function's runtime invocation/call context.
 
 **Four Rules**:
 + default context: function using this is out in the open, this refers to global var
-+ implicit binding:
++ implicit binding: a reference to a function from within an object literal initializer.
 + expliclit binding: using .call() and .apply(), you can explicitly set the object to use for this
 + hard binding: point is to prevent loss of the proper this binding.
 

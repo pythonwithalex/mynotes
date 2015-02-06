@@ -2,7 +2,7 @@
 
 #### Using '&&'
 
-When you have multiple boolean expressions linked by the '&&', the main expression returns false if any sub expressions false.  It returns true otherwise.
+When you have multiple boolean expressions linked by the '&&', the main expression returns false if any sub-expressions false.  It returns true otherwise.
 
     true && true && true
     // true
@@ -10,7 +10,7 @@ When you have multiple boolean expressions linked by the '&&', the main expressi
     true && true && false
     // false
     
-When your expressions involve one ore more non-booleans, the value returned is the last truthy or true value on the right if any truthy values are present.  
+When your expressions involves one or more non-booleans, the value returned is the last truthy or true value on the right if false is not present.  
 Otherwise the expression evaluates to false.
 
     'cat' && 'dog' && 'bear'

@@ -3,9 +3,7 @@ Functions are like objects in that they can have properties.
 
 #### A note on lexical scope using an example
 
-In the function below, because foo is declared with 'a' visible in the global namespace, the 'a' inside of foo will refer to that 'a'.  You can change the context in which foo() is called in such a way that you create an a that is visible to it, but if you don't pass it into the function, which redefines a, as I demonstrate with bar(), then the original function refers to the context in which it is defined, not in which it was called.
-
-This is also called static scoping, because the referents inside of the function don't change depending on the calling context.
+In the function below, because foo is declared with 'a' visible in the global namespace, the 'a' inside of foo will refer to that 'a'.  The context in which foo is called does not affect its scope, hence the term 'static' scoping.
 
 
 ```javascript

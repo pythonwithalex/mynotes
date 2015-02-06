@@ -1,8 +1,8 @@
 #### JS Operators
 
-#### Using '&&'
+#### Using '&&' and '||'
 
-When you have multiple boolean expressions linked by the '&&', the main expression returns false if any sub-expressions false.  It returns true otherwise.
+When you have multiple boolean expressions linked by the '&&', the main expression returns false if any sub-expressions are false.  It returns true otherwise. The evaluation stops at the first false value. This is called 'short-circuiting' because not all of the expressions are evaluated.
 
     true && true && true
     // true
@@ -10,8 +10,8 @@ When you have multiple boolean expressions linked by the '&&', the main expressi
     true && true && false
     // false
     
-When your expressions involves one or more non-booleans, the value returned is the last truthy or true value on the right if false is not present.  
-Otherwise the expression evaluates to false.
+If you have non-booleans involved in a group of logical expressions, the value returned is the last truthy or true value on the right, unless false is present.
+
 
     'cat' && 'dog' && 'bear'
     // returns 'bear'

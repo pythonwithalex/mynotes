@@ -26,10 +26,12 @@ for (var i in list)
 {
   console.log(i);
 }
+Object.keys(stuff)
+// ['1','2','3','4']
 
 ```
 
-#### Object.keys(o)
+#### 
 
 
 #### Non-enumerable Properties

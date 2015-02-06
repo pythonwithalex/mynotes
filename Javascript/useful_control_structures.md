@@ -17,4 +17,6 @@ most :  dogs
 */
 ```
 
-#### for each
+#### For each
+
+**don't bother using for each, it's not supported in major browsers, nor is it supported in node.js**

@@ -1,3 +1,21 @@
+#### label statements (for use in loops with the break and continue statements
+
+```javascript
+student:
+
+for (var i = 0; i< 10; i++)
+{
+
+  for (var j = 0; j < 5; j++)
+  {
+    if (j==4)
+    {
+      break student;
+    }
+  }
+}
+```
+
 #### iterate through the attributes of an object
 
 ```javascript

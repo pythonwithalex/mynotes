@@ -53,9 +53,23 @@ for (var i in list)
 
 ```javascript
 
-var o = [1,2,3,4,'string']
-Object.keys(o);
-// ['0','1','2']
+var stuff = {'book':'Crime and Punishment','tool':'hammer'};
+Object.defineProperty(stuff,'music_equipment',{value: 'keyboard',enumerable:false});
+Object.keys(stuff);
+// [ 'book', 'tool' ]
+for (var i in stuff)
+{
+  console.log(stuff[i]);
+}
+// Crime and Punishment
+// hammer
+
+console.log(stuff['music_equipment']);
+// keyboard
+
+JSON.stringify(stuff);
+// '{"book":"Crime and Punishment","tool":"hammer"}'
+
 ```
 
 #### For each

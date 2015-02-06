@@ -37,6 +37,12 @@ most :  dogs
 */
 ```
 
+#### Object.keys(o)
+
+var o = [1,2,3,4,'string']
+Object.keys(o);
+// ['0','1','2']
+
 #### For each
 
 Don't bother using for each, it's not supported in major browsers, nor is it supported in node.js.

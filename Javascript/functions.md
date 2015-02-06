@@ -1,8 +1,6 @@
-Functions are like objects in that they can have properties.
-Every time you declare a function, you create a lexical scope.
-Functions are objects and thus are unique
-
-lexical
+Functions can have properties.
+A Function definition defines a lexical scope.
+Identical functions unique
 
 
 #### Execution contexts

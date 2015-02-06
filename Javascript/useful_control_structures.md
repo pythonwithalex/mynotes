@@ -1,4 +1,6 @@
-#### label statements (for use in loops with the break and continue statements
+#### label statements 
+
+You can use a label inside of nested loops to break out of an outer loop
 
 ```javascript
 student:

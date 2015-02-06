@@ -40,7 +40,7 @@ console.log(bar());
 **this** is entirely determined by the location of the function call it's inside of.
 It's one part of a function's runtime invocation/call context.
 
-**Four Rules**:
+**Four/Five Rules**:
 + default context: function using this is out in the open, this refers to global var
 + implicit binding: a reference to a function from within an object literal initializer.
 + expliclit binding: using .call() and .apply(), you can explicitly set the object to use for this

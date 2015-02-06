@@ -3,7 +3,7 @@ Functions are like objects in that they can have properties.
 
 #### A note on lexical scope using an example
 
-In the function below, because foo is declared with 'a' visible in the global namespace, the 'a' returned by foo will refer to the global 'a'.  The context in which foo is called does not affect its scope, hence the term 'static' scoping.
+In the function below, because foo is declared with 'a' visible in the global namespace, the 'a' returned by foo will refer to the global 'a'.  The variables in the parent scope of a given function are available to that function.  The context in which foo is called does not affect its scope, hence the term 'static' scoping.
 
 
 ```javascript

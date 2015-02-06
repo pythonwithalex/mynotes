@@ -18,7 +18,7 @@ for (var i = 0; i< 10; i++)
 }
 ```
 
-#### iterate through the attributes of an object
+#### iterate through the enumerable attributes of an object
 
 ```javascript
 var favorites = ['movies','tv','junk food','skiing'];
@@ -36,12 +36,27 @@ for (var i in favorites)
 most :  dogs
 */
 ```
+#### What does 'enumerable' mean?
+If a property of an object is enumerable, this means you can access it iteratively using Object.keys(o) or for (var i in o) syntax.  You can explicitly set an object not to be enumerable:
+
+```javascript
+var list = [1,2,3,4];
+Object.defineProperty(list,4, { value: 5, enumerable: false });
+for (var i in list)
+{
+  console.log(i);
+}
+
+```
 
 #### Object.keys(o)
+
+```javascript
 
 var o = [1,2,3,4,'string']
 Object.keys(o);
 // ['0','1','2']
+```
 
 #### For each
 

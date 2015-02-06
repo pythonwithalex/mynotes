@@ -31,6 +31,8 @@ for (var i in list)
 
 #### Object.keys(o)
 
+
+#### Non-enumerable Properties
 ```javascript
 
 var stuff = {'book':'Crime and Punishment','tool':'hammer'};
@@ -50,6 +52,8 @@ console.log(stuff['music_equipment']);
 JSON.stringify(stuff);
 // '{"book":"Crime and Punishment","tool":"hammer"}'
 
+Object.getOwnPropertyNames(stuff)
+// [ 'book', 'tool', 'music_equipment' ]
 ```
 
 #### For each

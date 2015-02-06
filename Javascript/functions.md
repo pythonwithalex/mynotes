@@ -25,6 +25,10 @@ console.log(bar());
 
 ```
 
+#### 'this'
+
+
+**this** is one part of a function's runtime invocation/call context 
 
 #### Call Method - Determining Context
 

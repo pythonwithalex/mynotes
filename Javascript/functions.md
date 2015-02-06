@@ -37,8 +37,19 @@ console.log(bar());
 
 #### 'this' 
 
+**this will never be**:
++ the function in which it is called.
++ not an in-memory object that has that function as a property
++ not an execution context or a scope.  you have no access to the scope.
+
+**It will refer to**:
++ the current execution environment of its parent ???? e.g. obj.fn(3,4) or obj['fn'];
+
++ it behaves like a parameter, useful to think of it that way
+
 **this** is entirely determined by the location of the function call it's inside of.
 It's one part of a function's runtime invocation/call context.
+It's roughly the parameter that is the left of the dot in a method call, e.g. with r.method(g,b), it would be r
 
 **Four/Five Rules**:
 + default context: function using this is out in the open, this refers to global var

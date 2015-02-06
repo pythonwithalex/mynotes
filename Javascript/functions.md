@@ -1,6 +1,8 @@
 Functions can have properties.
+
 A Function definition defines a lexical scope.
-Identical functions unique
+
+Identical functions are unique.
 
 
 #### Execution contexts

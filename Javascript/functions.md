@@ -25,10 +25,9 @@ console.log(bar());
 
 ```
 
-#### 'this'
-
-
-**this** is one part of a function's runtime invocation/call context 
+#### 'this' 
+**this** is entirely determined by the location of the function call it's inside of.
+It's one part of a function's runtime invocation/call context.
 
 #### Call Method - Determining Context
 

@@ -48,8 +48,11 @@ console.log(bar());
 + it behaves like a parameter, useful to think of it that way
 
 **this** is entirely determined by the location of the function call it's inside of.
-It's one part of a function's runtime invocation/call context.
-It's roughly the parameter that is the left of the dot in a method call, e.g. with r.method(g,b), it would be r
++ find its invocation
++ It's one part of a function's runtime invocation/call context.
++ It's roughly the parameter that is the left of the dot in a method call, e.g. with r.method(g,b), it would be r
+
+ 
 
 **Four/Five Rules**:
 + default context: function using this is out in the open, this refers to global var

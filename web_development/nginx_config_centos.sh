@@ -4,7 +4,7 @@ yum -y install nginx
 #  create a location for your web root from which you willll serve data 
 mkdir /var/www
 
-# put a file in the web root directory so we can later verify nginx is serving content
+# put a file in the web root directory so we can later verify nginx is serving content (see sample file)
 echo 'nginx test' > /var/www/index.html
 
 chown -R nginx:nginx /var/www

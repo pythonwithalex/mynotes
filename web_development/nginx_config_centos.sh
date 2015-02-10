@@ -36,8 +36,9 @@ ps aux | grep -i nginx
 ls /etc/nginx/nginx.conf
 
 # SAMPLE NGINX CONF FILE
-
-
+#
+#
+#
 user              nginx;
 worker_processes  1;
 
@@ -82,4 +83,8 @@ http {
     }
 
 }
+
+#
+#
+# END NGINX SAMPLE FILE
 

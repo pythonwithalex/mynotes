@@ -1,3 +1,12 @@
+# had trouble getting nginx to work but i think these settings are correct
+# start wsgi server with the following. run command from dir with wsgi.py file in it
+env/bin/uwsgi --socket 127.0.0.1:8081 -w wsgi.py --callable app
+
+# then run nginx
+nginx
+
+
+
 # as root, install nginx
 yum -y install nginx
 

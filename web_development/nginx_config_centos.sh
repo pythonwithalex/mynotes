@@ -37,7 +37,7 @@ ls /etc/nginx/nginx.conf
 
 # SAMPLE NGINX CONF FILE
 
-```c
+
 user              nginx;
 worker_processes  1;
 
@@ -82,4 +82,4 @@ http {
     }
 
 }
-```
+

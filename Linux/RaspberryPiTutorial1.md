@@ -157,7 +157,7 @@ run ````sudo apt-get update```` and wait a bit
 
 + Setting a static IP allows you to know the address of the PI at boot time, but it requires a little work.  If you don't want to set up a static IP on your WIFI network, you can avoid the tedious process of looking for the pi each time by creating a boot script that pings your router when the PI starts up.  What this does is tell the router about its IP address, which gets passed to you when you run ````arp -a ```` on Linux/BSD/MAC system that is connected the router.  From there, you can deduce the proper IP.  For obvious reasons, a static IP is probably a better route, as your WIFI router's lease may expire and the IP may change.
 
-You can create a boot script called ````pingrouter```` on the Pi by creating a file called `````/etc/init.d/pingrouter```` with the following lines
+You can create a boot script called ````pingrouter```` on the Pi by creating a file called ````/etc/init.d/pingrouter```` with the following lines
 
 ````bash
 #!/bin/bash

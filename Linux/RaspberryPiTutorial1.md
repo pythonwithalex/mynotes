@@ -178,6 +178,8 @@ ping -c1 192.168.1.1
 
 #### Assigning the system a static IP
 
++ It is better to understand the IP address 192.168.1.10 as consisting of two addresses, a network address and a host address.  The network address identifies the internet that the host is on, e.g.,  ````192.168.1````.  The host address indicates *which* host on that network, e.g.  ````10````.
+
 + To assign the pi a static IP so that it boots with the same IP address each time, we need to figure out 5 things:
   - The DHCP range of the WIFI router
   - The Netmask
@@ -236,7 +238,7 @@ p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
   - The Netmask: 255.255.255.0
  
 + **Broadcast Address** 
-  - The broadcast address on a network is a host address at which each host is configured to receieve ethernet packets. Like the network address, it is a reserved address where you can direct messages intended for everyone on a LAN network. In the case of my LAN, the broadcast is the last possible address on my network,  ````192.168.1.255````. 
+  - The broadcast address is an address that reaches all hosts on a LAN segment. Like the network address, it is a reserved address where you can direct messages intended for everyone on a LAN network. In the case of my LAN, the broadcast is the last possible address on my network,  ````192.168.1.255````. 
 
 + **Gateway**: since we know the Network Address now, the gateway is simply the second possible address in ascending order, so ````192.168.1.1````.  This Gateway is also your WIFI router's address.
   - DHCP RANGE: ????

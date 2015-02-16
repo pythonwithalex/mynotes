@@ -2,7 +2,7 @@
 
 ##### Preamble
 
-In this tutorial, I’m going to show you how to install and configure a Raspberry Pi model B. The goal is to get your pi ready to be put to use for how you see fit. It will have a functional partition scheme, good default network settings and ssh accessible and password-protected on your local network. In follow-up posts, I’ll demonstrate a few practical uses I’ve found for it, such as a samba share, a web server, a webcam, as well as some backup solutions.  
+In this tutorial, I’m going to show you how to install and configure a Raspberry Pi model B. The goal is to get your pi ready for an as of yet undetermined but fun purpose. It will have a functional partition scheme, good default network settings and ssh accessible and password-protected on your local network. In follow-up posts, I’ll demonstrate a few practical uses I’ve found for it, such as a samba share, a web server, a webcam, as well as some backup solutions.  
 
 This tutorial will show any GUI options when appropriate, but the command-line is the main focus here.  
 

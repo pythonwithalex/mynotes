@@ -244,19 +244,20 @@ p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
   - The Gateway Address: 192.168.1.1
   - The Netmask: 255.255.255.0
 
-+ **Your Router's DHCP range**: When we set a static IP, we don't want it to conflict with an address reserved for automatic/dynamic assignment, which the WIFI router takes care of.  We need to log into our WIFI router's administration panel and find the DHCP range.  Since I have no idea what your WIFI router model is, I can't help you here other than to suggest that you look for the DHCP range settings in LAN Administration in the manual for your router (can probably be found online).  Mine reservers addressess ````192.168.1.2```` - ````192.168.1.100```` for DHCP addresses.  
++ **Your Router's DHCP range**: When we set a static IP, we don't want it to conflict with an address reserved for automatic/dynamic assignment, which the WIFI router takes care of.  We need to log into our WIFI router's administration panel and find the DHCP range.  Since I have no idea what your WIFI router model is, I can only advise that you look for the DHCP range settings in the LAN Administration in your WIFI Admin panel, or look that information up in the manual for your router (can probably be found online if it's at least somewhat recent).  My WIFI router reserves addressess ````192.168.1.2```` through ````192.168.1.100```` for DHCP addresses.  This means that anything from ````192.168.1.101```` through ````192.168.1.254```` is technicially available, assuming I configured any other static IP devices on this network.
 
-+ 
+  **What We Have So Far**
 
-+ Change the 4th line’s **dhcp** keyword to static.
+  - DHCP RANGE: ````192.168.1.2```` - ````192.168.1.100````
+  - The Network Address: ````192.168.1.0````
+  - The Gateway Address: ````192.168.1.1````
+  - Broadcast Address ````192.168.1.255````
+  - The Netmask: ````255.255.255.0````
 
-+ Determine proper IP, gateway, netmask, network and broadcast settings
++ We have all of the relevant information to configure a static IP. Let's edit our network settings file,  ````/etc/network/interfaces```` to give the pi a fixed IP address . 
++ But first, let’s back that up that so  we can modify it while keeping the original in tact. In a Terminal window, run ```` sudo cp /etc/network/interfaces /etc/network/interfaces.orig````
 
-+ The file where we define our networking settings is ````/etc/network/interfaces```` . Let’s back that up that so  we can modify it while keeping the original in tact.
-
-````cp /etc/network/interfaces /etc/network/interfaces.orig````
-
-+ Now lets modify the contents. The default file looks like this
++ Now lets modify the contents of ````/etc/network/interfaces````. The default file looks like this
 
 ````cat /etc/network/interfaces````
 

@@ -180,18 +180,23 @@ Try logging out and then back in.  Your new password should work with the user `
 run ````sudo apt-get update```` and wait a bit
 
 
-#### Leaving the Pi with default Network Settings
+#### Leaving the Pi on DHCP (the default)
 
-+ Setting a static IP allows you to know the address of the PI at boot time, but it requires a little work.  If you don't want to set up a static IP on your WIFI network, you can leave the PI set to DHCP by default and then create a boot script that pings your router when the PI boots.  What this does is tell the router about its IP address, which gets passed to you when you run ````arp -a ```` on Linux/BSD/MAC system that is connected the router.  From there, you can deduce the proper IP.  For obvious reasons, a static IP is probably a better route.
++ Setting a static IP allows you to know the address of the PI at boot time, but it requires a little work.  If you don't want to set up a static IP on your WIFI network, you can avoid the tedious process of looking for the pi each time by creating a boot script that pings your router when the PI starts up.  What this does is tell the router about its IP address, which gets passed to you when you run ````arp -a ```` on Linux/BSD/MAC system that is connected the router.  From there, you can deduce the proper IP.  For obvious reasons, a static IP is probably a better route, as your WIFI router's lease may expire and the IP may change.
 
-You can create a boot script on the Pi by doing the following
+You can create a boot script called pingrouter on the Pi by creating a file called /etc/init.d/pingrouter with the following lines
+
+````bash
+#!/bin/bash
+
+# This command will unconditionally run at boot
+ping -c1 192.168.1.1
 
 ````
-sudo echo "ping -c 1 192.168.1.1" > /etc/init.d/pingrouter
-service pingrouter
-sudo vim /etc/init.d/pingrouter
 
-````/etc/init.d/<SCRIPT NAME>````, e.g. ````/etc/init.d/pingrouter````
+Then run these commands:
++ ````sudo chmod 755 /etc/init.d/pingrouter```` 
++ ````sudo update-rc.d pingrouter defaults````
 
 #### Assigning the system a static IP
 

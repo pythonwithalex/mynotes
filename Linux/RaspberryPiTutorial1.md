@@ -219,7 +219,7 @@ p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
 
 + Notice that the ````en1```` device has an ````inet```` address.  We'll use this section to determine the necessary addresses for the pi's static IP.
 
-+ **Netmask**: the output for ````en1```` indicates that the Netmask is 0xffffff00, which is 255.255.255.0 in dotted decimal, the IP address notation you are probably most familiar with. The Netmask indicates the length of your network addresses.  If it were Oxffff0000, or 255.255.0.0, your network address information would consist of XXX.XXX.0.0.
++ **Netmask**: the output for ````en1```` indicates that the Netmask is 0xffffff00, which is 255.255.255.0 in dotted decimal, the IP address notation you are probably most familiar with. The Netmask tells you where in the ip address the network address ends and the IP address space begins. A network with the netmask 255.255.255.0 reserves the first 3 dot-separated numbers for representation of the network. The last number, excluding 3 special addresses, indicates the total possible host addresses on that network, so 256-3, or 253.
 
   **What We Have So Far**
   - DHCP RANGE: ????

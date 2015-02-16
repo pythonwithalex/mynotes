@@ -34,7 +34,7 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 + Hit Erase
 + unmount the disk but don’t eject it.  You can do this with the terminal command ```` sudo diskutil unmount /dev/disk1````.
 
-**Command line
+#### Command line
 
 + Before you insert the SD card, open the Terminal (fast way: command + spacebar + type ‘Termi…’ + hit enter)
 + type diskutil list and note the output. After we insert the SD card, it should output an additional disk. You want to make sure you reformat the correct disk, which is why we taking a safer route and comparing the output list before and after we insert the card.
@@ -54,10 +54,10 @@ Note: I also issues with my card that stemmed from the read-only switch being en
 
 #### Getting and Preparing the Raspberry Pi Operating System Image
 
-Download the latest Raspbian image from the Raspberry Pi website in either ZIP format or as a torrent
++ Download the latest Raspbian image from the Raspberry Pi website in either ZIP format or as a torrent
  
-zip format (~ 1Gb in size): http://downloads.raspberrypi.org/raspbian_latest 
-torrent: http://downloads.raspberrypi.org/raspbian_latest.torrent
+  - zip format (~ 1Gb in size): http://downloads.raspberrypi.org/raspbian_latest 
+  - torrent: http://downloads.raspberrypi.org/raspbian_latest.torrent
 
 + If you downloaded a ZIP file, unzip it. If you torrented it, you most likely got an IMG file.
 + I’m assuming the unzipped Raspbian .img file is located in your ~/Downloads folder, aka /Users/\<your username\>/Downloads, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
@@ -87,11 +87,9 @@ bytes copied / disk image size = % done
 
 ````3.1G	/data/ISO/2014-09-09-wheezy-raspbian.img````
 
-
-
 disk image size = 3.1 GB
 
-progress = .31GB/3.1GB = .1 or 10%.
+progress = .31GB/3.1GB = .1 = 1%.
 
 #### Network Setup
 

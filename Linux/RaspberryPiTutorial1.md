@@ -48,32 +48,6 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 + Unmount the disk but don’t eject it.  You can do this with the terminal command ```` sudo diskutil unmount /dev/disk1````.
 
-#### Command line
-
-+ Before you insert the SD card, open the Terminal (**fast way**: command + spacebar + type ‘Termi…’ + hit enter)
-
-+ Type diskutil list and note the output. After we insert the SD card, it should output an additional disk. You want to make sure you reformat the correct disk, which is why we taking a safer route and comparing the output list before and after we insert the card.
-
-+ Connect the card reader with the SD card inserted to the the computer's USB drive
-
-+ Type ````diskutil```` list again
-
-+ Find the newly added disk’s device name.  For me, it was ````/dev/disk1````
-
-+ Double check you have the right disk!
-
-+ We'll now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI.
- The format for the command is this: ````sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]````
-
-So, in my case I type:
-
-```sudo diskutil eraseDisk FAT32 RASPI /dev/disk1````
-
-**Note**: I had some trouble with this at first because I was typing the filesystem label in lowercase. I got the following error: “raspi does not appear to be a valid volume for its file system.” A less than informative message, if you ask me.  Make sure to type the label in CAPS.
-
-**Note**: I also issues with my card that stemmed from the read-only switch being engaged on the SD adapter.  It also would occasionally mount read-only even with the write-mode switch engaged. I found that moving the switch back and forth helped, but there are other 'magical' fixes documented on the internet if that doesn't work for you.
-
-+ Assuming the disk erasure and reformatting is successful, unmount but don’t eject the disk from disk utility.
 
 #### Getting and Preparing the Raspberry Pi Operating System Image
 

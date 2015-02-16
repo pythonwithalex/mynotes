@@ -180,13 +180,14 @@ ping -c1 192.168.1.1
 
 + To assign the pi a static IP so that it boots with the same IP address each time, we need to figure out 5 things:
   - The DHCP range of the WIFI router
-  - The Network Address
-  - The Broadcase Address
-  - The Gateway Address
   - The Netmask
+  - The Network Address
+  - The Broadcast Address
+  - The Gateway Address
 
-+ In a terminal, run ````ifconfig````.  This lists your network devices and the IP address information obtained by them.  Not all will have an IP address, so we need to look for an ````inet```` entry.
-+ This is the output of ````ifconfig```` on my system:
++ In a terminal, run ````ifconfig````.  This lists your network devices and the IP address information obtained by them.  Not all will have an IP address, so we need to look for an ````inet```` entry.  
+
++ This is the output of ````ifconfig```` on my system from my private LAN:
 
 ````bash
 en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
@@ -217,6 +218,7 @@ p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
 + Notice that the ````en1```` device has an ````inet```` address.  We'll use this section to determine the necessary addresses for the pi's static IP.
 
 + **Netmask**: the output for ````en1```` indicates that the netmask is 0xffffff00, which is 255.255.255.0 in dotted decimal, the IP address notation you are probably most familiar with. 
+  **What We Have So Far**
   - DHCP RANGE: ????
   - The Network Address: 192.168.1.0
   - The Gateway Address: ????

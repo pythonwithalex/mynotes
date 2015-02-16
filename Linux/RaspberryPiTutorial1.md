@@ -21,7 +21,7 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 + Type **````diskutil list````** and note the device output. If no other disks are attached at this time, you will likely see just the ````/dev/disk0```` device and its partitions, ````/dev/disk0s1````, ````/dev/disk0s2````, etc.  These are the BSD device labels.
 
-+ After we insert the SD card, **````diskutil list````** should reveal an additional mounted device, most likely at /dev/disk1. You want to make sure you reformat this disk, which is why we taking a safer route and comparing the output list before and after we insert the card. If you reverse the source and destination of the copy utility we will use, you will erase the data on your hard drive.
++ After we insert the SD card, **````diskutil list````** should reveal an additional mounted device, most likely at ````/dev/disk1````. You want to make sure you reformat this disk, which is why we taking a safer route and comparing the output list before and after we insert the card. If you reverse the source and destination of the copy utility we will use, you will erase the data on your hard drive.
 
 + Insert the SD card into a card reader or into your mac
 + Type ````diskutil list```` again
@@ -40,13 +40,13 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 + type diskutil list and note the output. After we insert the SD card, it should output an additional disk. You want to make sure you reformat the correct disk, which is why we taking a safer route and comparing the output list before and after we insert the card.
 + Connect the card reader with the SD card inserted to the the computer's USB drive
 + type diskutil list again
-+ find the newly added disk’s device name.  For me, it was /dev/disk1
++ find the newly added disk’s device name.  For me, it was ````/dev/disk1````
 + double check you have the right disk!
 + we will now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI
 the format for the command is this: sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]
 So, in my case I type:
 
-+ sudo diskutil eraseDisk FAT32 RASPI /dev/disk1
++ sudo diskutil eraseDisk FAT32 RASPI ````/dev/disk1````
 note: I had some trouble with this at first because I was typing the filesystem label in lowercase. I got the following error: “raspi does not appear to be a valid volume for its file system.” A less than informative message, if you ask me.  Make sure to type the label in CAPS.
 Note: I also issues with my card that stemmed from the read-only switch being engaged on the SD adapter.  It also would occasionally mount read-only even with the write-mode switch engaged.  SD cards are not the most reliable technology in the world and they vary in quality.
 
@@ -60,11 +60,11 @@ Note: I also issues with my card that stemmed from the read-only switch being en
   - torrent: http://downloads.raspberrypi.org/raspbian_latest.torrent
 
 + If you downloaded a ZIP file, unzip it. If you torrented it, you most likely got an IMG file.
-+ I’m assuming the unzipped Raspbian .img file is located in your ~/Downloads folder, aka /Users/\<your username\>/Downloads, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
++ I’m assuming the unzipped Raspbian .img file is located in your ````~/Downloads```` folder, aka ````/Users/USERNAME/Downloads````, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
 
 + Recall the device name of the SD card that you recently reformatted. In my case, it is ````/dev/disk1````.  You will write the Raspbian image to this device with the BSD utility, ````dd````. ````dd```` is a low-level block copying utility that comes in extremely handy in Unix-related tasks, but it is nick-named ‘disk destroyer’ for a reason.  The invocation of dd , so be careful to get the source (designated by ‘if’, the input file) and destination (designated by ‘of’, the output file) file paths correct.
 
-+ We want to use dd in this way: dd  if=<RPI IMAGE FILE> of=<DESTINATION DEVICE> bs=<block size>
++ We want to use dd in this way: ````dd  if=\<RPI IMAGE FILE\> of=\<DESTINATION DEVICE\> bs=\<block size\>````
 + This command will copy the image file to the newly formatted FAT32 disk: 
 
 ````sudo dd if=~/Downloads/2014-09-09-wheezy-raspbian.img of=/dev/disk1 bs=1m````

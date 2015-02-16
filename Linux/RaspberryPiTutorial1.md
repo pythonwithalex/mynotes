@@ -177,8 +177,17 @@ ping -c1 192.168.1.1
 + ````sudo update-rc.d pingrouter defaults````
 
 #### Assigning the system a static IP
++ To assign the pi a static IP so that it boots with the same IP address each time, we need to figure out 5 things:
+  - The DHCP range of the WIFI router
+  - The Network Address (if your IP address is ````192.168.1.xxx````, then it is ````192.168.1.0````)
+  - The Gateway Address (if your IP address is ````192.168.1.xxx````, then it is ````192.168.1.1````)
+  - The Netmask (if your IP address is ````192.168.1.xxx````, then it is ````192.168.1.255````)
 
-+ The file where we define our networking settings is ````/etc/network/interfaces```` . Let’s copy that so that we can modify it while retaining the old copy.
+
++ Change the 4th line’s **dhcp** keyword to static.
+
++ Determine proper IP, gateway, netmask, network and broadcast settings
++ The file where we define our networking settings is ````/etc/network/interfaces```` . Let’s back that up that so  we can modify it while keeping the original in tact.
 
 ````cp /etc/network/interfaces /etc/network/interfaces.orig````
 
@@ -218,11 +227,7 @@ wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 ````
 
-We need to do a few things:
 
-+ Change the 4th line’s **dhcp** keyword to static.
-
-+ Determine proper IP, gateway, netmask, network and broadcast settings
 
 #### Determining your IP address, Gateway, Netmask, Network and Broadcast Settings
 

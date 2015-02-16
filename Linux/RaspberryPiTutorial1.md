@@ -9,17 +9,17 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 ##### What you need
 
 + An SD card reader (if you have a MacBook, iMac or Mac Mini, it may be built into your computer)
-+ An SD card or a microSD card and a microUSB adapter that is 2GB or larger in size.  If you are going to purchase one, do some research on quality, not all SD cards yield good results
-+ A Mac on which you have administrative privileges, preferably one that doesn't hold data that other people depend on or hold dear.
-+ A Wifi Router
++ An SD card or a microSD card and a microUSB adapter that is 4GB or larger in size.  If you are going to purchase one, do some research on quality, not all SD cards yield good results
++ A Mac on which you have administrative privileges, preferably one with data that other people don't depend on or hold dear
++ A Wifi Router and Internet Access
 + An extra Ethernet cable
-+ A raspberry pi B+ model with a 5V microUSB power supply.
++ A raspberry Pi B model with a 5V microUSB power supply.
 
 #### Formatting the SD Card
 
-+ Before you insert the SD card, open the Terminal (Cmd + spacebar + type ‘Termi…’ + hit Enter)
++ Before you insert the SD card, open the Terminal (**tip**: Cmd + spacebar + type ‘Termi…’ + hit Enter)
 
-+ type **````diskutil list````** and note the device output. If no other disks are attached at this time, you will likely see just the ````/dev/disk0```` device and its partitions, ````/dev/disk0s1````, ````/dev/disk0s2````, etc.  These are the BSD device labels.
++ Type **````diskutil list````** and note the device output. If no other disks are attached at this time, you will likely see just the ````/dev/disk0```` device and its partitions, ````/dev/disk0s1````, ````/dev/disk0s2````, etc.  These are the BSD device labels.
 
 + After we insert the SD card, **````diskutil list````** should reveal an additional mounted device, most likely at /dev/disk1. You want to make sure you reformat this disk, which is why we taking a safer route and comparing the output list before and after we insert the card. If you reverse the source and destination of the copy utility we will use, you will erase the data on your hard drive.
 
@@ -36,7 +36,7 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 #### Command line
 
-+ Before you insert the SD card, open the Terminal (fast way: command + spacebar + type ‘Termi…’ + hit enter)
++ Before you insert the SD card, open the Terminal (**fast way**: command + spacebar + type ‘Termi…’ + hit enter)
 + type diskutil list and note the output. After we insert the SD card, it should output an additional disk. You want to make sure you reformat the correct disk, which is why we taking a safer route and comparing the output list before and after we insert the card.
 + Connect the card reader with the SD card inserted to the the computer's USB drive
 + type diskutil list again

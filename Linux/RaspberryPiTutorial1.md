@@ -23,7 +23,7 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 + After we insert the SD card, **````diskutil list````** should reveal an additional mounted device, most likely at /dev/disk1. You want to make sure you reformat this disk, which is why we taking a safer route and comparing the output list before and after we insert the card. If you reverse the source and destination of the copy utility we will use, you will erase the data on your hard drive.
 
-+ Insert the SD card into a card read or into your mac
++ Insert the SD card into a card reader or into your mac
 + Type ````diskutil list```` again
 + Note the newly added disk’s device name.  For me, it was ````/dev/disk1````.
 + Understand the difference between ````/dev/disk1```` and ````/dev/disk1s0```` or ````/dev/disk1s1````, etc.  The first describes the physical device, the latter examples refer to the logical partitions on that device. We will be writing a group of filesystems that comprise the Raspbian OS to the new ````/dev/disk1```` device.

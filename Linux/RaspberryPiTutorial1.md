@@ -56,14 +56,14 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 + Connect the card reader with the SD card inserted to the the computer's USB drive
 
-+ Type diskutil list again
++ Type ````diskutil```` list again
 
 + Find the newly added disk’s device name.  For me, it was ````/dev/disk1````
 
 + Double check you have the right disk!
 
-+ We will now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI
-the format for the command is this: ````sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]````
++ We'll now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI.
+ The format for the command is this: ````sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]````
 
 So, in my case I type:
 
@@ -71,7 +71,7 @@ So, in my case I type:
 
 **Note**: I had some trouble with this at first because I was typing the filesystem label in lowercase. I got the following error: “raspi does not appear to be a valid volume for its file system.” A less than informative message, if you ask me.  Make sure to type the label in CAPS.
 
-**Note**: I also issues with my card that stemmed from the read-only switch being engaged on the SD adapter.  It also would occasionally mount read-only even with the write-mode switch engaged.  SD cards are not the most reliable technology in the world and they vary in quality.
+**Note**: I also issues with my card that stemmed from the read-only switch being engaged on the SD adapter.  It also would occasionally mount read-only even with the write-mode switch engaged. I found that moving the switch back and forth helped, but there are other 'magical' fixes documented on the internet if that doesn't work for you.
 
 + Assuming the disk erasure and reformatting is successful, unmount but don’t eject the disk from disk utility.
 
@@ -86,7 +86,7 @@ So, in my case I type:
 
 + I’m assuming the unzipped Raspbian .img file is located in your ````~/Downloads```` folder, aka ````/Users/<USERNAME>/Downloads````, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
 
-+ Recall the device name of the SD card that you recently reformatted. In my case, it is ````/dev/disk1````.  You will write the Raspbian image to this device with the BSD utility, ````dd````. ````dd```` is a low-level block copying utility that comes in extremely handy in Unix-related tasks, but it is nick-named ‘disk destroyer’ for a reason.  The invocation of dd , so be careful to get the source (designated by ‘if’, the input file) and destination (designated by ‘of’, the output file) file paths correct.
++ Recall the device name of the SD card that you recently reformatted. In my case, it is ````/dev/disk1````.  You will write the Raspbian image to this device with the BSD utility, ````dd````. ````dd```` is a low-level block copying utility that comes in extremely handy in Unix/BSD-related tasks, but it is nick-named ‘disk destroyer’ for a reason.  Be careful to get the source (designated by ````if````, the input file) and destination (designated by ````of````, the output file) file paths correct.
 
 + We want to use dd in this way: ````dd  if=<RPI IMAGE FILE> of=<DESTINATION DEVICE> bs=<block size>````
 
@@ -96,7 +96,8 @@ So, in my case I type:
 
 That command will copy the raspbian image to the FAT32-formatted SD device named ‘RASPI’.  It takes a while (took me just under 35 minutes) so be patient. 
 
-**Note**: ````dd```` doesn’t give you any indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.
+#### Getting a Read on the Progress of ````dd````
+````dd```` doesn’t give you any indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.
 
 The output is something like this:
 

@@ -193,7 +193,7 @@ wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 ````
 
-We need to change it to this (note the arrows)
+We need to change it to this (note the arrows, which do not actually go in the file)
 
 ````bash
 allow-hotplug wlan0

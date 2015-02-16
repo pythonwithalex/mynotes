@@ -2,7 +2,7 @@
 
 ##### Preamble
 
-In this tutorial, I’m going to show you how to install and configure a raspberry pi. The goal is to get your pi ready to be put to use -  it will have a functional partition scheme, good default network settings and ssh accessible and password-protected on your local network. In follow-up posts, I’ll demonstrate a few practical uses I’ve found for it, such as a samba share, a web server, a webcam, as well as some backup solutions.  
+In this tutorial, I’m going to show you how to install and configure a Raspberry Pi model B. The goal is to get your pi ready to be put to use for how you see fit. It will have a functional partition scheme, good default network settings and ssh accessible and password-protected on your local network. In follow-up posts, I’ll demonstrate a few practical uses I’ve found for it, such as a samba share, a web server, a webcam, as well as some backup solutions.  
 
 This tutorial will show any GUI options when appropriate, but the command-line is the main focus here.  
 
@@ -64,13 +64,13 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 + We want to use dd in this way: ````dd  if=<RPI IMAGE FILE> of=<DESTINATION DEVICE> bs=<block size>````
 
-+ This command copied the raspbian image to the FAT32-formatted SD device named ‘RASPI’ on my Mac.  It takes a while (took me just under 35 minutes) so be patient.
++ This command copied the raspbian image to the FAT32-formatted SD device named ‘RASPI’ on my Mac.  It took me just under 35 minutes for the image writing process to complete.
 
 ````sudo dd if=~/Downloads/2014-09-09-wheezy-raspbian.img of=/dev/disk1 bs=1m````
 
 
 #### Getting a Read on the Progress of ````dd````
-````dd```` doesn’t give you any indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.
+````dd```` doesn’t give you any visible indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.
 
 The output is something like this:
 
@@ -113,7 +113,8 @@ If all has gone well, the raspberry pi should have booted up and received an ip 
 You can find the raspberry pi with the Terminal application in a few ways:
 
 ##### Method 1: Find it through your Wi-Fi Router
-1. Log into the admin panel of your wifi router and look for connected devices.  It may reveal the hostname and ip of the pi.  It showed mine as hostname raspberrypi with ip address 192.168.1.10.  However, your wireless router software may not support this.
+
+1. Log into the admin panel of your wifi router and look for connected devices.  It may reveal the hostname and IP address of the pi.  It showed mine as hostname raspberrypi with the IP address 192.168.1.10.  However, if your wireless router's firmware is old, it software may not show you this information.  
 
 ##### Method 2: Use nmap for MAC/BSD
 
@@ -132,32 +133,36 @@ You can find the raspberry pi with the Terminal application in a few ways:
 
 + If you think you've found the pi's address, you can cancel the for loop by typing CTRL + \ into the terminal.  This sends a SIGQUIT signal to the bash process running the loop.
 
-**Note**: this method is okay on your private network, but I don’t recommend doing it on a monitored network where such activity might be flagged as suspicious.
+**Note**: this method is permissable on your private network, but I don’t recommend doing it on a monitored network where such activity might be flagged as suspicious.
  
-If you’ve found the IP address of the pi, then type ````ssh pi@raspberrypi````
+If you’ve found the IP address of the pi, then type ````ssh pi@raspberrypi````.
 
-You will likely see a message that says ‘The authenticity of the host ‘xxx.xxx.xxx.xxx’ can’t be established. Are you sure you want to continue connecting (yes/no)?’.  Type ‘yes’ and enter ‘raspberry’ as the password.
+You will likely see a message that says 
 
-If you end up at a command prompt that says ‘pi@raspberrypi’, then congratulations! You have setup a raspberry pi. 
+````‘The authenticity of the host ‘xxx.xxx.xxx.xxx’ can’t be established. Are you sure you want to continue connecting (yes/no)?’.````
 
-… but we are not done yet. :]
++ Type ‘yes’ and enter ‘raspberry’ as the password.
+
+If you end up at a command prompt that says ‘pi@raspberrypi’, then congratulations! You got your pi online! 
+
+… but we have more to do. :]
 
 
 #### Resetting the Password
 
-Type ````sudo raspi-config```` and select item #2, "Change User Password"
-Enter your new password twice.
-Try logging out and then back in.  Your new password should work with the user ````pi````, and you shouldn’t see the previous message regarding the questionable authenticity of this system's RSA key.
++ Type ````sudo raspi-config```` and select item #2, "Change User Password"
++ Enter your new password twice.
++ Try logging out and then back in.  Your new password should work with the user ````pi````, and you shouldn’t see the previous message regarding the questionable authenticity of this system's RSA key.
 
 #### Updating current packages
-run ````sudo apt-get update```` and wait a bit
++ Run ````sudo apt-get update```` and wait a bit
 
 
 #### Leaving the Pi on DHCP (the default)
 
 + Setting a static IP allows you to know the address of the PI at boot time, but it requires a little work.  If you don't want to set up a static IP on your WIFI network, you can avoid the tedious process of looking for the pi each time by creating a boot script that pings your router when the PI starts up.  What this does is tell the router about its IP address, which gets passed to you when you run ````arp -a ```` on Linux/BSD/MAC system that is connected the router.  From there, you can deduce the proper IP.  For obvious reasons, a static IP is probably a better route, as your WIFI router's lease may expire and the IP may change.
 
-You can create a boot script called ````pingrouter```` on the Pi by creating a file called ````/etc/init.d/pingrouter```` with the following lines
++ You can create a boot script called ````pingrouter```` on the Pi by creating a file called ````/etc/init.d/pingrouter```` with the following lines
 
 ````bash
 #!/bin/bash
@@ -167,7 +172,7 @@ ping -c1 192.168.1.1
 
 ````
 
-Then run these commands:
++ Then run these commands:
 + ````sudo chmod 755 /etc/init.d/pingrouter```` 
 + ````sudo update-rc.d pingrouter defaults````
 
@@ -193,7 +198,7 @@ wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 ````
 
-We need to change it to this (note the arrows, which do not actually go in the file)
++ We need to change it to this (note the arrows, which do not actually go in the file)
 
 ````bash
 allow-hotplug wlan0

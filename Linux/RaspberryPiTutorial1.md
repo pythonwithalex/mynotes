@@ -217,19 +217,26 @@ p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
 
 + Notice that the ````en1```` device has an ````inet```` address.  We'll use this section to determine the necessary addresses for the pi's static IP.
 
-+ **Netmask**: the output for ````en1```` indicates that the netmask is 0xffffff00, which is 255.255.255.0 in dotted decimal, the IP address notation you are probably most familiar with. 
++ **Netmask**: the output for ````en1```` indicates that the Netmask is 0xffffff00, which is 255.255.255.0 in dotted decimal, the IP address notation you are probably most familiar with. The Netmask indicates the length of your network addresses.  If it were Oxffff0000, or 255.255.0.0, your network address information would consist of XXX.XXX.0.0.
+
   **What We Have So Far**
   - DHCP RANGE: ????
-  - The Network Address: 192.168.1.0
+  - The Network Address: ????
   - The Gateway Address: ????
   - The Netmask: 255.255.255.0
 
 
-+ **Network Address**: the netmask 255.255.255.0 indicates a network address of 3 'octets' long, separated by dots, so the first 3 'octets' of your inet address. In my case this is 192.168.1.0.
++ **Network Address**: the netmask 255.255.255.0 indicates a network address of 3 'octets' in length. The Network address is simply the first 3 octets of the inet address you found in the ````ifconfig```` output, with a 0 as the last octet.
+
+  **What We Have So Far**
+
   - DHCP RANGE: ????
   - The Network Address: 192.168.1.0
   - The Gateway Address: ????
   - The Netmask: 255.255.255.0
+ 
++ **Broadcast Address** 
+  - The broadcast address on a network is a host address at which each host is configured to receieve ethernet packets. Like the network address, it is a reserved address where you can direct messages intended for everyone on a LAN network. In the case of my LAN, the broadcast is the last possible address on my network,  ````192.168.1.255````. 
 
 + **Gateway**: since we know the Network Address now, the gateway is simply the second possible address in ascending order, so ````192.168.1.1````.  This Gateway is also your WIFI router's address.
   - DHCP RANGE: ????

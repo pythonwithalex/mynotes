@@ -64,11 +64,10 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 + We want to use dd in this way: ````dd  if=<RPI IMAGE FILE> of=<DESTINATION DEVICE> bs=<block size>````
 
-+ This command will copy the image file to the newly formatted FAT32 disk: 
++ This command copied the raspbian image to the FAT32-formatted SD device named ‘RASPI’ on my Mac.  It takes a while (took me just under 35 minutes) so be patient.
 
 ````sudo dd if=~/Downloads/2014-09-09-wheezy-raspbian.img of=/dev/disk1 bs=1m````
 
-That command will copy the raspbian image to the FAT32-formatted SD device named ‘RASPI’.  It takes a while (took me just under 35 minutes) so be patient. 
 
 #### Getting a Read on the Progress of ````dd````
 ````dd```` doesn’t give you any indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.

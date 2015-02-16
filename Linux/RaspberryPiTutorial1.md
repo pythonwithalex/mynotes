@@ -43,7 +43,7 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 + find the newly added disk’s device name.  For me, it was ````/dev/disk1````
 + double check you have the right disk!
 + we will now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI
-the format for the command is this: sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]
+the format for the command is this: ````sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]````
 So, in my case I type:
 
 + sudo diskutil eraseDisk FAT32 RASPI ````/dev/disk1````
@@ -64,7 +64,7 @@ Note: I also issues with my card that stemmed from the read-only switch being en
 
 + Recall the device name of the SD card that you recently reformatted. In my case, it is ````/dev/disk1````.  You will write the Raspbian image to this device with the BSD utility, ````dd````. ````dd```` is a low-level block copying utility that comes in extremely handy in Unix-related tasks, but it is nick-named ‘disk destroyer’ for a reason.  The invocation of dd , so be careful to get the source (designated by ‘if’, the input file) and destination (designated by ‘of’, the output file) file paths correct.
 
-+ We want to use dd in this way: ````dd  if=\<RPI IMAGE FILE\> of=\<DESTINATION DEVICE\> bs=\<block size\>````
++ We want to use dd in this way: ````dd  if=<RPI IMAGE FILE> of=<DESTINATION DEVICE> bs=<block size>````
 + This command will copy the image file to the newly formatted FAT32 disk: 
 
 ````sudo dd if=~/Downloads/2014-09-09-wheezy-raspbian.img of=/dev/disk1 bs=1m````
@@ -108,7 +108,7 @@ If this doesn’t happen for you, you can look at the light labels on the board 
 If all has gone well, the raspberry pi should have booted up and received an ip address from your wifi router.
 You can find the raspberry pi with the Terminal application in a few ways:
 1. Log into the admin panel of your wifi router and look for connected devices.  It may reveal the hostname and ip of the pi.  It showed mine as hostname raspberrypi with ip address 192.168.1.10.  However, your wireless router software may not support this.
-2. Download and install nmap for mac, run ‘sudo nmap -sP 192.168.0.0/24’ from your Mac Terminal.
+2. Download and install nmap for mac, run ````sudo nmap -sP 192.168.0.0/24```` from your Mac Terminal.
 3. If you can’t or don’t want to download any extra tools and you’re on your own network, you can try a brute-force approach by pinging all of the possible IP addresses on your network a single time, and with a brief timeout setting. This is how you’d do it in bash:
 
 ````for i in {1..254}; do ping -c1 -t1 192.168.1.$i; done | grep -B 1 “ 0.0% packet loss”````
@@ -128,23 +128,25 @@ If you end up at a command prompt that says ‘pi@raspberrypi’, then congratul
 … but we are not done yet. :]
 
 
-Reset the Password
+#### Resetting the Password
 
-type sudo raspi-config and select item #2, Change User Password
+Type ````sudo raspi-config```` and select item #2, "Change User Password"
 Enter your new password twice.
-Try logging out and then back in.  Your new password should work, and you shouldn’t see the previous message regarding the authenticity of this system.
+Try logging out and then back in.  Your new password should work with the user ````pi````, and you shouldn’t see the previous message regarding the questionable authenticity of this system's RSA key.
 
-Updating current packages
-run sudo apt-get update and wait a bit
+#### Updating current packages
+run ````sudo apt-get update```` and wait a bit
 
-Assigning the system a static IP
-the file where we define our networking settings is /etc/network/interfaces
-let’s copy that so that we can modify it while retaining the old copy
-cp /etc/network/interfaces /etc/network/interfaces.orig
+#### Assigning the system a static IP
++ The file where we define our networking settings is ````/etc/network/interfaces```` . Let’s copy that so that we can modify it while retaining the old copy.
 
-now lets modify the contents. The default file looks like this
+````cp /etc/network/interfaces /etc/network/interfaces.orig````
 
-cat /etc/network/interfaces
++ Now lets modify the contents. The default file looks like this
+
+````cat /etc/network/interfaces````
+
+```bash
 auto lo
 
 iface lo inet loopback
@@ -154,13 +156,15 @@ allow-hotplug wlan0
 iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
+````
 
 We need to change it to this (changes in bold)
 
+````bash
 allow-hotplug wlan0
 iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
-iface default inet static
+iface default inet **static**
 
 address 192.168.1.10
 gateway 192.168.1.1
@@ -174,13 +178,13 @@ wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 
 We need to do a few things:
-+ change the 4th line’s ‘dhcp’ keyword to static.
-+ 
++ change the 4th line’s **dhcp** keyword to static.
 
-Expanding the root partition
+#### Expanding the root partition
 
-We wrote a 2.9GB root filesystem to the SD card, but that means whatever space is left on the card isn’t presently usable. For me, that’s about 5GB of space.  Fortunately, the raspberry pi folks have provided us with an ‘Expand Filesystem’ option in the raspi-config panel we just used to change our password.
++ We wrote a 2.9GB root filesystem to the SD card, but that means whatever space is left on the card isn’t presently usable. For me, that’s about 5GB of space.  Fortunately, the Raspbian Image developers have provided us with a convenient ‘Expand Filesystem’ option in the same ````raspi-config```` panel we just used to set our password.
 
-type sudo raspi-config again
+
++ Type ````sudo raspi-config```` again
 choose option #1
-It should say, “Root partition has been resized … ”. Hit okay, choose Finish at the bottom, and say yes to the reboot option.  Since we’ve already set a static ip for the pi, rebooting won’t mean we have to go looking for the ip again.
+It should say, “Root partition has been resized … ”. Hit **OK**, choose **Finish** at the bottom, and say yes to the reboot option.  Since we’ve already set a static ip for the pi, rebooting won’t mean we have to go looking for the ip again.

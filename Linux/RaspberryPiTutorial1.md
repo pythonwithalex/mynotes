@@ -199,7 +199,7 @@ We need to change it to this (note the arrows)
 allow-hotplug wlan0
 iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
---> iface default inet **static**
+iface default inet static <--
 
 --> address 192.168.1.10
 --> gateway 192.168.1.1

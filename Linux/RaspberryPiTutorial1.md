@@ -84,7 +84,7 @@ So, in my case I type:
 
 + If you downloaded a ZIP file, unzip it. If you torrented it, you most likely got an IMG file.
 
-+ I’m assuming the unzipped Raspbian .img file is located in your ````~/Downloads```` folder, aka ````/Users/USERNAME/Downloads````, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
++ I’m assuming the unzipped Raspbian .img file is located in your ````~/Downloads```` folder, aka ````/Users/<USERNAME>/Downloads````, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
 
 + Recall the device name of the SD card that you recently reformatted. In my case, it is ````/dev/disk1````.  You will write the Raspbian image to this device with the BSD utility, ````dd````. ````dd```` is a low-level block copying utility that comes in extremely handy in Unix-related tasks, but it is nick-named ‘disk destroyer’ for a reason.  The invocation of dd , so be careful to get the source (designated by ‘if’, the input file) and destination (designated by ‘of’, the output file) file paths correct.
 

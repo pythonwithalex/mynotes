@@ -88,7 +88,7 @@ bytes copied / disk image size = % done
 
 disk image size = 3.1 GB
 
-progress = .31GB/3.1GB = .1 = 1%.
+progress = .31GB/3.1GB = .1 = 10% done
 
 #### Network Setup
 

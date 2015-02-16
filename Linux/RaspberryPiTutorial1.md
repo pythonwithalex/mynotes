@@ -135,26 +135,34 @@ If this doesn’t happen for you, you can look at the light labels on the board 
 
 **100** - a 100MBit connection is active 
 
-+ From your mac, open a Terminal
 
 If all has gone well, the raspberry pi should have booted up and received an ip address from your wifi router.
 You can find the raspberry pi with the Terminal application in a few ways:
 
+##### Method 1: Find it through your Wi-Fi Router
 1. Log into the admin panel of your wifi router and look for connected devices.  It may reveal the hostname and ip of the pi.  It showed mine as hostname raspberrypi with ip address 192.168.1.10.  However, your wireless router software may not support this.
+
+##### Method 2: Use nmap for MAC/BSD
 
 2. Download and install nmap for mac, run ````sudo nmap -sP 192.168.0.0/24```` from your Mac Terminal.
 
-3. If you can’t or don’t want to download any extra tools and you’re on your own network, you can try a brute-force approach by pinging all of the possible IP addresses on your network a single time, and with a brief timeout setting. This is how you’d do it in bash:
+
+##### Method 3: Brute Force
+
+3. If you can’t or don’t want to download any extra tools and you’re on your own network, you can try a brute-force approach by pinging all of the possible IP addresses on your network once, and with a brief timeout setting. This is how you’d do it in bash:
 
 ````for i in {1..254}; do ping -c1 -t1 192.168.1.$i; done | grep -B 1 “ 0.0% packet loss”````
 
-+ This will ping every ip address on your network once and wait a second before moving on, regardless of the result.  We are looking for a ping that results in %0.0 packet loss, and getting that line of text plus the previous line, where I know the ip address is put.
++ This will ping every ip address on your network once and wait a second before moving on, regardless of the result.  We are looking for a ping that results in %0.0 packet loss, and getting that line of text plus the previous line, where I know the IP address is usually output.
 
-If you find the pi, you can cancel the for loop by typing CTRL + \ into the terminal.  This sends a SIGQUIT signal to the bash process running the loop.
++ It should reveal the IP address of any system that respond to ping, but not the hostname.  But if you have only a handful of devices connected to your router, then the process of elimination shouldn't be too hard.
 
-**Note**: this method is okay on your private network, but I don’t recommend doing it in public, where network administrators flag it as suspicious.
++ If you think you've found the pi's address, you can cancel the for loop by typing CTRL + \ into the terminal.  This sends a SIGQUIT signal to the bash process running the loop.
+
+**Note**: this method is okay on your private network, but I don’t recommend doing it on a monitored network where such activity might be flagged as suspicious.
  
 If you’ve found the IP address of the pi, then type ````ssh pi@raspberrypi````
+
 You will likely see a message that says ‘The authenticity of the host ‘xxx.xxx.xxx.xxx’ can’t be established. Are you sure you want to continue connecting (yes/no)?’.  Type ‘yes’ and enter ‘raspberry’ as the password.
 
 If you end up at a command prompt that says ‘pi@raspberrypi’, then congratulations! You have setup a raspberry pi. 
@@ -171,7 +179,22 @@ Try logging out and then back in.  Your new password should work with the user `
 #### Updating current packages
 run ````sudo apt-get update```` and wait a bit
 
+
+#### Leaving the Pi with default Network Settings
+
++ Setting a static IP allows you to know the address of the PI at boot time, but it requires a little work.  If you don't want to set up a static IP on your WIFI network, you can leave the PI set to DHCP by default and then create a boot script that pings your router when the PI boots.  What this does is tell the router about its IP address, which gets passed to you when you run ````arp -a ```` on Linux/BSD/MAC system that is connected the router.  From there, you can deduce the proper IP.  For obvious reasons, a static IP is probably a better route.
+
+You can create a boot script on the Pi by doing the following
+
+````
+sudo echo "ping -c 1 192.168.1.1" > /etc/init.d/pingrouter
+service pingrouter
+sudo vim /etc/init.d/pingrouter
+
+````/etc/init.d/<SCRIPT NAME>````, e.g. ````/etc/init.d/pingrouter````
+
 #### Assigning the system a static IP
+
 + The file where we define our networking settings is ````/etc/network/interfaces```` . Let’s copy that so that we can modify it while retaining the old copy.
 
 ````cp /etc/network/interfaces /etc/network/interfaces.orig````
@@ -192,27 +215,35 @@ wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 ````
 
-We need to change it to this (changes in bold)
+We need to change it to this (note the arrows)
 
 ````bash
 allow-hotplug wlan0
 iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
-iface default inet **static**
+--> iface default inet **static**
 
-address 192.168.1.10
-gateway 192.168.1.1
-netmask 255.255.255.0
-network 192.168.1.0
-broadcast 192.168.1.255
+--> address 192.168.1.10
+--> gateway 192.168.1.1
+--> netmask 255.255.255.0
+--> network 192.168.1.0
+--> broadcast 192.168.1.255
 
 allow-hotplug wlan0
 iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
+````
 
 We need to do a few things:
-+ change the 4th line’s **dhcp** keyword to static.
+
++ Change the 4th line’s **dhcp** keyword to static.
+
++ Determine proper IP, gateway, netmask, network and broadcast settings
+
+#### Determining your IP address, Gateway, Netmask, Network and Broadcast Settings
+
++ We need a static ip
 
 #### Expanding the root partition
 

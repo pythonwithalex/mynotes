@@ -8,17 +8,17 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 
 ##### What you need
 
-+ An SD card reader (if you have a MacBook, iMac or Mac Mini, it may be built into your computer)
++ A raspberry Pi B model with a 5V microUSB power supply.
 
-+ An SD card or a microSD card and a microUSB adapter that is 4GB or larger in size.  If you are going to purchase one, do some research on quality, not all SD cards yield good results
-
-+ A Mac on which you have administrative privileges, preferably one with data that other people don't depend on or hold dear
++ An extra Ethernet cable 
 
 + A Wifi Router and Internet Access
 
-+ An extra Ethernet cable
++ An SD card or a microSD card and a microUSB adapter that is 4GB or larger in size.  If you are going to purchase one, do some research on quality, not all SD cards yield good results
 
-+ A raspberry Pi B model with a 5V microUSB power supply.
++ An SD card reader (if you have a MacBook, iMac or Mac Mini, it may be built into your computer)
+
++ A Mac on which you have administrative privileges, preferably one with data that other people don't depend on or hold dear
 
 #### Formatting the SD Card
 

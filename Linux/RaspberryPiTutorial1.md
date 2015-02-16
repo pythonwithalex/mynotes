@@ -4,7 +4,7 @@
 
 In this tutorial, I’m going to show you how to install and configure a raspberry pi. The goal is to get your pi ready to be put to use -  it will have a functional partition scheme, good default network settings and ssh accessible and password-protected on your local network. In follow-up posts, I’ll demonstrate a few practical uses I’ve found for it, such as a samba share, a web server, a webcam, as well as some backup solutions.  
 
-This tutorial will show any GUI options when appropriate, but the command-line is the main terrain here.   If that is an issue for you, you might consider x, y and z.
+This tutorial will show any GUI options when appropriate, but the command-line is the main focus here.   If that is an issue for you, you might consider x, y and z.
 
 ##### What you need
 

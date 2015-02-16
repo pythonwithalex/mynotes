@@ -94,7 +94,7 @@ progress = .31GB/3.1GB = .1 = 10% done
 
 + Now that your raspberry pi is properly imaged, connect it to an ethernet port on your wifi router.
 
-+ Connect the micro-usb power source and plug it in. You should see a red light that indicates power.  Soon after you should see a few other lights (yellow and green), that indicate that the system is booting and that the network is active.
++ Connect the micro-usb power source and plug it in. You should see a red light that indicates power.  Soon after you should see a few other lights (yellow and green), that indicate that the system is booting and that the network connection is active.
 
 If this doesn’t happen for you, you can look at the light labels on the board and troubleshoot accordingly.  They are as follows:
 

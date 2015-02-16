@@ -177,16 +177,72 @@ ping -c1 192.168.1.1
 + ````sudo update-rc.d pingrouter defaults````
 
 #### Assigning the system a static IP
+
 + To assign the pi a static IP so that it boots with the same IP address each time, we need to figure out 5 things:
   - The DHCP range of the WIFI router
-  - The Network Address (if your IP address is ````192.168.1.xxx````, then it is ````192.168.1.0````)
-  - The Gateway Address (if your IP address is ````192.168.1.xxx````, then it is ````192.168.1.1````)
-  - The Netmask (if your IP address is ````192.168.1.xxx````, then it is ````192.168.1.255````)
+  - The Network Address
+  - The Broadcase Address
+  - The Gateway Address
+  - The Netmask
 
++ In a terminal, run ````ifconfig````.  This lists your network devices and the IP address information obtained by them.  Not all will have an IP address, so we need to look for an ````inet```` entry.
++ This is the output of ````ifconfig```` on my system:
+
+````bash
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=27<RXCSUM,TXCSUM,VLAN_MTU,TSO4>
+	ether 34:15:9e:13:0c:4e 
+	nd6 options=1<PERFORMNUD>
+	media: autoselect
+	status: inactive
+en1: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether f8:1e:df:e4:e3:3e 
+	inet6 fe80::fa1e:dfff:fee4:e33e%en1 prefixlen 64 scopeid 0x5 
+	inet 192.168.1.6 netmask 0xffffff00 broadcast 192.168.1.255
+	nd6 options=1<PERFORMNUD>
+	media: autoselect
+	status: active
+fw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 4078
+	lladdr 34:15:9e:ff:fe:13:0c:4e 
+	nd6 options=1<PERFORMNUD>
+	media: autoselect <full-duplex>
+	status: inactive
+p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
+	ether 0a:1e:df:e4:e3:3e 
+	media: autoselect
+	status: inactive
+
+````
+
++ Notice that the ````en1```` device has an ````inet```` address.  We'll use this section to determine the necessary addresses for the pi's static IP.
+
++ **Netmask**: the output for ````en1```` indicates that the netmask is 0xffffff00, which is 255.255.255.0 in dotted decimal, the IP address notation you are probably most familiar with. 
+  - DHCP RANGE: ????
+  - The Network Address: 192.168.1.0
+  - The Gateway Address: ????
+  - The Netmask: 255.255.255.0
+
+
++ **Network Address**: the netmask 255.255.255.0 indicates a network address of 3 'octets' long, separated by dots, so the first 3 'octets' of your inet address. In my case this is 192.168.1.0.
+  - DHCP RANGE: ????
+  - The Network Address: 192.168.1.0
+  - The Gateway Address: ????
+  - The Netmask: 255.255.255.0
+
++ **Gateway**: since we know the Network Address now, the gateway is simply the second possible address in ascending order, so ````192.168.1.1````.  This Gateway is also your WIFI router's address.
+  - DHCP RANGE: ????
+  - The Network Address: 192.168.1.0
+  - The Gateway Address: 192.168.1.1
+  - The Netmask: 255.255.255.0
+
++ **Your Router's DHCP range**: When we set a static IP, we don't want it to conflict with an address reserved for automatic/dynamic assignment, which the WIFI router takes care of.  We need to log into our WIFI router's administration panel and find the DHCP range.  Since I have no idea what your WIFI router model is, I can't help you here other than to suggest that you look for the DHCP range settings in LAN Administration in the manual for your router (can probably be found online).  Mine reservers addressess ````192.168.1.2```` - ````192.168.1.100```` for DHCP addresses.  
+
++ 
 
 + Change the 4th line’s **dhcp** keyword to static.
 
 + Determine proper IP, gateway, netmask, network and broadcast settings
+
 + The file where we define our networking settings is ````/etc/network/interfaces```` . Let’s back that up that so  we can modify it while keeping the original in tact.
 
 ````cp /etc/network/interfaces /etc/network/interfaces.orig````

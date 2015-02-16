@@ -9,10 +9,15 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 ##### What you need
 
 + An SD card reader (if you have a MacBook, iMac or Mac Mini, it may be built into your computer)
+
 + An SD card or a microSD card and a microUSB adapter that is 4GB or larger in size.  If you are going to purchase one, do some research on quality, not all SD cards yield good results
+
 + A Mac on which you have administrative privileges, preferably one with data that other people don't depend on or hold dear
+
 + A Wifi Router and Internet Access
+
 + An extra Ethernet cable
+
 + A raspberry Pi B model with a 5V microUSB power supply.
 
 #### Formatting the SD Card
@@ -24,31 +29,49 @@ This tutorial will show any GUI options when appropriate, but the command-line i
 + After we insert the SD card, **````diskutil list````** should reveal an additional mounted device, most likely at ````/dev/disk1````. You want to make sure you reformat this disk, which is why we taking a safer route and comparing the output list before and after we insert the card. If you reverse the source and destination of the copy utility we will use, you will erase the data on your hard drive.
 
 + Insert the SD card into a card reader or into your mac
+
 + Type ````diskutil list```` again
+
 + Note the newly added disk’s device name.  For me, it was ````/dev/disk1````.
+
 + Understand the difference between ````/dev/disk1```` and ````/dev/disk1s0```` or ````/dev/disk1s1````, etc.  The first describes the physical device, the latter examples refer to the logical partitions on that device. We will be writing a group of filesystems that comprise the Raspbian OS to the new ````/dev/disk1```` device.
+
 + Open Disk Utility
+
 + You should see your disk in the left pane. Mine says 7.86GB Apple SDXC Reader.
+
 + Find the erase Tab and change the format to MS-DOS(FAT)
+
 + name your disk, e.g. RASPI
+
 + Hit Erase
-+ unmount the disk but don’t eject it.  You can do this with the terminal command ```` sudo diskutil unmount /dev/disk1````.
+
++ Unmount the disk but don’t eject it.  You can do this with the terminal command ```` sudo diskutil unmount /dev/disk1````.
 
 #### Command line
 
 + Before you insert the SD card, open the Terminal (**fast way**: command + spacebar + type ‘Termi…’ + hit enter)
-+ type diskutil list and note the output. After we insert the SD card, it should output an additional disk. You want to make sure you reformat the correct disk, which is why we taking a safer route and comparing the output list before and after we insert the card.
+
++ Type diskutil list and note the output. After we insert the SD card, it should output an additional disk. You want to make sure you reformat the correct disk, which is why we taking a safer route and comparing the output list before and after we insert the card.
+
 + Connect the card reader with the SD card inserted to the the computer's USB drive
-+ type diskutil list again
-+ find the newly added disk’s device name.  For me, it was ````/dev/disk1````
-+ double check you have the right disk!
-+ we will now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI
+
++ Type diskutil list again
+
++ Find the newly added disk’s device name.  For me, it was ````/dev/disk1````
+
++ Double check you have the right disk!
+
++ We will now type a command that reformats the correct disk as a FAT32 filesystem with the name RASPI
 the format for the command is this: ````sudo diskutil eraseDisk [FORMAT] [FILESYSTEM LABEL] [DEVICE]````
+
 So, in my case I type:
 
-+ sudo diskutil eraseDisk FAT32 RASPI ````/dev/disk1````
-note: I had some trouble with this at first because I was typing the filesystem label in lowercase. I got the following error: “raspi does not appear to be a valid volume for its file system.” A less than informative message, if you ask me.  Make sure to type the label in CAPS.
-Note: I also issues with my card that stemmed from the read-only switch being engaged on the SD adapter.  It also would occasionally mount read-only even with the write-mode switch engaged.  SD cards are not the most reliable technology in the world and they vary in quality.
+```sudo diskutil eraseDisk FAT32 RASPI /dev/disk1````
+
+**Note**: I had some trouble with this at first because I was typing the filesystem label in lowercase. I got the following error: “raspi does not appear to be a valid volume for its file system.” A less than informative message, if you ask me.  Make sure to type the label in CAPS.
+
+**Note**: I also issues with my card that stemmed from the read-only switch being engaged on the SD adapter.  It also would occasionally mount read-only even with the write-mode switch engaged.  SD cards are not the most reliable technology in the world and they vary in quality.
 
 + Assuming the disk erasure and reformatting is successful, unmount but don’t eject the disk from disk utility.
 
@@ -56,22 +79,24 @@ Note: I also issues with my card that stemmed from the read-only switch being en
 
 + Download the latest Raspbian image from the Raspberry Pi website in either ZIP format or as a torrent
  
-  - zip format (~ 1Gb in size): http://downloads.raspberrypi.org/raspbian_latest 
-  - torrent: http://downloads.raspberrypi.org/raspbian_latest.torrent
+  - Zip format (~ 1Gb in size): http://downloads.raspberrypi.org/raspbian_latest 
+  - Torrent: http://downloads.raspberrypi.org/raspbian_latest.torrent
 
 + If you downloaded a ZIP file, unzip it. If you torrented it, you most likely got an IMG file.
+
 + I’m assuming the unzipped Raspbian .img file is located in your ````~/Downloads```` folder, aka ````/Users/USERNAME/Downloads````, but if it is in a different location, adjust the upcoming ````dd```` commands to reflect that.
 
 + Recall the device name of the SD card that you recently reformatted. In my case, it is ````/dev/disk1````.  You will write the Raspbian image to this device with the BSD utility, ````dd````. ````dd```` is a low-level block copying utility that comes in extremely handy in Unix-related tasks, but it is nick-named ‘disk destroyer’ for a reason.  The invocation of dd , so be careful to get the source (designated by ‘if’, the input file) and destination (designated by ‘of’, the output file) file paths correct.
 
 + We want to use dd in this way: ````dd  if=<RPI IMAGE FILE> of=<DESTINATION DEVICE> bs=<block size>````
+
 + This command will copy the image file to the newly formatted FAT32 disk: 
 
 ````sudo dd if=~/Downloads/2014-09-09-wheezy-raspbian.img of=/dev/disk1 bs=1m````
 
 That command will copy the raspbian image to the FAT32-formatted SD device named ‘RASPI’.  It takes a while (took me just under 35 minutes) so be patient. 
 
-Note: ````dd```` doesn’t give you any indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.
+**Note**: ````dd```` doesn’t give you any indication of its progress, but you can figure this out yourself by pressing ````CTRL + T```` in the terminal where the dd copy is presently working.  ````CTRL + T```` sends the ````dd```` process a ````SIGINFO```` signal that will return cpu load information to the console, as well as a read on how many bytes have been transferred by ````dd```` and the duration in seconds of the copy thus far.
 
 The output is something like this:
 
@@ -94,6 +119,7 @@ progress = .31GB/3.1GB = .1 = 1%.
 #### Network Setup
 
 + Now that your raspberry pi is properly imaged, connect it to an ethernet port on your wifi router.
+
 + Connect the micro-usb power source and plug it in. You should see a red light that indicates power.  Soon after you should see a few other lights (yellow and green), that indicate that the system is booting and that the network is active.
 
 If this doesn’t happen for you, you can look at the light labels on the board and troubleshoot accordingly.  They are as follows:
@@ -108,11 +134,15 @@ If this doesn’t happen for you, you can look at the light labels on the board 
 
 **100** - a 100MBit connection is active 
 
-+ From your mac, open  a Terminal
++ From your mac, open a Terminal
+
 If all has gone well, the raspberry pi should have booted up and received an ip address from your wifi router.
 You can find the raspberry pi with the Terminal application in a few ways:
+
 1. Log into the admin panel of your wifi router and look for connected devices.  It may reveal the hostname and ip of the pi.  It showed mine as hostname raspberrypi with ip address 192.168.1.10.  However, your wireless router software may not support this.
+
 2. Download and install nmap for mac, run ````sudo nmap -sP 192.168.0.0/24```` from your Mac Terminal.
+
 3. If you can’t or don’t want to download any extra tools and you’re on your own network, you can try a brute-force approach by pinging all of the possible IP addresses on your network a single time, and with a brief timeout setting. This is how you’d do it in bash:
 
 ````for i in {1..254}; do ping -c1 -t1 192.168.1.$i; done | grep -B 1 “ 0.0% packet loss”````
@@ -121,10 +151,9 @@ You can find the raspberry pi with the Terminal application in a few ways:
 
 If you find the pi, you can cancel the for loop by typing CTRL + \ into the terminal.  This sends a SIGQUIT signal to the bash process running the loop.
 
-Note: this method is okay on your private network, but I don’t recommend doing it in public, where network administrators flag it as suspicious.
+**Note**: this method is okay on your private network, but I don’t recommend doing it in public, where network administrators flag it as suspicious.
  
-if you’ve found the IP address of the pi, then type
-ssh pi@raspberrypi
+If you’ve found the IP address of the pi, then type ````ssh pi@raspberrypi````
 You will likely see a message that says ‘The authenticity of the host ‘xxx.xxx.xxx.xxx’ can’t be established. Are you sure you want to continue connecting (yes/no)?’.  Type ‘yes’ and enter ‘raspberry’ as the password.
 
 If you end up at a command prompt that says ‘pi@raspberrypi’, then congratulations! You have setup a raspberry pi. 

@@ -99,9 +99,13 @@ progress = .31GB/3.1GB = .1 = 1%.
 If this doesn’t happen for you, you can look at the light labels on the board and troubleshoot accordingly.  They are as follows:
 
 **ACT** — SD Card Access
+
 **PWR (RED)** - The device is powered
+
 **FDX** - Full Duplex mode is enabled
+
 **LNK** - The Ethernet LINK is present
+
 **100** - a 100MBit connection is active 
 
 + From your mac, open  a Terminal

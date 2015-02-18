@@ -13,6 +13,11 @@
 + printing
 
 ## Commands
+** mkdir -m 0770 /data**: create a dir and set the permissions mode in one go!
+
+**grep -ve ^# -ve ‘^;’ -ve ^$ smb.conf.2103-11-26   >  smb.conf**: filter out empty lines and various commented lines from the smb.conf.2103-11-26 file and write them to a new smb.conf file 
+
+
 **lsof -i**: open ports
 
 **df -T**: show mounted filesystems with FileSystem Type information

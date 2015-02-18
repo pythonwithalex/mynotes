@@ -1,0 +1,2 @@
+apt-cache search <keyword>
+// find a package in the most recently downloaded set package list

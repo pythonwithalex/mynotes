@@ -9,6 +9,8 @@
 + lamp
 + openldap
 + mail server (dovecot)
++ samba
++ 
 + nfs
 + printing
 
@@ -67,6 +69,22 @@ vim /etc/selinux/config
 
 /etc/passwd
 each user gets an identically named group account
+
+## SAMBA
+
+**yum install samba samba-common-bin** (need the latter for testparm)
+**add share to /etc/samba/smb.conf**
+
+```bash
+[share]
+comment = A samba share 
+read only = no
+````
+**service samba restart (may require sudo)**
+**sudo testparm - validate /etc/samba/smb.conf settings**
+**sudo smbclient -L localhost**: lists shares on localhost
+**sudo pdbedit -L**: check pdb database for samba users on system
+**sudo pdbedit -L**
 
 
 ## OpenLDAP

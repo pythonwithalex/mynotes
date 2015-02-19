@@ -10,11 +10,13 @@
 + openldap
 + mail server (dovecot)
 + samba
-+ 
 + nfs
 + printing
 
 ## Commands
+** Fn + Command + F[2,3,4,5]**: Virtual Box way to switch virtual terminals
+** CTRL + Z **: suspends a the current process in the terminal
+** bg %1 **: sends the 
 ** mkdir -m 0770 /data**: create a dir and set the permissions mode in one go!
 
 **grep -ve ^# -ve ‘^;’ -ve ^$ smb.conf.2103-11-26   >  smb.conf**: filter out empty lines and various commented lines from the smb.conf.2103-11-26 file and write them to a new smb.conf file 
@@ -55,6 +57,8 @@ vim /etc/selinux/config
 
 **printing**:
 
+## Installation via FTP
++ linux repo=ftp://192.168.1.10
 ## Network Config
 + don't use /etc/init.d/network for scripts. it isn't event driven, so not real-time. use NetworkManager
 + ifconfig still supported

@@ -15,8 +15,11 @@
 
 ## Commands
 ** Fn + Command + F[2,3,4,5]**: Virtual Box way to switch virtual terminals
+
 ** CTRL + Z **: suspends a the current process in the terminal
-** bg %1 **: sends the 
+
+** bg %1 **: sends the suspended job to the background
+
 ** mkdir -m 0770 /data**: create a dir and set the permissions mode in one go!
 
 **grep -ve ^# -ve ‘^;’ -ve ^$ smb.conf.2103-11-26   >  smb.conf**: filter out empty lines and various commented lines from the smb.conf.2103-11-26 file and write them to a new smb.conf file 

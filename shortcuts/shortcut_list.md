@@ -26,6 +26,11 @@ toggle between windows
 
 ## Vim
 
+copy up to a certain point and paste it
+
+  v, e, yy, esc, paste
+    
+
 reverse case of letter in command mode mode
 
     ~ 

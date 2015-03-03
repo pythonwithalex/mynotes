@@ -1,5 +1,7 @@
 ## A Practical Guide to The Linux Command Line
 
+find . -type f -name '*.pyc' -exec rm -f {} \;
+
 #### Table of Contents
 + [Text Editors](#text-editors)
 + [The Linux Command Line](#the-linux-command-line)

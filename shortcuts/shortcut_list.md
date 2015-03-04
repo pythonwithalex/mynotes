@@ -29,6 +29,8 @@ toggle between windows
 copy up to a certain point and paste it
 
   v, e, yy, esc, paste
+ 
+capitalize each word in a sentence
     
 
 reverse case of letter in command mode mode

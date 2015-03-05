@@ -24,6 +24,18 @@ toggle between windows
     
     CMD-Arrow Key or CMD-SHIFT -Arrow 
 
+navigate back through your typed but unexecuted command by WORD
+    
+    ESC + b
+    
+go to head of command line
+
+    CTRL + a
+
+go to end of command line
+
+    CTRL + e
+
 ## Vim
 
 copy up to a certain point and paste it

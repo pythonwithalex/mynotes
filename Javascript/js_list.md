@@ -5,6 +5,7 @@ JavaScript, what a language
 + [Backbone Local Storage Annotated Code](http://backbonejs.org/docs/backbone-localstorage.html)
 + [A Better Way to Learn Angular](https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/)
 + [Thomas Davis's Backbone.js Tutorials](https://backbonetutorials.com/)
++ [A great Thomas Davis Backbone.js Tutorial](https://www.youtube.com/watch?v=FZSjvWtUxYk)
 + [nodebeginner](http://www.nodebeginner.org/)
 + [jstherightway](http://jstherightway.org/)
 + [Immediately Invoked Function Expression](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)

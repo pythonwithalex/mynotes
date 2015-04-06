@@ -3,10 +3,10 @@
 ````bash
 
 a@b: ~$ mysql 
->>> CREATE DATABASE mydatabase;
+>>> CREATE DATABASE contacts;
 >>> quit;
 a@b: ~$ mysql 
->>> use mydatabase;
+>>> use contacts;
 >>> show tables;
-
+>>> CREATE TABLE colleagues;
 ````

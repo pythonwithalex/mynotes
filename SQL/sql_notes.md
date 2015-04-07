@@ -24,3 +24,4 @@ a@b: ~$ mysql
 + ENUM gives you specific options, e.g. "sex ENUM('M','F')"
 
 primary key: unique to a row, can't be null
+primary keys are for referencing one table from another

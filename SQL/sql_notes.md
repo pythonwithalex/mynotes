@@ -15,6 +15,11 @@ a@b: ~$ mysql
 >>> CREATE TABLE colleagues;
 
 ````
+
+## show tables
+## use <db>
+## explain <table>
+
 ## data types
 
 + varchar is an estimate of size, e.g. "city varchar(40) not null"
@@ -23,5 +28,5 @@ a@b: ~$ mysql
 
 + ENUM gives you specific options, e.g. "sex ENUM('M','F')"
 
-primary key: unique to a row, can't be null
+primary key: refers uniquely to a row, can't be null
 primary keys are for referencing one table from another

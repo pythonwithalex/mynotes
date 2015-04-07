@@ -1,5 +1,8 @@
 ## SQLNOTES
 
+####useful links:
++ [nettuts sql basics](http://code.tutsplus.com/tutorials/sql-for-beginners--net-8200)
+
 + row = record
 + column = data item
 
@@ -17,7 +20,8 @@ a@b: ~$ mysql
 ````
 
 ## show tables
-## use <db>
+## use \<db\>
+## drop Database
 ## explain <table>
 
 ## data types

@@ -2,6 +2,7 @@
 
 ## add a property to a function
 
+```python
 def hi(debug=False):
   print hi.normal
   hi.count += 1
@@ -18,3 +19,4 @@ hi.func_dict.update({
 
 hi()
 hi(debug=True)
+````

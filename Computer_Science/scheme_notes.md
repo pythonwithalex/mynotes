@@ -37,6 +37,7 @@ special form vs standard expression form:
 
 ````scheme
 special: (define a 4) ; not all sub-expressions are evaluated (a is not evaluated)
+special: (and (< 0 4) (< 3 10))
 normal (+ 4 9) ;  all sub-expressions are evaluated
 ````
 

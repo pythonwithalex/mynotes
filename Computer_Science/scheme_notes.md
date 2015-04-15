@@ -39,6 +39,8 @@ Not all sub-expressions are evaluated in the standard way.
 ````scheme
 special: (define a 4) ; not all sub-expressions are evaluated (a is not evaluated)
 special: (and (< 0 4) (< 3 10)) ; if the first one is false, the second isn't evaluated.
+special: (or (< 0 -2) (< 3 10)) ; if the first one is true, the second isn't evaluated.
+normal: (not (< 0 -2)) ; all sub-expressions are necessarily evaluted
 normal (+ 4 9) ;  all sub-expressions are evaluated
 ````
 

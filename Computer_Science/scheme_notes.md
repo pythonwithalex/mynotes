@@ -31,13 +31,14 @@ example:
 (sum-of-squares 5 2)
 ````
 
-#### Special Forms
+## Special Forms
+Not all sub-expressions are evaluated in the standard way.
 
-special form vs standard expression form: 
+#### Special form vs standard expression form: 
 
 ````scheme
 special: (define a 4) ; not all sub-expressions are evaluated (a is not evaluated)
-special: (and (< 0 4) (< 3 10))
+special: (and (< 0 4) (< 3 10)) ; if the first one is false, the second isn't evaluated.
 normal (+ 4 9) ;  all sub-expressions are evaluated
 ````
 

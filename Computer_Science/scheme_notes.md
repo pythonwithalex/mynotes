@@ -30,3 +30,14 @@ example:
 ````scheme
 (sum-of-squares 5 2)
 ````
+
+#### Special Forms
+
+special form vs standard expression form: 
+
+````scheme
+special: (define a 4) ; not all sub-expressions are evaluated (a is not evaluated)
+normal (+ 4 9) ;  all sub-expressions are evaluated
+````
+
+A keyword is a special forms. Example of special forms: define

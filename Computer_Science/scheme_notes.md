@@ -32,8 +32,11 @@ example:
 ````
 
 ## Special Forms
-Not all sub-expressions are evaluated in the standard way.
-
+In a special form, not all the arguments are evaluated.
+````scheme
+(define f 9) ; f isn't evaluated, it is assigned the value of 9
+(if (< 0 4) 'lt 'gt) ; if condition evaluted to true, so only 'lt is evaluated.
+````
 #### Special form vs standard expression form: 
 
 ````scheme

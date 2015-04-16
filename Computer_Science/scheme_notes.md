@@ -45,3 +45,12 @@ normal (+ 4 9) ;  all sub-expressions are evaluated
 ````
 
 A keyword is a special forms. Example of special forms: define
+
+## Compound Expressions as Operators
+
+````scheme
+(define (adj a b)
+    ((if (< a 0) + -) a b))
+````
+
+`(if (< a 0) + -)` evaluates to `+` or `-`, which because of its position becomes the operator for `a b` operands.

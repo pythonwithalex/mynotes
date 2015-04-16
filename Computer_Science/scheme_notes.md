@@ -53,4 +53,4 @@ A keyword is a special forms. Example of special forms: define
     ((if (< a 0) + -) a b))
 ````
 
-In line 2 ````scheme (if (< a 0) + -)```` evaluates to `+` or `-`, which because of its position becomes the operator for `a b` operands.
+In line 2, `(if (< a 0) + -)` evaluates to `+` or `-`, which because of its position becomes the operator for `a b` operands.

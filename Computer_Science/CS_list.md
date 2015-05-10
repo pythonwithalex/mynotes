@@ -8,6 +8,8 @@
 
 ## Finite State Machines
 
+http://python-3-patterns-idioms-test.readthedocs.org/en/latest/StateMachine.html
+
 http://lamsonproject.org/docs/introduction_to_finite_state_machines.html
 
 http://www.i-programmer.info/babbages-bag/223-finite-state-machines.html

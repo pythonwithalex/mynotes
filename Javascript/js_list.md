@@ -1,5 +1,8 @@
 JavaScript, what a language
 ==========
+
++ [The Definitive Guide to Object-Oriented JavaScript](https://www.youtube.com/watch?v=PMfcsYzj-9M)
++ [http://www.objectplayground.com/]
 + [Everything You wanted to Know about JavaScript Scope](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
 + [JavaScript - less known parts](http://michalbe.blogspot.com/2013/03/javascript-less-known-parts-bitwise.html)
 + [Backbone Local Storage Annotated Code](http://backbonejs.org/docs/backbone-localstorage.html)
